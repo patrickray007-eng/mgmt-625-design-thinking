@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 8: Systems Thinking + Problem Definition</title>
+  <!-- Icons: Lucide (https://lucide.dev), ISC License -->
+  <!-- Presentation: reveal.js (https://revealjs.com), MIT License -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    :root {
+      --teal: #0D9488;
+      --navy: #1E3A5F;
+      --orange: #F97316;
+      --dark-gray: #4B5563;
+      --light-mint: #F0FDFA;
+      --body-gray: #374151;
+    }
+
+    /* ── Base ── */
+
+    .reveal {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 28px;
+      color: var(--body-gray);
+    }
+
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slides section {
+      box-sizing: border-box;
+      padding: 40px 60px;
+      overflow: hidden;
+      background: #ffffff;
+      background-image: radial-gradient(ellipse at top right, rgba(13, 148, 136, 0.04) 0%, transparent 60%);
+    }
+
+    /* ── Slide Titles ── */
+
+    .reveal h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.6em;
+      margin-bottom: 4px;
+      text-transform: none;
+    }
+
+    .reveal .title-underline {
+      width: 80px;
+      height: 4px;
+      background: var(--teal);
+      border-radius: 2px;
+      margin-bottom: 30px;
+    }
+
+    /* ── Body Text ── */
+
+    .reveal p, .reveal li {
+      font-size: 0.82em;
+      line-height: 1.6;
+      color: var(--body-gray);
+    }
+
+    .reveal ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .reveal ul li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .reveal ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+
+    .reveal ol {
+      padding-left: 24px;
+      margin: 0;
+    }
+
+    .reveal ol li {
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    .reveal ol li::marker {
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    /* ── Emphasis ── */
+
+    .reveal strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .reveal .orange {
+      color: var(--orange);
+      font-weight: 600;
+    }
+
+    /* ── Activity Box (dark gray, white text) ── */
+
+    .reveal .activity-box {
+      box-sizing: border-box;
+      max-width: 100%;
+      background: var(--dark-gray);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 20px 0;
+      font-size: 0.78em;
+      line-height: 1.65;
+    }
+
+    .reveal .activity-box p,
+    .reveal .activity-box li {
+      color: #ffffff;
+    }
+
+    .reveal .activity-box strong {
+      color: #ffffff;
+    }
+
+    .reveal .activity-box ol li::marker {
+      color: #ffffff;
+    }
+
+    .reveal .activity-box ul li::before {
+      background: #ffffff;
+    }
+
+    .reveal .activity-box .time-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      margin-top: 12px;
+    }
+
+    /* ── Callout Box (light mint, teal border) ── */
+
+    .reveal .callout-box {
+      background: var(--light-mint);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.78em;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.5;
+    }
+
+    /* ── Title Slide ── */
+
+    .reveal .title-slide {
+      text-align: center;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .reveal .title-slide .pre-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.7em;
+      color: var(--teal);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .reveal .title-slide h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 2.2em;
+      line-height: 1.2;
+      margin: 0 0 8px 0;
+      text-transform: none;
+    }
+
+    .reveal .title-slide .subtitle {
+      font-size: 0.85em;
+      color: var(--dark-gray);
+      margin-bottom: 40px;
+    }
+
+    .reveal .title-slide .footer {
+      font-size: 0.65em;
+      color: #9CA3AF;
+    }
+
+    /* ── Two-Column Layout ── */
+
+    .reveal .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .reveal .two-col .col {
+      font-size: 0.9em;
+    }
+
+    .reveal .two-col .col h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--teal);
+      font-size: 0.95em;
+      margin-bottom: 8px;
+    }
+
+    /* ── Checklist ── */
+
+    .reveal .checklist li::before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border: 2px solid var(--teal);
+      border-radius: 3px;
+      background: transparent;
+      top: 7px;
+      left: 0;
+    }
+
+    .reveal .checklist li {
+      padding-left: 26px;
+    }
+
+    /* ── Closing Slide ── */
+
+    .reveal .closing-slide {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .reveal .closing-footer {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--teal);
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+
+    /* ── Progress Bar ── */
+
+    .reveal .progress {
+      color: var(--teal);
+    }
+
+    /* ── Slide Number ── */
+
+    .reveal .slide-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      color: #9CA3AF;
+    }
+
+    /* ── Find the Duct Tape Reminder (MGMT 625) ── */
+
+    .reveal .reminder {
+      display: inline-block;
+      background: rgba(249, 115, 22, 0.08);
+      border: 1px solid rgba(249, 115, 22, 0.25);
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 0.72em;
+      color: var(--dark-gray);
+      margin-top: 12px;
+    }
+
+    .reveal .reminder .label {
+      font-weight: 600;
+      color: var(--orange);
+    }
+
+    /* ── Lucide Icon Defaults ── */
+
+    .reveal .activity-box i[data-lucide] {
+      width: 18px;
+      height: 18px;
+      color: #ffffff;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    .reveal .callout-box i[data-lucide] {
+      width: 16px;
+      height: 16px;
+      color: var(--teal);
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+
+    .reveal i[data-lucide] {
+      width: 20px;
+      height: 20px;
+      color: var(--teal);
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Title -->
+      <section class="title-slide">
+        <div class="pre-title">Session 8</div>
+        <h1>Systems Thinking +<br>Problem Definition</h1>
+        <div class="subtitle">Design Thinking for MBAs</div>
+        <div class="footer">Monday, February 16, 2026 &ensp;|&ensp; Instructor: Patrick Ray</div>
+      </section>
+
+      <!-- Slide 2: Duct Tape Check-In -->
+      <section>
+        <h2>Find the Duct Tape</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin:0 0 14px 0;"><i data-lucide="notebook-pen"></i> Pull out your notebooks. What workaround or improvised fix did you spot last week?</p>
+          <p style="margin:0 0 12px 0;">Let's hear a few:</p>
+          <ol>
+            <li>What was the <strong>workaround</strong> you noticed?</li>
+            <li>What <strong>underlying problem</strong> does it point to?</li>
+            <li>Who does it affect, and how do they <strong>feel about it</strong>?</li>
+          </ol>
+          <div class="time-tag"><i data-lucide="clock"></i> ~15 minutes</div>
+        </div>
+        <div class="callout-box">
+          The best design opportunities hide in the fixes people have already invented for themselves.
+        </div>
+      </section>
+
+      <!-- Slide 3: Causal Loop Map Gallery -->
+      <section>
+        <h2>Causal Loop Map Gallery</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin:0 0 14px 0;"><i data-lucide="eye"></i> Post your Causal Loop Map on the back and side walls. One team member stays at your map as the <strong>docent</strong>: your job is to walk visitors through the map, answer questions, and note what confuses people. Rotate the docent role halfway through.</p>
+          <p style="margin:0 0 12px 0;">As you view other teams' maps, focus on:</p>
+          <ol>
+            <li>What <strong>causes</strong> this problem?</li>
+            <li>What <strong>perpetuates</strong> it? (Look for feedback loops)</li>
+            <li>Who <strong>benefits</strong> if this problem persists?</li>
+          </ol>
+          <div class="time-tag"><i data-lucide="clock"></i> ~20 minutes</div>
+        </div>
+      </section>
+
+      <!-- Slide 4: Gallery Walk Reference -->
+      <section>
+        <h2>Reading a Causal Loop Map</h2>
+        <div class="title-underline"></div>
+        <div class="two-col">
+          <div class="col">
+            <h3>Reinforcing Loops</h3>
+            <p>Amplify change. Things get better or worse in a cycle.</p>
+            <div style="text-align:center; margin: 16px 0;">
+              <svg width="120" height="100" viewBox="0 0 120 100">
+                <path d="M60 10 A40 40 0 1 1 59 10" fill="none" stroke="#0D9488" stroke-width="2.5"/>
+                <polygon points="55,12 65,12 60,4" fill="#0D9488"/>
+                <text x="60" y="58" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="16" fill="#0D9488">R</text>
+              </svg>
+            </div>
+          </div>
+          <div class="col">
+            <h3>Balancing Loops</h3>
+            <p>Resist change. The system pushes back toward equilibrium.</p>
+            <div style="text-align:center; margin: 16px 0;">
+              <svg width="120" height="100" viewBox="0 0 120 100">
+                <path d="M60 10 A40 40 0 1 1 59 10" fill="none" stroke="#F97316" stroke-width="2.5"/>
+                <polygon points="55,12 65,12 60,4" fill="#F97316"/>
+                <text x="60" y="58" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="16" fill="#F97316">B</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top: 8px;"><strong>What to look for:</strong> Arrows forming circles, places where the system resists change, stakeholders who benefit from the current state.</p>
+        <div class="callout-box">
+          "If your map is a straight line with no loops, something is missing."
+        </div>
+      </section>
+
+      <!-- Slide 5: Feedback Loops Discussion -->
+      <section>
+        <h2>What Did the Maps Reveal?</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>What feedback loops did you find? <span class="orange">Reinforcing or balancing?</span></li>
+          <li>Who benefits if this problem persists? Why does that matter?</li>
+          <li>What second-order effects did you identify?</li>
+          <li>Where does the system <span class="orange">resist change</span>?</li>
+        </ul>
+      </section>
+
+      <!-- Slide 6: Problem Definition Synthesis -->
+      <section>
+        <h2>Put It Into Words</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin:0 0 14px 0;"><i data-lucide="pencil"></i> Synthesize your research into <strong>one bounded problem statement</strong>.</p>
+          <p style="margin:0 0 12px 0;">Your problem definition should:</p>
+          <ol>
+            <li>Name the <strong>specific population</strong> affected</li>
+            <li>Describe the <strong>core dynamic</strong> (not just the symptom)</li>
+            <li>Be <strong>traceable</strong> to your research</li>
+            <li>Be <strong>bounded</strong> enough to generate testable solutions</li>
+          </ol>
+          <p style="margin: 16px 0 0 0; padding: 12px 16px; background: rgba(255,255,255,0.1); border-radius: 8px; font-size: 0.95em;">
+            "For [specific population] in [specific context], [core problem dynamic] because [causal factors], which means [consequences for stakeholders]."
+          </p>
+          <div class="time-tag"><i data-lucide="clock"></i> ~20 minutes</div>
+        </div>
+      </section>
+
+      <!-- Slide 7: Problem Definition Test -->
+      <section>
+        <h2>Is Your Problem Statement Sharp Enough?</h2>
+        <div class="title-underline"></div>
+        <ul class="checklist">
+          <li>Could someone outside your team understand exactly what you're investigating?</li>
+          <li>Does it describe a <span class="orange">dynamic</span>, not just a symptom?</li>
+          <li>Can you trace it back to your stakeholder research and causal loop map?</li>
+          <li>Is it bounded enough to research in 3 more sessions?</li>
+          <li>Does it avoid being a solution in disguise?</li>
+        </ul>
+        <div class="callout-box">
+          "If you can only name the symptom, go back to your causal loop. It told you the cause."
+        </div>
+      </section>
+
+      <!-- Slide 8: Class Critique -->
+      <section>
+        <h2>Fresh Eyes</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin:0 0 14px 0;"><i data-lucide="message-circle"></i> Each team reads their problem statement to the class. As you listen, consider:</p>
+          <ol>
+            <li><strong>Bounded?</strong> Could you research this in 3 more sessions?</li>
+            <li><strong>Specific?</strong> Do you know exactly who is affected and where?</li>
+            <li><strong>Traceable?</strong> Can you see how their research led here?</li>
+            <li><strong>Dynamic?</strong> Does it describe a system, not just a symptom?</li>
+          </ol>
+          <p style="margin: 14px 0 0 0;">Be specific. "I don't know who 'stakeholders' refers to" is useful. "Looks good!" is not.</p>
+          <div class="time-tag"><i data-lucide="clock"></i> ~15 minutes</div>
+        </div>
+      </section>
+
+      <!-- Slide 9: Closing -->
+      <section class="closing-slide">
+        <h2>Permission to Ideate</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>You've earned the right to build solutions. Starting Wednesday, we ideate.</li>
+          <li><i data-lucide="calendar"></i> Wednesday (Session 9): <strong>Permission to Ideate</strong>. Bring your problem statement.</li>
+          <li><i data-lucide="file-text"></i> <strong>Problem Definition Report</strong> (team assignment, due Session 9): Synthesize your research into the bounded problem statement you drafted today.</li>
+        </ul>
+        <div class="callout-box">
+          "Solutions built on shallow understanding are just guesses. You've done the work. Now you're ready."
+        </div>
+        <div class="reminder">
+          <span class="label"><i data-lucide="notebook-pen"></i> Find the Duct Tape:</span> Each week, identify and document one workaround or improvised fix in your notebook.
+        </div>
+        <div class="closing-footer">See you Wednesday!</div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      progress: true,
+      center: false,
+      width: 1280,
+      height: 720,
+      margin: 0,
+      transition: 'fade',
+      transitionSpeed: 'fast',
+      controlsTutorial: false,
+      keyboard: true
+    });
+    lucide.createIcons();
+  </script>
+</body>
+</html>
