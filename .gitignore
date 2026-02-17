@@ -5,3 +5,8 @@ node_modules/
 .tmp/
 __pycache__/
 *.pyc
+
+# Student PII
+Project-2-Teams.md
+*-Teams.md
+*-Roster*.md
