@@ -6,69 +6,91 @@ points: 150
 weight: 15%
 ---
 
-# Mid-Project Presentation
+# Mid-Project Gallery Walk
 
 ## Assignment Overview
 
-The Mid-Project Presentation is a checkpoint to share your problem definition and early solution concepts with the class. This is not a final pitch. It's an opportunity to articulate your thinking, receive feedback, and identify what needs more work before the Final Presentation.
+The Mid-Project Gallery Walk is a checkpoint to share your problem definition and early solution concepts with the class. This is not a final pitch. It's an opportunity to articulate your thinking, receive written feedback from peers, and identify what needs more work before the Final Presentation.
 
 The goal is **traceability**: showing how your research led to your problem definition, and how your problem definition is guiding your solution directions.
 
 ## Learning Objectives
 
-- Communicate problem definition clearly and concisely
+- Communicate problem definition clearly and concisely through visual materials
 - Demonstrate connection between empathy work and problem framing
 - Present early solution concepts grounded in research
-- Receive and integrate peer feedback
+- Receive and integrate written peer feedback
 - Identify gaps and areas for further development
+- Practice giving constructive, specific feedback to other teams
 
 ## Instructions
 
-### Presentation Structure (5-6 minutes)
+### Station Setup
 
-#### 1. The Problem (2-3 minutes)
+Each team prepares a station (table or wall space) that visitors can engage with independently. Your station should tell the story of your project so far.
+
+#### What to include at your station:
+
+**1. Problem Definition (prominent, easy to read)**
 - What problem is your team addressing?
 - Who experiences it and why does it matter?
 - What did you observe or learn that led to this framing?
 - What makes this problem hard to solve? (reference your [[A03-Causal-Loop-Map|causal loop]])
 
-#### 2. Early Concepts (2-3 minutes)
-- What 1-2 solution directions are you exploring?
+**2. Research Highlights**
+- Key stakeholder quotes or observations
+- Your causal loop map (printed or drawn)
+- Any artifacts from your empathy work (photos, journey maps, etc.)
+
+**3. Early Concepts (1-2 solution directions)**
 - How does each connect to specific research insights?
 - What questions or uncertainties remain?
-- What feedback would be most helpful?
+- What feedback would be most helpful? (post this as a specific question for visitors)
 
-### Q&A (2 minutes)
-- Be prepared for questions about your research and reasoning
-- It's okay (even good) to say "we're not sure yet" or "that's what we need to figure out"
+### Gallery Walk Format
 
-### Presentation Guidelines
+- Each team leaves **one member** at their station to answer questions (rotate halfway through)
+- Remaining team members visit other stations in small groups
+- At each station you visit, **leave written feedback** on the provided cards or sticky notes
+- Spend roughly **5 minutes per station**
+
+### Feedback Guidelines
+
+When visiting other stations, write feedback that addresses:
+- Where was the problem-to-concept connection clearest?
+- What question do you have about their research or reasoning?
+- What suggestion would you offer for strengthening their direction?
+
+### Station Preparation Tips
 
 **Do:**
 - Show your thinking, not polish
 - Reference specific observations, quotes, or stakeholder insights
 - Acknowledge what you don't know yet
-- Ask for specific feedback
+- Post a specific question you want visitors to answer
+- Make materials readable from a few feet away
 
 **Don't:**
 - Create a polished sales pitch
 - Present solutions as final
 - Hide uncertainties
-- Rush through research to get to solutions
+- Rely only on a laptop screen (have at least some printed or drawn materials)
 
 ### Visual Aids
 
-- Slides are optional but can be helpful
+- Printed or hand-drawn materials work well
 - Your [[A03-Causal-Loop-Map|causal loop map]] and stakeholder maps are useful visuals
-- Hand-drawn materials are welcome
-- No slides required. You can present from your [[A04-Problem-Definition-Report|Problem Definition Report]]
+- Slides on a laptop can supplement but should not be the only thing at your station
+- Consider large-format prints of key diagrams
 
 ## Deliverables
 
 In Session 10 (Monday, February 23):
-- [ ] Team presentation (5-6 minutes)
-- [ ] Q&A participation (2 minutes)
-- [ ] Slides (if used) uploaded to Canvas after session
+- [ ] Team station set up and ready by 2:20 PM
+- [ ] Station materials covering problem definition, research highlights, and early concepts
+- [ ] One team member stationed at all times to field questions
+- [ ] Written feedback left at every station you visit
+- [ ] Station materials (photos or files) uploaded to Canvas after session
 
 ## Grading Rubric (Specifications-Based)
 
@@ -78,31 +100,31 @@ This assignment is graded on a **Meets Specifications / Revise** basis. All team
 
 | Specification Met | Specification Not Met |
 |-------------------|----------------------|
-| Problem is clearly articulated. Audience understands who experiences the problem, what it is, and why it matters. Problem scope is bounded and specific. | Problem is vague, confusing, or poorly scoped. Audience can't identify specific stakeholders affected. Problem is too broad or unclear. |
+| Problem is clearly articulated at the station. Visitors can understand who experiences the problem, what it is, and why it matters without needing extensive explanation. Problem scope is bounded and specific. | Problem is vague, confusing, or poorly scoped. Visitors can't identify specific stakeholders affected. Problem is too broad or unclear. Station requires extensive verbal explanation to make sense. |
 
 ### Specification 2: Research Connection
 
 | Specification Met | Specification Not Met |
 |-------------------|----------------------|
-| Presentation references specific observations, stakeholder insights, or research findings. Clear that the team conducted empathy work and learned from it. Problem definition is grounded in evidence. | Research section is vague or missing. No specific observations or quotes. Problem could have been defined without doing any research. |
+| Station includes specific observations, stakeholder insights, or research findings. Clear that the team conducted empathy work and learned from it. Problem definition is grounded in evidence. | Research section is vague or missing. No specific observations or quotes. Problem could have been defined without doing any research. |
 
 ### Specification 3: Solution Grounding
 
 | Specification Met | Specification Not Met |
 |-------------------|----------------------|
-| Solution directions are connected to specific insights from research. Team can explain why their research points toward these directions. Solutions are presented as explorations, not final answers. | Solutions appear disconnected from research. No explanation of why research led to these directions. Solutions presented as finished without acknowledging uncertainty. |
+| Solution directions are connected to specific insights from research. Station materials explain why research points toward these directions. Solutions are presented as explorations, not final answers. | Solutions appear disconnected from research. No explanation of why research led to these directions. Solutions presented as finished without acknowledging uncertainty. |
 
-### Specification 4: Presentation Delivery
-
-| Specification Met | Specification Not Met |
-|-------------------|----------------------|
-| Presentation is 5-6 minutes (not significantly over or under). All team members contribute. Presentation is organized and followable. Team engages constructively with Q&A. | Significantly over or under time. One person dominates. Presentation is disorganized. Team is dismissive or unprepared for Q&A. |
-
-### Specification 5: Openness to Feedback
+### Specification 4: Station Quality
 
 | Specification Met | Specification Not Met |
 |-------------------|----------------------|
-| Team explicitly asks for feedback on specific aspects. Engages thoughtfully with questions and suggestions. Demonstrates awareness of what they still need to learn or figure out. | Team does not solicit feedback. Defensive in response to questions. Presents work as complete rather than in-progress. |
+| Station is well-organized and can be understood by visitors with minimal verbal guidance. Materials are readable and visually clear. Team member at station engages constructively with visitors. | Station is disorganized or impossible to follow without extensive explanation. Materials are illegible or missing key elements. Station is unattended. |
+
+### Specification 5: Peer Feedback Participation
+
+| Specification Met | Specification Not Met |
+|-------------------|----------------------|
+| Team visits all other stations and leaves substantive written feedback at each. Feedback is specific and constructive, referencing what they observed at the station. | Team does not visit all stations. Feedback is missing, generic, or unhelpful. No evidence of genuine engagement with other teams' work. |
 
 ---
 
@@ -110,4 +132,4 @@ This assignment is graded on a **Meets Specifications / Revise** basis. All team
 
 ## What Happens Next
 
-Based on feedback from this presentation and the Session 11 Assumption Audit + Stress Test, you'll refine your problem definition and solution concepts for the [[A06-Final-Presentation|Final Presentation]] (Session 12).
+Based on feedback from the gallery walk and the Session 11 Assumption Audit + Stress Test, you'll refine your problem definition and solution concepts for the [[A06-Final-Presentation|Final Presentation]] (Session 12).

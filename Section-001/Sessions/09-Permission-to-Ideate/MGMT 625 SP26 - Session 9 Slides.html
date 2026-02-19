@@ -171,6 +171,12 @@
       line-height: 1.5;
     }
 
+    .reveal .callout-box .hint-label {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--teal);
+    }
+
     /* -- Title Slide -- */
 
     .reveal .title-slide {
@@ -179,6 +185,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 0 60px;
+      height: 100%;
     }
 
     .reveal .title-slide .pre-title {
@@ -399,6 +407,56 @@
     .hypothesis-template .connector {
       color: rgba(255, 255, 255, 0.7);
     }
+
+    /* -- Constraint Storm Slides -- */
+
+    .reveal .constraint-slide {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .reveal .constraint-number {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.7em;
+      color: var(--teal);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .reveal .constraint-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.5em;
+      color: var(--navy);
+      line-height: 1.3;
+      max-width: 800px;
+      margin-bottom: 28px;
+    }
+
+    .reveal .constraint-prompt {
+      font-size: 0.75em;
+      color: var(--dark-gray);
+      font-style: italic;
+      max-width: 600px;
+    }
+
+    .reveal .constraint-timer {
+      display: inline-block;
+      background: rgba(13, 148, 136, 0.1);
+      border: 1px solid rgba(13, 148, 136, 0.3);
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.7em;
+      color: var(--teal);
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -410,10 +468,32 @@
         <div class="pre-title">Session 9</div>
         <h1>Permission to Ideate</h1>
         <div class="subtitle">Design Thinking for MBAs</div>
-        <div class="footer">Wednesday, February 18, 2026 &ensp;|&ensp; Instructor: Patrick Ray</div>
+        <div class="footer">Wednesday, February 18, 2026 &ensp;|&ensp; Faculty: Patrick Ray</div>
       </section>
 
-      <!-- Slide 2: Why We Waited -->
+      <!-- Slide 2: Find the Duct Tape Recap -->
+      <section>
+        <h2><i data-lucide="notebook-pen"></i> Find the Duct Tape</h2>
+        <div class="title-underline"></div>
+        <p style="margin-bottom: 18px;">This is a <span class="orange">weekly practice</span>. Every week, you should be identifying and documenting workarounds, improvised fixes, and duct-tape solutions in the world around you.</p>
+        <div class="activity-box">
+          <p style="margin:0 0 14px 0;"><i data-lucide="users"></i> <strong>Quick share (pairs, then full group):</strong></p>
+          <ol>
+            <li>Turn to a neighbor. Share one duct-tape fix you spotted this week.</li>
+            <li>What problem was it trying to solve? Who created it and why?</li>
+            <li>What does it tell you about the system it lives in?</li>
+          </ol>
+          <p style="margin: 14px 0 0 0; padding: 12px 16px; background: rgba(255,255,255,0.1); border-radius: 8px; font-size: 0.95em;">
+            Duct tape = evidence of unmet needs. Train your eye to see these everywhere.
+          </p>
+          <div class="time-tag"><i data-lucide="clock"></i> ~10 minutes</div>
+        </div>
+        <div class="callout-box">
+          <span class="hint-label">Helpful Hint:</span> Look for hand-written signs, propped-open doors, taped-over buttons, Post-it reminders on machines. These are all signals of a design gap.
+        </div>
+      </section>
+
+      <!-- Slide 3: Why We Waited -->
       <section>
         <h2>Why We Waited This Long</h2>
         <div class="title-underline"></div>
@@ -423,14 +503,11 @@
           <li>Today you build solutions. But every idea must connect back to something you learned.</li>
         </ul>
         <div class="callout-box">
-          "No orphan solutions. If you can't trace it to your research, it's a guess."
-        </div>
-        <div class="reminder">
-          <span class="label"><i data-lucide="notebook-pen"></i> Find the Duct Tape:</span> Each week, identify and document one workaround or improvised fix in your notebook.
+          <span class="hint-label">Helpful Hint:</span> No orphan solutions. If you can't trace it to your research, it's a guess.
         </div>
       </section>
 
-      <!-- Slide 3: Solutions Tic-Tac-Toe Instructions -->
+      <!-- Slide 4: Solutions Tic-Tac-Toe Instructions -->
       <section>
         <h2>Solutions Tic-Tac-Toe</h2>
         <div class="title-underline"></div>
@@ -440,11 +517,11 @@
           <p style="margin:0 0 14px 0;"><strong>Columns (Scope):</strong> Individual / System / Policy</p>
           <p style="margin:0 0 10px 0;">The rule: no two ideas should be variations of each other. If you could easily combine them, they're too similar. <strong>Make them incompatible.</strong></p>
           <p style="margin:0;">Push into the uncomfortable squares.</p>
-          <div class="time-tag"><i data-lucide="clock"></i> ~30 minutes (including share-out)</div>
+          <div class="time-tag"><i data-lucide="clock"></i> ~25 minutes (including share-out)</div>
         </div>
       </section>
 
-      <!-- Slide 4: The Grid -->
+      <!-- Slide 5: The Grid -->
       <section>
         <h2>The Grid</h2>
         <div class="title-underline"></div>
@@ -470,11 +547,87 @@
           <div class="cell">your idea here</div>
         </div>
         <div class="callout-box">
-          "If every square is a variation on the same idea, start over."
+          <span class="hint-label">Helpful Hint:</span> If every square is a variation on the same idea, start over.
         </div>
       </section>
 
-      <!-- Slide 5: Share and Discuss -->
+      <!-- Slide 6: Constraint Storm Intro -->
+      <section>
+        <h2><i data-lucide="zap"></i> Constraint Storm</h2>
+        <div class="title-underline"></div>
+        <p style="margin-bottom: 18px;">Now we push your thinking further. For each constraint, generate <span class="orange">as many ideas as possible</span> before the next one appears.</p>
+        <div class="activity-box">
+          <p style="margin:0 0 14px 0;"><i data-lucide="timer"></i> <strong>How it works:</strong></p>
+          <ol>
+            <li>A constraint will appear on screen</li>
+            <li>You have <strong>2 minutes</strong> per constraint</li>
+            <li>Write down every idea that fits the constraint, no matter how wild</li>
+            <li>Quantity over quality. Don't self-edit. Just write.</li>
+          </ol>
+          <p style="margin: 14px 0 0 0; padding: 12px 16px; background: rgba(255,255,255,0.1); border-radius: 8px; font-size: 0.95em;">
+            Constraints force creativity. The stranger the constraint, the more original the idea.
+          </p>
+          <div class="time-tag"><i data-lucide="clock"></i> ~15 minutes total</div>
+        </div>
+      </section>
+
+      <!-- Slide 7: Constraint 1 -->
+      <section class="constraint-slide">
+        <div class="constraint-number">Constraint 1</div>
+        <div class="constraint-text">Your solution must cost under $1.</div>
+        <div class="constraint-prompt">What can you do with almost nothing? Think behavior changes, information, social nudges, reframing.</div>
+        <div class="constraint-timer"><i data-lucide="timer"></i> 2 minutes</div>
+      </section>
+
+      <!-- Slide 8: Constraint 2 -->
+      <section class="constraint-slide">
+        <div class="constraint-number">Constraint 2</div>
+        <div class="constraint-text">Your solution must cost more than $1 million.</div>
+        <div class="constraint-prompt">Go big. Infrastructure, systemic overhaul, large-scale programs. What becomes possible when budget is not the bottleneck?</div>
+        <div class="constraint-timer"><i data-lucide="timer"></i> 2 minutes</div>
+      </section>
+
+      <!-- Slide 9: Constraint 3 -->
+      <section class="constraint-slide">
+        <div class="constraint-number">Constraint 3</div>
+        <div class="constraint-text">Your solution must involve robots or automation.</div>
+        <div class="constraint-prompt">Where could you remove humans from the loop entirely? What repetitive process is begging to be automated?</div>
+        <div class="constraint-timer"><i data-lucide="timer"></i> 2 minutes</div>
+      </section>
+
+      <!-- Slide 10: Constraint 4 -->
+      <section class="constraint-slide">
+        <div class="constraint-number">Constraint 4</div>
+        <div class="constraint-text">Your solution must be a physical piece of hardware (not electronic).</div>
+        <div class="constraint-prompt">Think mechanical, tangible, spatial. A tool, a structure, a physical redesign of the environment.</div>
+        <div class="constraint-timer"><i data-lucide="timer"></i> 2 minutes</div>
+      </section>
+
+      <!-- Slide 11: Constraint 5 -->
+      <section class="constraint-slide">
+        <div class="constraint-number">Constraint 5</div>
+        <div class="constraint-text">Your solution must be implementable in 24 hours.</div>
+        <div class="constraint-prompt">What could you build, launch, or change by tomorrow? Strip away everything except the core action.</div>
+        <div class="constraint-timer"><i data-lucide="timer"></i> 2 minutes</div>
+      </section>
+
+      <!-- Slide 12: Constraint 6 -->
+      <section class="constraint-slide">
+        <div class="constraint-number">Constraint 6</div>
+        <div class="constraint-text">Your solution must require zero technology.</div>
+        <div class="constraint-prompt">No apps, no software, no electronics. How would you solve this in 1950? Think people, process, policy, physical space.</div>
+        <div class="constraint-timer"><i data-lucide="timer"></i> 2 minutes</div>
+      </section>
+
+      <!-- Slide 13: Constraint 7 -->
+      <section class="constraint-slide">
+        <div class="constraint-number">Constraint 7</div>
+        <div class="constraint-text">Your solution must serve a completely different stakeholder.</div>
+        <div class="constraint-prompt">Not your primary user. Pick someone on the periphery of your problem. What would you build for them?</div>
+        <div class="constraint-timer"><i data-lucide="timer"></i> 2 minutes</div>
+      </section>
+
+      <!-- Slide 14: What Did the Grid Reveal? -->
       <section>
         <h2>What Did the Grid Reveal?</h2>
         <div class="title-underline"></div>
@@ -483,14 +636,15 @@
           <li>Which squares were hardest to fill? Why?</li>
           <li>Did any ideas make you rethink your problem definition?</li>
           <li>Which ideas are most connected to your <span class="orange">stakeholder research</span>?</li>
+          <li>Did any constraint spark an idea that surprised you?</li>
         </ul>
       </section>
 
-      <!-- Slide 6: Testable Hypotheses -->
+      <!-- Slide 15: Testable Hypotheses -->
       <section>
         <h2>From Idea to Hypothesis</h2>
         <div class="title-underline"></div>
-        <p>Select your top 1-2 concepts from the grid. Reframe each as a testable hypothesis:</p>
+        <p>Select your top 1-2 concepts from the grid or constraint storm. Reframe each as a testable hypothesis:</p>
         <div class="hypothesis-template">
           <span class="connector">We believe</span> <span class="bracket">[solution]</span>
           <span class="connector">will</span> <span class="bracket">[outcome]</span>
@@ -498,11 +652,11 @@
           <span class="connector">because</span> <span class="bracket">[insight from our research]</span>.
         </div>
         <div class="callout-box">
-          "The 'because' clause is the whole point. It must trace back to your research."
+          <span class="hint-label">Helpful Hint:</span> The "because" clause is the whole point. It must trace back to your research.
         </div>
       </section>
 
-      <!-- Slide 7: Writing Your Hypotheses -->
+      <!-- Slide 16: Writing Your Hypotheses -->
       <section>
         <h2>Writing Your Hypotheses</h2>
         <div class="title-underline"></div>
@@ -520,7 +674,7 @@
         </div>
       </section>
 
-      <!-- Slide 8: Map It Back -->
+      <!-- Slide 17: Map It Back -->
       <section>
         <h2>Connect to Your Research</h2>
         <div class="title-underline"></div>
@@ -531,22 +685,22 @@
           <li>What would have to be <span class="orange">true</span> for this to work?</li>
         </ul>
         <div class="callout-box">
-          "That last question becomes a full activity in Session 11. For now, just name your top assumption."
+          <span class="hint-label">Helpful Hint:</span> That last question becomes a full activity in Session 11. For now, just name your top assumption.
         </div>
       </section>
 
-      <!-- Slide 9: Closing -->
+      <!-- Slide 18: Closing -->
       <section class="closing-slide">
         <h2>What's Next</h2>
         <div class="title-underline"></div>
         <ul>
-          <li><i data-lucide="presentation"></i> Monday (Session 10): <strong>Mid-Project Presentations</strong></li>
-          <li>5-6 minutes per team + 2 min Q&amp;A</li>
-          <li>Cover: problem definition, top 1-2 concepts as hypotheses, connection to research</li>
+          <li><i data-lucide="footprints"></i> Monday (Session 10): <strong>Mid-Project Gallery Walk</strong></li>
+          <li>Teams set up stations with their problem definition, research highlights, and top concepts</li>
+          <li>Class rotates through stations, leaving written feedback at each one</li>
           <li>Show your thinking, not polish. <span class="orange">Traceability matters more than slide design.</span></li>
         </ul>
         <div class="callout-box">
-          "Your presentation should answer: 'Why this solution for this problem?' with evidence."
+          <span class="hint-label">Helpful Hint:</span> Your station should answer "Why this solution for this problem?" with evidence.
         </div>
         <div class="reminder">
           <span class="label"><i data-lucide="notebook-pen"></i> Find the Duct Tape:</span> Each week, identify and document one workaround or improvised fix in your notebook.
