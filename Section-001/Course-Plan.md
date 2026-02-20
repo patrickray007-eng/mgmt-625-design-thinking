@@ -44,9 +44,9 @@
 > | 7 | Wed, Feb 11 | Problem Framing + Reframing | 2 |
 > | 8 | Mon, Feb 16 | Systems Thinking + Problem Definition | 2 |
 > | 9 | Wed, Feb 18 | Permission to Ideate | 3 |
-> | 10 | Mon, Feb 23 | Mid-Project Presentations | 3 |
+> | 10 | Mon, Feb 23 | Mid-Project Gallery Walk | 3 |
 > | 11 | Wed, Feb 25 | Assumption Audit + Stress Test | 3 |
-> | 12 | Mon, Mar 2 | Final Presentations | 3 |
+> | 12 | Mon, Mar 2 | Tell the Story of Your Project | 3 |
 
 > [!note]- Pedagogical Approach
 >
@@ -73,7 +73,7 @@
 > |-----------|--------|-------|
 > | Attendance & Participation | 25% | Present, on time, engaged in activities and discussions |
 > | Individual Assignments | 35% | Notebook (includes Find the Duct Tape entries), TETHER (part of Notebook), Problem Reflection 1 |
-> | Team Assignments | 40% | Causal Loop Map, Problem Definition Report, Mid-Project Presentation, Final Presentation |
+> | Team Assignments | 40% | Causal Loop Map, Problem Definition Report, Mid-Project Gallery Walk, Tell the Story of Your Project |
 >
 > *Source: Syllabus distributed to students. The exact mix of assignments may be adjusted based on class needs.*
 >
@@ -83,7 +83,7 @@
 >
 > ## Group Formation
 >
-> Project 1: Individual. Project 2: Teams of 5, formed Session 5 by scenario selection. Hard cap: 5 teams.
+> Project 1: Individual. Project 2: Teams formed Session 5 by scenario selection. 7 teams.
 
 > [!abstract]- Project 2: Bird's Eye View
 >
@@ -175,11 +175,11 @@
 > **Problem Definition Report (Due Session 9) — 10%**
 > Synthesize stakeholder research and causal analysis into bounded problem statement.
 >
-> **Mid-Project Presentation (Session 10) — 15%**
-> 5-6 min + 2 min Q&A. Problem definition and early concepts.
+> **Mid-Project Gallery Walk (Session 10) — 15%**
+> Teams set up stations. Class rotates through, leaving written feedback. Problem definition + early concepts.
 >
-> **Final Presentation (Session 12) -- 25%**
-> 7-8 min + 2 min Q&A. Full problem-to-solution traceability. Slides uploaded to Canvas serve as the submitted artifact.
+> **Tell the Story of Your Project (Session 12) — 25%**
+> 9-min team blocks, format of team's choice. Three-act narrative arc with prototype required. Format rationale due 48 hours before. Supporting materials uploaded to Canvas.
 
 ---
 
@@ -402,7 +402,7 @@
 > |------|-----|----------|
 > | 2:15 | 7 | OPENING: Brief debrief of Project 1. What did you learn about observing? What will you carry forward? Reminder: Find the Duct Tape entries in your notebook. |
 > | 2:22 | 18 | TRANSITION: Present Project 2 arc (bird's eye view of Sessions 5-12, design abilities by phase, how to choose a subject). Then present 6 scenarios. Distribute one-pagers. Learners review and consider preferences. |
-> | 2:40 | 10 | EXPLORE: Live formation. Learners move to scenario stations. Instructor caps at 5 teams, rebalances for size and diversity. |
+> | 2:40 | 10 | EXPLORE: Live formation. Learners move to scenario stations. Instructor rebalances for size and diversity. 7 teams formed. |
 > | 2:50 | 45 | EXPLORE: Initial team work. What do you already know about this problem? What assumptions are you making? Who are the stakeholders? What will you investigate? |
 > | 3:35 | 10 | CLOSE: Scope constraints reminder (max 3 stakeholder groups, bounded context). Preview Session 6. |
 >
@@ -410,7 +410,7 @@
 > - Problem Reflection 1
 >
 > ### Team Formation
-> Hard cap: 5 teams of 5 learners. Teams form by scenario interest with instructor rebalancing.
+> 7 teams formed by scenario interest with instructor rebalancing.
 >
 > ### Session Materials
 > - **Slide Instructions**: [[Sessions/05-Project-2-Launch/Session-5-Slides-Instructions.md|Session 5 Slides Instructions]]
@@ -557,15 +557,15 @@
 > - Problem Definition Report (team)
 >
 > ### After Session
-> **Canvas:** Mid-Project Presentation instructions
-> 5-6 min + 2 min Q&A. Problem definition + early concepts.
+> **Canvas:** Mid-Project Gallery Walk instructions
+> Teams set up stations. Class rotates through, leaving written feedback.
 >
 > ### Session Materials
 > - **Prep Notes**: [[Sessions/09-Permission-to-Ideate/Session-9-Prep-Notes.md|Session 9 Prep Notes]]
 > - **Slide Instructions**: [[Sessions/09-Permission-to-Ideate/Session-9-Slides-Instructions.md|Session 9 Slides Instructions]]
 > - **Claude CoWork Prompt**: [[Sessions/09-Permission-to-Ideate/Session-9-Slides-Prompt.md|Session 9 Slides Prompt]]
 
-> [!note]- Session 10: Mid-Project Presentations
+> [!note]- Session 10: Mid-Project Gallery Walk
 >
 > **Monday, February 23, 2026 | 2:15-3:45 PM | McNair Hall**
 >
@@ -574,24 +574,24 @@
 > ### Learning Objectives
 >
 > By the end of this session, learners will be able to:
-> - Communicate problem definition and early concepts to an audience
+> - Communicate problem definition and early concepts through visual station materials
 > - Demonstrate traceability from empathy work to solution concepts
-> - Receive and integrate peer feedback
-> - Evaluate peer presentations for clarity and traceability
+> - Receive and integrate written peer feedback
+> - Give constructive, specific feedback to other teams
 >
 > ### Session Schedule
 >
 > | Time | Min | Activity |
 > |------|-----|----------|
-> | 2:15 | 5 | OPENING: "Show your thinking, not polish. Traceability matters." Reminder: Find the Duct Tape entries in your notebook. |
-> | 2:20 | 40 | PRESENT: Team presentations. 5 teams × 8 minutes (5-6 min present + 2 min Q&A). Content: problem definition, top 1-2 concepts as hypotheses, connection to research. |
-> | 3:00 | 20 | MAKE SENSE: What made presentations compelling? Where was problem-to-concept traceability clearest? What patterns across teams? |
-> | 3:20 | 10 | CLOSE: What feedback will you act on? What needs more work? Preview Session 11. |
+> | 2:15 | 10 | OPENING + SETUP: "Show your thinking, not polish. Traceability matters." Reminder: Find the Duct Tape entries in your notebook. Teams set up stations. |
+> | 2:25 | 40 | GALLERY WALK: 7 teams x ~5 min per station rotation. One member stays at station, rest circulate. Leave written feedback at each station. |
+> | 3:05 | 20 | MAKE SENSE: Teams read feedback received. Then class discussion: where was traceability clearest? What patterns across all seven stations? |
+> | 3:25 | 10 | CLOSE: What feedback will you act on? What needs more work? Preview Session 11. |
 >
-> ### Presentation Requirements
-> - 5-6 minutes presentation + 2 minutes Q&A
-> - Cover: problem definition, 1-2 solution concepts, connection to insights
-> - No slides required—show your thinking, not polish
+> ### Gallery Walk Requirements
+> - Station materials: problem definition, research highlights, top 1-2 solution concepts
+> - One team member at station at all times (rotate halfway)
+> - Written feedback left at every station visited
 >
 > ### Session Materials
 > - **Prep Notes**: [[Sessions/10-Mid-Project-Presentations/Session-10-Prep-Notes.md|Session 10 Prep Notes]]
@@ -624,25 +624,26 @@
 > | 3:30 | 5 | CLOSE: Final presentation expectations. Reminder: notebooks due Session 12. |
 >
 > ### After Session
-> **Canvas:** Final Presentation instructions
-> 7-8 min presentation. Slides uploaded to Canvas serve as the submitted artifact. Due Session 12.
+> **Canvas:** Tell the Story of Your Project instructions
+> 9-min team blocks, format of team's choice. Prototype required. Format rationale due 48 hours before Session 12.
 >
 > ### Session Materials
 > - **Prep Notes**: [[Sessions/11-Assumption-Audit-Stress-Test/Session-11-Prep-Notes.md|Session 11 Prep Notes]]
 > - **Slide Instructions**: [[Sessions/11-Assumption-Audit-Stress-Test/Session-11-Slides-Instructions.md|Session 11 Slides Instructions]]
 > - **Claude CoWork Prompt**: [[Sessions/11-Assumption-Audit-Stress-Test/Session-11-Slides-Prompt.md|Session 11 Slides Prompt]]
 
-> [!note]- Session 12: Final Presentations
+> [!note]- Session 12: Tell the Story of Your Project
 >
 > **Monday, March 2, 2026 | 2:15-3:45 PM | McNair Hall**
 >
-> **Primary Design Abilities:** Communicate Deliberately, Build and Craft Intentionally
+> **Primary Design Abilities:** Communicate Deliberately, Build and Craft Intentionally, Experiment Rapidly
 >
 > ### Learning Objectives
 >
 > By the end of this session, learners will be able to:
-> - Present refined solution concepts with clear problem-to-solution traceability
-> - Demonstrate how empathy work shaped final concepts
+> - Tell a complete problem-to-solution story with traceability
+> - Demonstrate how empathy work shaped final concepts through a chosen format
+> - Show a prototype tested with real stakeholders
 > - Reflect on design thinking process and personal learning
 > - Identify applications for professional context
 >
@@ -650,21 +651,26 @@
 >
 > | Time | Min | Activity |
 > |------|-----|----------|
-> | 2:15 | 5 | OPENING: "Traceability is the test. Show us how your empathy work shaped your concept." Reminder: Find the Duct Tape entries in your notebook. |
-> | 2:20 | 50 | PRESENT: Final presentations. 5 teams × 10 minutes (7-8 min present + 2 min Q&A). Full problem-to-solution arc with evidence. |
-> | 3:10 | 15 | MAKE SENSE: Where did empathy pay off? Strongest examples of traceability? What would you do differently? |
-> | 3:25 | 10 | CLOSE: Individual reflection. What will you take forward? Which abilities grew most? How does this apply to your work? Notebooks due (physical collected in class, digital submitted on Canvas). |
+> | 2:15 | 3 | OPENING: "You started with ambiguity. Today, you tell the story of what happened next." Reminder: Find the Duct Tape entries in your notebook. |
+> | 2:18 | 63 | STORIES: 7 teams × 9-minute blocks. Format is team's choice (film, demo, installation, performance, mixed media, etc.). Must involve audience. |
+> | 3:21 | 12 | REFLECT: Individual reflection in notebook. What will you take forward? Which abilities grew most? What was hardest? |
+> | 3:33 | 12 | CLOSE: Collect notebooks. Closing remarks. "Design thinking isn't a process you follow. It's a set of abilities you build." |
+>
+> ### Due Before This Session
+> - Format rationale (Canvas, 48 hours before)
 >
 > ### Due This Session
-> - Final Presentation slides (Canvas, before class)
-> - Notebooks due (physical collected in class, digital submitted on Canvas)
+> - Notebooks (physical collected in class, digital submitted on Canvas)
 >
-> ### Final Presentation Requirements
-> - 7-8 minutes presentation + 2 minutes Q&A
-> - Problem statement evolved from empathy work
-> - Solution as testable hypothesis with assumptions
-> - Evidence of iteration from stress testing
-> - Clear problem-to-solution traceability
+> ### After Session
+> - Supporting materials uploaded to Canvas (films, slides, photos, etc.)
+>
+> ### Story Requirements
+> - 9-minute block, used however the team chooses
+> - Three-act narrative: the world as it is, what you learned, what you built and what happened
+> - Prototype built and tested with at least one real stakeholder
+> - Audience involvement required
+> - Format rationale submitted 48 hours prior
 >
 > ### Session Materials
 > - **Prep Notes**: [[Sessions/12-Final-Presentations/Session-12-Prep-Notes.md|Session 12 Prep Notes]]
@@ -723,20 +729,27 @@
   duration: 15
 
 - date: 2026-02-22
-  title: Prep Session 10 presentations
+  title: Prep Session 10 gallery walk
   type: prep
   duration: 30
-  description: Set up room for presentations, timer ready
+  description: Set up room for gallery walk stations, feedback cards, timer ready
 
 - date: 2026-02-24
-  title: Post Final Presentation instructions
+  title: Post Tell the Story of Your Project instructions
   type: planning
   duration: 15
 
-- date: 2026-03-01
-  title: Prep final presentations + notebook submission
+- date: 2026-02-28
+  title: Review format rationales for Session 12
   type: prep
   duration: 30
+  description: Check team format rationales, arrange any special setup needs
+
+- date: 2026-03-01
+  title: Prep Session 12 stories + notebook submission
+  type: prep
+  duration: 30
+  description: Room setup per format rationales, notebook collection system ready
 ```
 
 ---

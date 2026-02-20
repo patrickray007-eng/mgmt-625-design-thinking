@@ -12,7 +12,7 @@ weight: 10%
 
 This document synthesizes your team's empathy work (stakeholder mapping, [[A03-Causal-Loop-Map|causal loop analysis]], and observations) into a clear, bounded problem definition.
 
-This report serves as the foundation for your [[A05-Mid-Project-Presentation|Mid-Project Presentation]] (Session 10) and [[A06-Final-Presentation|Final Presentation]] (Session 12).
+This report serves as the foundation for your [[A05-Mid-Project-Presentation|Mid-Project Gallery Walk]] (Session 10) and [[A06-Final-Presentation|Tell the Story of Your Project]] (Session 12).
 
 ## Learning Objectives
 

@@ -10,7 +10,7 @@ weight: 15%
 
 ## Assignment Overview
 
-The Mid-Project Gallery Walk is a checkpoint to share your problem definition and early solution concepts with the class. This is not a final pitch. It's an opportunity to articulate your thinking, receive written feedback from peers, and identify what needs more work before the Final Presentation.
+The Mid-Project Gallery Walk is a checkpoint to share your problem definition and early solution concepts with the class. This is not a final pitch. It's an opportunity to articulate your thinking, receive written feedback from peers, and identify what needs more work before the final session.
 
 The goal is **traceability**: showing how your research led to your problem definition, and how your problem definition is guiding your solution directions.
 
@@ -128,8 +128,8 @@ This assignment is graded on a **Meets Specifications / Revise** basis. All team
 
 ---
 
-**Overall:** Assignment meets specifications when ALL FIVE specifications are met. If any specification is not met, the team should incorporate feedback for the Final Presentation.
+**Overall:** Assignment meets specifications when ALL FIVE specifications are met. If any specification is not met, the team should incorporate feedback for Session 12 (Tell the Story of Your Project).
 
 ## What Happens Next
 
-Based on feedback from the gallery walk and the Session 11 Assumption Audit + Stress Test, you'll refine your problem definition and solution concepts for the [[A06-Final-Presentation|Final Presentation]] (Session 12).
+Based on feedback from the gallery walk and the Session 11 Assumption Audit + Stress Test, you'll refine your problem definition and solution concepts for [[A06-Final-Presentation|Tell the Story of Your Project]] (Session 12).
