@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 6: Stakeholder Mapping</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #0D9488;
+      --navy: #1E3A5F;
+      --orange: #F97316;
+      --dark-gray: #4B5563;
+      --light-mint: #F0FDFA;
+      --body-gray: #374151;
+    }
+
+    .reveal {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 28px;
+      color: var(--body-gray);
+    }
+
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slides section {
+      padding: 40px 60px;
+      background: #ffffff;
+      background-image: radial-gradient(ellipse at top right, rgba(13, 148, 136, 0.04) 0%, transparent 60%);
+    }
+
+    /* Slide titles */
+    .reveal h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.6em;
+      margin-bottom: 4px;
+      text-transform: none;
+    }
+
+    .reveal .title-underline {
+      width: 80px;
+      height: 4px;
+      background: var(--teal);
+      border-radius: 2px;
+      margin-bottom: 30px;
+    }
+
+    /* Body text */
+    .reveal p, .reveal li {
+      font-size: 0.82em;
+      line-height: 1.6;
+      color: var(--body-gray);
+    }
+
+    .reveal ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .reveal ul li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .reveal ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+
+    .reveal ol {
+      padding-left: 24px;
+      margin: 0;
+    }
+
+    .reveal ol li {
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    .reveal ol li::marker {
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    /* Emphasis */
+    .reveal strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .reveal .orange {
+      color: var(--orange);
+      font-weight: 600;
+    }
+
+    /* Activity box (dark gray with white text) */
+    .reveal .activity-box {
+      background: var(--dark-gray);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 20px 0;
+      font-size: 0.78em;
+      line-height: 1.65;
+    }
+
+    .reveal .activity-box strong {
+      color: #ffffff;
+    }
+
+    .reveal .activity-box ol li::marker {
+      color: #ffffff;
+    }
+
+    .reveal .activity-box ul li::before {
+      background: #ffffff;
+    }
+
+    .reveal .activity-box .time-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      margin-top: 12px;
+    }
+
+    /* Callout box (light mint with teal border) */
+    .reveal .callout-box {
+      background: var(--light-mint);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.78em;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.5;
+    }
+
+    /* Title slide */
+    .reveal .title-slide {
+      text-align: center;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .reveal .title-slide .pre-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.7em;
+      color: var(--teal);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .reveal .title-slide h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 2.2em;
+      line-height: 1.2;
+      margin: 0 0 8px 0;
+      text-transform: none;
+    }
+
+    .reveal .title-slide .subtitle {
+      font-size: 0.85em;
+      color: var(--dark-gray);
+      margin-bottom: 40px;
+    }
+
+    .reveal .title-slide .footer {
+      font-size: 0.65em;
+      color: #9CA3AF;
+    }
+
+    /* Two-column layout */
+    .reveal .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .reveal .two-col .col {
+      font-size: 0.9em;
+    }
+
+    .reveal .two-col .col h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--teal);
+      font-size: 0.95em;
+      margin-bottom: 8px;
+    }
+
+    /* Checklist */
+    .reveal .checklist li::before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border: 2px solid var(--teal);
+      border-radius: 3px;
+      background: transparent;
+      top: 7px;
+      left: 0;
+    }
+
+    .reveal .checklist li {
+      padding-left: 26px;
+    }
+
+    /* Stakeholder mapping table */
+    .reveal table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 16px 0;
+      font-size: 0.78em;
+    }
+
+    .reveal table th {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: #ffffff;
+      background: var(--teal);
+      padding: 10px 16px;
+      text-align: left;
+    }
+
+    .reveal table th:first-child {
+      border-radius: 8px 0 0 0;
+    }
+
+    .reveal table th:last-child {
+      border-radius: 0 8px 0 0;
+    }
+
+    .reveal table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #E5E7EB;
+      color: var(--body-gray);
+    }
+
+    .reveal table tr:nth-child(even) td {
+      background: #F9FAFB;
+    }
+
+    .reveal table tr:last-child td:first-child {
+      border-radius: 0 0 0 8px;
+    }
+
+    .reveal table tr:last-child td:last-child {
+      border-radius: 0 0 8px 0;
+    }
+
+    /* Design Tapas menu */
+    .reveal .tapas-menu {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .reveal .tapas-item {
+      background: #F9FAFB;
+      border: 1px solid #E5E7EB;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.72em;
+      line-height: 1.4;
+    }
+
+    .reveal .tapas-item .tapas-number {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--teal);
+      margin-right: 6px;
+    }
+
+    .reveal .tapas-item .tapas-time {
+      color: #9CA3AF;
+      font-size: 0.9em;
+    }
+
+    .reveal .tapas-item.highlighted {
+      background: var(--light-mint);
+      border-color: var(--teal);
+    }
+
+    /* Numbered principles */
+    .reveal .principle-list {
+      list-style: none;
+      padding-left: 0;
+      counter-reset: principle;
+    }
+
+    .reveal .principle-list li {
+      counter-increment: principle;
+      padding-left: 36px;
+      position: relative;
+      margin-bottom: 14px;
+    }
+
+    .reveal .principle-list li::before {
+      content: counter(principle);
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 24px;
+      height: 24px;
+      background: var(--orange);
+      color: #ffffff;
+      border-radius: 50%;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.7em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Round labels for interview activity */
+    .reveal .round-label {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--teal);
+      font-size: 0.85em;
+      margin-bottom: 6px;
+    }
+
+    /* Closing slide */
+    .reveal .closing-slide {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .reveal .closing-footer {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--teal);
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+
+    /* Progress bar */
+    .reveal .progress {
+      color: var(--teal);
+    }
+
+    /* Slide number */
+    .reveal .slide-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      color: #9CA3AF;
+    }
+
+    /* Find the Duct Tape reminder */
+    .reveal .reminder {
+      display: inline-block;
+      background: rgba(249, 115, 22, 0.08);
+      border: 1px solid rgba(249, 115, 22, 0.25);
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 0.72em;
+      color: var(--dark-gray);
+      margin-top: 12px;
+    }
+
+    .reveal .reminder .label {
+      font-weight: 600;
+      color: var(--orange);
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Title -->
+      <section class="title-slide">
+        <div class="pre-title">Session 6</div>
+        <h1>Stakeholder Mapping</h1>
+        <div class="subtitle">Design Thinking for MBAs</div>
+        <div class="footer">Monday, February 9, 2026 &ensp;|&ensp; Instructor: Patrick Ray</div>
+      </section>
+
+      <!-- Slide 2: Stakeholder Mapping Activity -->
+      <section>
+        <h2>Who Is Affected by This Problem?</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin:0 0 14px 0;">With your team, identify <strong>3-4 stakeholders</strong> affected by your problem scenario.</p>
+          <p style="margin:0 0 12px 0;">Include at least one <strong>extreme user</strong>: someone who experiences this problem 10x more intensely than average, or who has found creative workarounds.</p>
+          <p style="margin:0 0 12px 0;">For each stakeholder, document:</p>
+          <ol>
+            <li>Who are they? (Be specific: "frontline nurses," not "healthcare workers")</li>
+            <li>What do they optimize for?</li>
+            <li>What constraints do they face?</li>
+          </ol>
+          <div class="time-tag">~20 minutes</div>
+        </div>
+      </section>
+
+      <!-- Slide 3: Stakeholder Mapping Template -->
+      <section>
+        <h2>Stakeholder Mapping Template</h2>
+        <div class="title-underline"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Prompt</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Who</strong></td>
+              <td>Specific role or identity (not generic)</td>
+            </tr>
+            <tr>
+              <td><strong>Optimizes for</strong></td>
+              <td>What are they trying to maximize?</td>
+            </tr>
+            <tr>
+              <td><strong>Constraints</strong></td>
+              <td>What limits their options?</td>
+            </tr>
+            <tr>
+              <td><strong>Top concerns</strong></td>
+              <td>What do they care about most? (2-3)</td>
+            </tr>
+            <tr>
+              <td><strong>Tensions</strong></td>
+              <td>Where might their interests conflict with others?</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout-box">
+          "If everyone on your list wants the same thing, that's a clue you might need to reapproach."
+        </div>
+      </section>
+
+      <!-- Slide 4: Visual Examples -->
+      <section>
+        <h2>Visual Examples</h2>
+        <div class="title-underline"></div>
+        <div class="two-col">
+          <div class="col">
+            <h3>Concentric Circles</h3>
+            <div style="text-align:center; margin: 16px 0;">
+              <svg width="260" height="220" viewBox="0 0 260 220">
+                <circle cx="130" cy="110" r="100" fill="none" stroke="#E5E7EB" stroke-width="2"/>
+                <circle cx="130" cy="110" r="68" fill="none" stroke="#0D9488" stroke-width="2" stroke-opacity="0.4"/>
+                <circle cx="130" cy="110" r="36" fill="rgba(13,148,136,0.1)" stroke="#0D9488" stroke-width="2.5"/>
+                <text x="130" y="115" text-anchor="middle" font-family="Montserrat" font-weight="600" font-size="11" fill="#1E3A5F">Core</text>
+                <text x="130" y="80" text-anchor="middle" font-family="Open Sans" font-size="10" fill="#4B5563">Direct</text>
+                <text x="130" y="25" text-anchor="middle" font-family="Open Sans" font-size="10" fill="#9CA3AF">Peripheral</text>
+              </svg>
+            </div>
+            <p style="font-size:0.75em; color:#6B7280;">Map stakeholders by proximity to the problem. Who feels it most directly?</p>
+          </div>
+          <div class="col">
+            <h3>2x2 Matrix</h3>
+            <div style="text-align:center; margin: 16px 0;">
+              <svg width="260" height="220" viewBox="0 0 260 220">
+                <line x1="30" y1="110" x2="230" y2="110" stroke="#E5E7EB" stroke-width="2"/>
+                <line x1="130" y1="10" x2="130" y2="210" stroke="#E5E7EB" stroke-width="2"/>
+                <text x="130" y="8" text-anchor="middle" font-family="Montserrat" font-weight="600" font-size="10" fill="#0D9488">High Influence</text>
+                <text x="130" y="220" text-anchor="middle" font-family="Montserrat" font-weight="600" font-size="10" fill="#9CA3AF">Low Influence</text>
+                <text x="22" y="114" text-anchor="end" font-family="Montserrat" font-weight="600" font-size="10" fill="#9CA3AF" transform="rotate(-90,22,114)">Low Interest</text>
+                <text x="238" y="114" text-anchor="start" font-family="Montserrat" font-weight="600" font-size="10" fill="#0D9488" transform="rotate(-90,238,114)">High Interest</text>
+                <circle cx="180" cy="55" r="18" fill="rgba(249,115,22,0.15)" stroke="#F97316" stroke-width="2"/>
+                <text x="180" y="59" text-anchor="middle" font-family="Open Sans" font-weight="600" font-size="9" fill="#F97316">Key</text>
+                <circle cx="80" cy="60" r="14" fill="rgba(13,148,136,0.1)" stroke="#0D9488" stroke-width="1.5"/>
+                <text x="80" y="64" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#0D9488">Keep informed</text>
+                <circle cx="180" cy="160" r="14" fill="rgba(13,148,136,0.1)" stroke="#0D9488" stroke-width="1.5"/>
+                <text x="180" y="164" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#0D9488">Engage</text>
+                <circle cx="80" cy="160" r="14" fill="#F9FAFB" stroke="#E5E7EB" stroke-width="1.5"/>
+                <text x="80" y="164" text-anchor="middle" font-family="Open Sans" font-size="8" fill="#9CA3AF">Monitor</text>
+              </svg>
+            </div>
+            <p style="font-size:0.75em; color:#6B7280;">Plot by influence and interest. Who has the power to change things?</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 5: Stakeholder Concerns Deep Dive -->
+      <section>
+        <h2>Go Deeper</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin:0 0 14px 0;">Choose your <strong>2-3 most critical stakeholders</strong> and explore:</p>
+          <ol>
+            <li>What are their top 2-3 concerns?</li>
+            <li>What do they care about most?</li>
+            <li>What would they sacrifice to get what they want?</li>
+            <li>Where do their concerns <strong>intersect</strong> with other stakeholders?</li>
+            <li>What are some cause/effect relationships between stakeholders?</li>
+          </ol>
+          <p style="margin: 16px 0 0 0; padding: 12px 16px; background: rgba(255,255,255,0.1); border-radius: 8px; font-size: 0.95em;">
+            Look for tensions. If solving for one stakeholder creates a problem for another, you're on to something.
+          </p>
+          <div class="time-tag">~20 minutes</div>
+        </div>
+      </section>
+
+      <!-- Slide 6: Share Out -->
+      <section>
+        <h2>What Did You Find?</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>Name one stakeholder your team almost forgot. Why were they easy to overlook?</li>
+          <li>Where do stakeholder concerns conflict?</li>
+          <li>Which stakeholders are hardest to access?</li>
+        </ul>
+        <div class="callout-box">
+          "You've mapped these stakeholders on paper. Now you need to learn from them directly."
+        </div>
+      </section>
+
+      <!-- Slide 7: From Observation to Conversation -->
+      <section>
+        <h2>From Observation to Conversation</h2>
+        <div class="title-underline"></div>
+        <p>In Project 1, you practiced <strong>pure observation</strong>. Shadowing, TETHER. Your job was to watch, not ask. That discipline matters.</p>
+        <p>In Project 2, you add a new tool: <strong>the empathy interview</strong>.</p>
+        <div class="two-col" style="margin-top: 20px;">
+          <div class="col">
+            <h3>Observation</h3>
+            <p>Shows you what people <span class="orange">do</span></p>
+          </div>
+          <div class="col">
+            <h3>Interviews</h3>
+            <p>Help you understand <span class="orange">why</span>: motivations, constraints, frustrations</p>
+          </div>
+        </div>
+        <div class="callout-box">
+          "These two skills complement each other, so don't be afraid to use both."
+        </div>
+      </section>
+
+      <!-- Slide 8: Design Tapas Menu -->
+      <section>
+        <h2>Design Tapas Menu</h2>
+        <div class="title-underline"></div>
+        <div class="tapas-menu">
+          <div class="tapas-item">
+            <span class="tapas-number">1.</span> Trader Joe's <span class="tapas-time">(10 min)</span><br>
+            Practice spotting needs from observation
+          </div>
+          <div class="tapas-item">
+            <span class="tapas-number">2.</span> 30 Circles <span class="tapas-time">(10 min)</span><br>
+            Rapid ideation and reframing
+          </div>
+          <div class="tapas-item">
+            <span class="tapas-number">3.</span> John Venn <span class="tapas-time">(5 min)</span><br>
+            Where design thinking begins
+          </div>
+          <div class="tapas-item">
+            <span class="tapas-number">4.</span> Story of Your Name <span class="tapas-time">(5 min)</span><br>
+            Community building through storytelling
+          </div>
+          <div class="tapas-item highlighted">
+            <span class="tapas-number">5.</span> Why? Interview <span class="tapas-time">(10 min)</span><br>
+            Practicing deep listening
+          </div>
+          <div class="tapas-item">
+            <span class="tapas-number">6.</span> 3 Things <span class="tapas-time">(5 min)</span><br>
+            High-energy icebreaker
+          </div>
+          <div class="tapas-item">
+            <span class="tapas-number">7.</span> 2 Truths 1 Lie <span class="tapas-time">(5 min)</span><br>
+            Just for fun!
+          </div>
+          <div class="tapas-item">
+            <span class="tapas-number">8.</span> TaDa! <span class="tapas-time">(10 min)</span><br>
+            Learn from others, experiment rapidly
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 9: "Why?" Interview Activity -->
+      <section>
+        <h2>Activity: The "Why?" Interview</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <div class="round-label" style="color:#ffffff;">Round 1 (2 min each)</div>
+          <p style="margin:0 0 18px 0;">Interview your partner about a topic (e.g., their morning routine) using <strong>only body language</strong> and nodding. No words. You can ask only the initial question.</p>
+          <div class="round-label" style="color:#ffffff;">Round 2 (2 min each)</div>
+          <p style="margin:0;">Same topic. Now you can ask <strong>"Why?"</strong></p>
+        </div>
+        <div class="callout-box">
+          "Notice how much deeper the conversation goes when you have just one word to work with."
+        </div>
+      </section>
+
+      <!-- Slide 10: "Why?" Interview Reflection -->
+      <section>
+        <h2>Reflection: The "Why?" Interview</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>How did that feel? What was challenging?</li>
+          <li>When did the conversation get <span class="orange">interesting</span>?</li>
+          <li>What surprised you about what you heard?</li>
+          <li>How did silence change the dynamic?</li>
+        </ul>
+      </section>
+
+      <!-- Slide 11: Empathy Interview Principles -->
+      <section>
+        <h2>Empathy Interview Principles</h2>
+        <div class="title-underline"></div>
+        <ul class="principle-list">
+          <li><strong>Listen more than you talk.</strong> Your job is to understand their world, not explain yours.</li>
+          <li><strong>Follow curiosity.</strong> When something surprises you, go deeper: "Tell me more about that."</li>
+          <li><strong>Ask for stories, not opinions.</strong> "Tell me about a time when..." beats "What do you think about..."</li>
+          <li><strong>Embrace silence.</strong> After they answer, wait. They'll often fill the silence with something more interesting.</li>
+          <li><strong>No leading questions.</strong> "How do you experience X?" not "What's frustrating about X?"</li>
+        </ul>
+      </section>
+
+      <!-- Slide 12: Closing -->
+      <section class="closing-slide">
+        <h2>What's Next</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>Wednesday (Session 7): <strong>Problem Framing + Reframing</strong></li>
+          <li><strong>Research expectation:</strong> Each team member conducts 1-2 research activities (observations, interviews, or both) before Session 8 (Feb 16)</li>
+          <li>Canvas: Project 2 Research Guide will be posted with more interview guidance</li>
+        </ul>
+        <div class="callout-box">
+          "When you present your problem definition, we'll ask: 'What did you learn from talking to people?'"
+        </div>
+        <div class="reminder">
+          <span class="label">Find the Duct Tape:</span> Each week, identify and document one workaround or improvised fix in your notebook.
+        </div>
+        <div class="closing-footer">See you Wednesday!</div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      progress: true,
+      center: false,
+      width: 1280,
+      height: 720,
+      margin: 0,
+      transition: 'fade',
+      transitionSpeed: 'fast',
+      controlsTutorial: false,
+      keyboard: true
+    });
+  </script>
+</body>
+</html>

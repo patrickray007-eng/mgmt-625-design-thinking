@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 1: Course Intro + Navigate Ambiguity</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #0D9488;
+      --navy: #1E3A5F;
+      --orange: #F97316;
+      --dark-gray: #4B5563;
+      --light-mint: #F0FDFA;
+      --body-gray: #374151;
+    }
+
+    .reveal {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 28px;
+      color: var(--body-gray);
+    }
+
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slides section {
+      padding: 40px 60px;
+      background: #ffffff;
+      background-image: radial-gradient(ellipse at top right, rgba(13, 148, 136, 0.04) 0%, transparent 60%);
+    }
+
+    /* Slide titles */
+    .reveal h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.6em;
+      margin-bottom: 4px;
+      text-transform: none;
+    }
+
+    .reveal .title-underline {
+      width: 80px;
+      height: 4px;
+      background: var(--teal);
+      border-radius: 2px;
+      margin-bottom: 30px;
+    }
+
+    /* Body text */
+    .reveal p, .reveal li {
+      font-size: 0.82em;
+      line-height: 1.6;
+      color: var(--body-gray);
+    }
+
+    .reveal ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .reveal ul li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .reveal ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+
+    .reveal ol {
+      padding-left: 24px;
+      margin: 0;
+    }
+
+    .reveal ol li {
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    .reveal ol li::marker {
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    /* Emphasis */
+    .reveal strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .reveal .orange {
+      color: var(--orange);
+      font-weight: 600;
+    }
+
+    /* Activity box (dark gray with white text) */
+    .reveal .activity-box {
+      background: var(--dark-gray);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 20px 0;
+      font-size: 0.78em;
+      line-height: 1.65;
+    }
+
+    .reveal .activity-box strong {
+      color: #ffffff;
+    }
+
+    .reveal .activity-box ol li::marker {
+      color: #ffffff;
+    }
+
+    .reveal .activity-box ul li::before {
+      background: #ffffff;
+    }
+
+    .reveal .activity-box .time-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      margin-top: 12px;
+    }
+
+    /* Callout box (light mint with teal border) */
+    .reveal .callout-box {
+      background: var(--light-mint);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.78em;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.5;
+    }
+
+    /* Title slide */
+    .reveal .title-slide {
+      text-align: center;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .reveal .title-slide .pre-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.7em;
+      color: var(--teal);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .reveal .title-slide h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 2.2em;
+      line-height: 1.2;
+      margin: 0 0 8px 0;
+      text-transform: none;
+    }
+
+    .reveal .title-slide .subtitle {
+      font-size: 0.85em;
+      color: var(--dark-gray);
+      margin-bottom: 40px;
+    }
+
+    .reveal .title-slide .footer {
+      font-size: 0.65em;
+      color: #9CA3AF;
+    }
+
+    /* Two-column layout */
+    .reveal .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .reveal .two-col .col {
+      font-size: 0.9em;
+    }
+
+    .reveal .two-col .col h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--teal);
+      font-size: 0.95em;
+      margin-bottom: 8px;
+    }
+
+    /* Three-column layout */
+    .reveal .three-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .reveal .three-col .col {
+      font-size: 0.85em;
+    }
+
+    .reveal .three-col .col h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--teal);
+      font-size: 0.9em;
+      margin-bottom: 8px;
+    }
+
+    /* Phase box for course structure */
+    .reveal .phase-box {
+      background: var(--light-mint);
+      border-radius: 10px;
+      padding: 18px 20px;
+      text-align: center;
+    }
+
+    .reveal .phase-box .phase-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--teal);
+      font-size: 0.75em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .reveal .phase-box .phase-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 0.9em;
+      margin-bottom: 4px;
+    }
+
+    .reveal .phase-box .phase-sessions {
+      font-size: 0.72em;
+      color: var(--dark-gray);
+    }
+
+    /* Checklist */
+    .reveal .checklist li::before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border: 2px solid var(--teal);
+      border-radius: 3px;
+      background: transparent;
+      top: 7px;
+      left: 0;
+    }
+
+    .reveal .checklist li {
+      padding-left: 26px;
+    }
+
+    /* Video label */
+    .reveal .video-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.65em;
+      color: var(--teal);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    /* Chat prompt box */
+    .reveal .chat-prompt {
+      background: rgba(13, 148, 136, 0.08);
+      border: 1px solid rgba(13, 148, 136, 0.25);
+      border-radius: 10px;
+      padding: 18px 24px;
+      margin: 16px 0;
+      font-size: 0.82em;
+      text-align: center;
+      color: var(--navy);
+    }
+
+    .reveal .chat-prompt .chat-icon {
+      font-size: 0.7em;
+      color: var(--teal);
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    /* Closing slide */
+    .reveal .closing-slide {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .reveal .closing-footer {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--teal);
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+
+    /* Progress bar */
+    .reveal .progress {
+      color: var(--teal);
+    }
+
+    /* Slide number */
+    .reveal .slide-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      color: #9CA3AF;
+    }
+
+    /* Find the Duct Tape reminder */
+    .reveal .reminder {
+      display: inline-block;
+      background: rgba(249, 115, 22, 0.08);
+      border: 1px solid rgba(249, 115, 22, 0.25);
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 0.72em;
+      color: var(--dark-gray);
+      margin-top: 12px;
+    }
+
+    .reveal .reminder .label {
+      font-weight: 600;
+      color: var(--orange);
+    }
+
+    /* Silence indicator */
+    .reveal .silence-box {
+      background: #1E293B;
+      color: #94A3B8;
+      border-radius: 10px;
+      padding: 24px 32px;
+      margin: 20px 0;
+      text-align: center;
+      font-size: 0.82em;
+      font-style: italic;
+      letter-spacing: 1px;
+    }
+
+    /* Schedule table */
+    .reveal table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.72em;
+      margin: 12px 0;
+    }
+
+    .reveal table th {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--navy);
+      text-align: left;
+      padding: 8px 12px;
+      border-bottom: 2px solid var(--teal);
+    }
+
+    .reveal table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #E5E7EB;
+      color: var(--body-gray);
+    }
+
+    .reveal table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* TETHER acronym styling */
+    .reveal .tether-letter {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--teal);
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Title -->
+      <section class="title-slide">
+        <div class="pre-title">Session 1</div>
+        <h1>Course Intro +<br>Navigate Ambiguity</h1>
+        <div class="subtitle">Design Thinking for MBAs (Hybrid Section)</div>
+        <div class="footer">Thursday, February 26, 2026 &ensp;|&ensp; 6:30 PM &ensp;|&ensp; Online (Zoom) &ensp;|&ensp; Instructor: Patrick Ray</div>
+      </section>
+
+      <!-- Slide 2: Welcome + Chat Prompt -->
+      <section>
+        <h2>Welcome</h2>
+        <div class="title-underline"></div>
+        <p>Welcome to MGMT 625, Section 002. This is a 6-session hybrid course in Design Thinking.</p>
+        <p>Let's get to know who's in the room.</p>
+        <div class="chat-prompt">
+          <div class="chat-icon">DROP IN CHAT</div>
+          Your name, where you're located, and <span class="orange">one word</span> for how you feel about ambiguity.
+        </div>
+        <div class="callout-box">
+          "This section has people in different cities, different industries, different contexts. That's not a limitation of the hybrid format. It's the whole point."
+        </div>
+      </section>
+
+      <!-- Slide 3: Course Overview -->
+      <section>
+        <h2>Course at a Glance</h2>
+        <div class="title-underline"></div>
+        <div class="three-col">
+          <div class="col">
+            <div class="phase-box">
+              <div class="phase-label">Phase 1</div>
+              <div class="phase-name">Empathy &amp; Observation</div>
+              <div class="phase-sessions">Sessions 1-2</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="phase-box">
+              <div class="phase-label">Phase 2</div>
+              <div class="phase-name">Problem Definition</div>
+              <div class="phase-sessions">Sessions 3-4</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="phase-box">
+              <div class="phase-label">Phase 3</div>
+              <div class="phase-name">Ideation &amp; Testing</div>
+              <div class="phase-sessions">Sessions 5-6</div>
+            </div>
+          </div>
+        </div>
+        <ul style="margin-top: 28px;">
+          <li><strong>6 sessions</strong>: 4 online (90 min) + 2 in-person (4.5 hrs)</li>
+          <li><strong>2 projects</strong>: Individual observation, then team design challenge</li>
+          <li><strong>7 design abilities</strong>: You'll experience all seven. We'll name them as we go.</li>
+        </ul>
+      </section>
+
+      <!-- Slide 4: Hybrid Format as Strength -->
+      <section>
+        <h2>The Hybrid Advantage</h2>
+        <div class="title-underline"></div>
+        <div class="two-col">
+          <div class="col">
+            <h3>Online Sessions</h3>
+            <ul>
+              <li>Framing and synthesis</li>
+              <li>Team coordination</li>
+              <li>Research planning</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>In-Person Sessions</h3>
+            <ul>
+              <li>Hands-on activities</li>
+              <li>Team formation</li>
+              <li>Final presentations</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top: 16px;">
+          <ul>
+            <li><strong>Async fieldwork</strong>: Research conducted in YOUR environments (workplaces, neighborhoods, cities)</li>
+          </ul>
+        </div>
+        <div class="callout-box">
+          "In a traditional class, everyone observes the same campus coffee shop. In this class, you'll observe your own workplaces, neighborhoods, and cities. That diversity is what makes the research richer."
+        </div>
+      </section>
+
+      <!-- Slide 5: Quick Logistics -->
+      <section>
+        <h2>How This Course Works</h2>
+        <div class="title-underline"></div>
+        <div class="two-col">
+          <div class="col">
+            <h3>Grading</h3>
+            <ul>
+              <li><strong>Specs-based</strong>: Credit for meeting specifications</li>
+              <li>Attendance &amp; Participation: 25%</li>
+              <li>Individual Assignments: 35%</li>
+              <li>Team Assignments: 40%</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Tokens</h3>
+            <ul>
+              <li>6 tokens total</li>
+              <li>3 for 24-hour extensions</li>
+              <li>3 for revisions</li>
+              <li>Teams get 3 revision tokens</li>
+            </ul>
+          </div>
+        </div>
+        <p style="margin-top: 16px;"><strong>Your notebook</strong> (physical or digital) goes with you the entire course. Start using it tonight.</p>
+      </section>
+
+      <!-- Slide 6: Session Schedule -->
+      <section>
+        <h2>Six Sessions</h2>
+        <div class="title-underline"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Date</th>
+              <th>Format</th>
+              <th>Focus</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1</strong></td>
+              <td>Thu, Feb 26</td>
+              <td><span class="orange">Online</span></td>
+              <td>Course Intro + Navigate Ambiguity</td>
+            </tr>
+            <tr>
+              <td><strong>2</strong></td>
+              <td>Sat, Mar 7</td>
+              <td>In-Person</td>
+              <td>Observation Debrief + Team Formation</td>
+            </tr>
+            <tr>
+              <td><strong>3</strong></td>
+              <td>Thu, Mar 12</td>
+              <td><span class="orange">Online</span></td>
+              <td>Stakeholder Mapping + Research Planning</td>
+            </tr>
+            <tr>
+              <td><strong>4</strong></td>
+              <td>Thu, Mar 26</td>
+              <td><span class="orange">Online</span></td>
+              <td>Research Synthesis + Problem Definition</td>
+            </tr>
+            <tr>
+              <td><strong>5</strong></td>
+              <td>Sat, Apr 4</td>
+              <td>In-Person</td>
+              <td>Final Presentations + Stress Testing</td>
+            </tr>
+            <tr>
+              <td><strong>6</strong></td>
+              <td>Thu, Apr 9</td>
+              <td><span class="orange">Online</span></td>
+              <td>Reflection + Course Close</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top: 8px; font-size: 0.75em; color: var(--dark-gray);">Two-week research gap between Sessions 3 and 4 is intentional. That's when your team does distributed fieldwork.</p>
+      </section>
+
+      <!-- Slide 7: Transition to Videos -->
+      <section>
+        <h2>Let's Try Something</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin:0 0 16px 0;">I'm going to show you <strong>three short videos</strong>.</p>
+          <p style="margin:0 0 16px 0;">Your only job is to <strong>watch</strong> and <strong>write</strong> in your notebook.</p>
+          <p style="margin:0;">No other instructions.</p>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.82em;">Have your notebook ready. Pen or keyboard, your choice.</p>
+      </section>
+
+      <!-- Slide 8: Video 1 -->
+      <section>
+        <div class="video-label">Video 1</div>
+        <h2>Watch. Write.</h2>
+        <div class="title-underline"></div>
+        <p style="font-size: 1em; color: var(--navy); margin-bottom: 24px;">Observe what you see. Write what you notice.</p>
+        <div style="height: 280px; background: #0F172A; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+          <p style="color: #64748B; font-size: 0.8em; font-style: italic; margin: 0;">[Screen share: NYC 1910s, ~4 min excerpt]</p>
+        </div>
+      </section>
+
+      <!-- Slide 9: Chat Drop 1 -->
+      <section>
+        <h2>&nbsp;</h2>
+        <div class="chat-prompt" style="margin-top: 120px;">
+          <div class="chat-icon">DROP IN CHAT</div>
+          One word for what you just experienced.
+        </div>
+      </section>
+
+      <!-- Slide 10: Video 2 -->
+      <section>
+        <div class="video-label">Video 2</div>
+        <h2>Watch. Write.</h2>
+        <div class="title-underline"></div>
+        <p style="font-size: 1em; color: var(--navy); margin-bottom: 24px;">Keep observing. Keep writing.</p>
+        <div style="height: 280px; background: #0F172A; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+          <p style="color: #64748B; font-size: 0.8em; font-style: italic; margin: 0;">[Screen share: Tokyo Shibuya (Rambalac), ~3 min excerpt]</p>
+        </div>
+      </section>
+
+      <!-- Slide 11: Chat Drop 2 -->
+      <section>
+        <h2>&nbsp;</h2>
+        <div class="chat-prompt" style="margin-top: 120px;">
+          <div class="chat-icon">DROP IN CHAT</div>
+          One word for what you just experienced.
+        </div>
+      </section>
+
+      <!-- Slide 12: Video 3 -->
+      <section>
+        <div class="video-label">Video 3</div>
+        <h2>Watch. Write.</h2>
+        <div class="title-underline"></div>
+        <p style="font-size: 1em; color: var(--navy); margin-bottom: 24px;">Last one. Watch closely.</p>
+        <div style="height: 280px; background: #0F172A; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+          <p style="color: #64748B; font-size: 0.8em; font-style: italic; margin: 0;">[Screen share: Stainless: Dadar (Adam Magyar), ~2 min excerpt]</p>
+        </div>
+      </section>
+
+      <!-- Slide 13: Silent Writing -->
+      <section>
+        <div class="silence-box" style="margin-top: 140px;">
+          <p style="margin: 0 0 16px 0; font-size: 1.1em; color: #E2E8F0; font-style: normal;">Two minutes of silent writing.</p>
+          <p style="margin: 0; font-size: 0.9em;">Write whatever is in your head. Don't filter it.</p>
+        </div>
+      </section>
+
+      <!-- Slide 14: Debrief -->
+      <section>
+        <h2>Make Sense of It</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>What did you <span class="orange">not know</span> while watching?</li>
+          <li>When did you start <strong>making up stories</strong> or explanations?</li>
+          <li>What was it like to keep watching <strong>without understanding</strong>?</li>
+          <li>Did your strategy <span class="orange">change</span> from video 1 to video 3?</li>
+          <li>Where did certainty creep in, and <strong>was it real</strong>?</li>
+        </ul>
+      </section>
+
+      <!-- Slide 15: Name the Ability -->
+      <section>
+        <h2>Navigate Ambiguity</h2>
+        <div class="title-underline"></div>
+        <div class="callout-box" style="font-size: 0.85em; font-style: normal;">
+          What you just experienced is <strong>Navigate Ambiguity</strong>. Sitting with incomplete information and resisting the urge to resolve it prematurely. That's the first of seven design abilities, and it's the hardest one.
+        </div>
+        <p style="margin-top: 20px;">This ability shows up throughout the course:</p>
+        <ul>
+          <li><strong>TETHER observation</strong>: Watching without interpreting</li>
+          <li><strong>Research period</strong>: Gathering data before defining the problem</li>
+          <li><strong>Problem definition</strong>: Resisting premature solutions</li>
+        </ul>
+        <div class="chat-prompt" style="margin-top: 16px;">
+          <div class="chat-icon">THINK ABOUT THIS</div>
+          Where in your work do you feel pressure to have the answer immediately?
+        </div>
+      </section>
+
+      <!-- Slide 16: TETHER Introduction -->
+      <section>
+        <h2>Your First Assignment</h2>
+        <div class="title-underline"></div>
+        <p style="font-size: 1.1em; color: var(--navy); margin-bottom: 16px;">
+          <span class="tether-letter">T</span>ake
+          <span class="tether-letter">E</span>xtended
+          <span class="tether-letter">T</span>ime to
+          <span class="tether-letter">H</span>old
+          <span class="tether-letter">E</span>verything in
+          <span class="tether-letter">R</span>eview
+        </p>
+        <ul>
+          <li><strong>90 minutes</strong> of uninterrupted observation in YOUR environment</li>
+          <li>Choose a place where people interact with systems, spaces, or each other</li>
+          <li>Notebook and pen only. No laptop. Phone on silent and away.</li>
+          <li>Document what you <span class="orange">see</span>, not what you <span class="orange">think it means</span></li>
+          <li>Write a half-page reflection after</li>
+        </ul>
+      </section>
+
+      <!-- Slide 17: TETHER Location Ideas -->
+      <section>
+        <h2>Where Will You Observe?</h2>
+        <div class="title-underline"></div>
+        <div class="two-col">
+          <div class="col">
+            <h3>Good Locations</h3>
+            <ul>
+              <li>Your workplace lobby or common area</li>
+              <li>A local coffee shop</li>
+              <li>Public transit</li>
+              <li>A grocery store</li>
+              <li>Your neighborhood park</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>What Makes It Work</h3>
+            <ul>
+              <li>People interacting with systems or spaces</li>
+              <li>Enough activity to watch for 90 minutes</li>
+              <li>A place you can sit without drawing attention</li>
+              <li>Somewhere in YOUR context, not on campus</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout-box">
+          "Your observation location is unique to you. When we come together in Session 2, we'll have observations from completely different worlds. That's data no single-campus class can match."
+        </div>
+      </section>
+
+      <!-- Slide 18: Closing -->
+      <section class="closing-slide">
+        <h2>What's Next</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>Complete your <strong>TETHER observation</strong> before Session 2</li>
+          <li><strong>Session 2</strong>: Saturday, March 7, 8:00 AM to 12:30 PM</li>
+          <li>In-person at <strong>McNair Hall 216</strong></li>
+          <li>Bring your notebook with completed TETHER</li>
+        </ul>
+        <div class="reminder">
+          <span class="label">Find the Duct Tape:</span> Each week, identify and document one workaround or improvised fix in your notebook.
+        </div>
+        <p style="margin-top: 16px; font-size: 0.82em;">Start thinking about where you'll do your TETHER. The location matters.</p>
+        <div class="closing-footer">See you March 7.</div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      progress: true,
+      center: false,
+      width: 1280,
+      height: 720,
+      margin: 0,
+      transition: 'fade',
+      transitionSpeed: 'fast',
+      controlsTutorial: false,
+      keyboard: true
+    });
+  </script>
+</body>
+</html>

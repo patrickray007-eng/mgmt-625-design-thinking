@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 5: Project 2 Launch</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #0D9488;
+      --navy: #1E3A5F;
+      --orange: #F97316;
+      --dark-gray: #4B5563;
+      --light-mint: #F0FDFA;
+      --body-gray: #374151;
+    }
+
+    .reveal {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 28px;
+      color: var(--body-gray);
+    }
+
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slides section {
+      padding: 40px 60px;
+      background: #ffffff;
+      background-image: radial-gradient(ellipse at top right, rgba(13, 148, 136, 0.04) 0%, transparent 60%);
+    }
+
+    /* Slide titles */
+    .reveal h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.6em;
+      margin-bottom: 4px;
+      text-transform: none;
+    }
+
+    .reveal .title-underline {
+      width: 80px;
+      height: 4px;
+      background: var(--teal);
+      border-radius: 2px;
+      margin-bottom: 30px;
+    }
+
+    /* Body text */
+    .reveal p, .reveal li {
+      font-size: 0.82em;
+      line-height: 1.6;
+      color: var(--body-gray);
+    }
+
+    .reveal ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .reveal ul li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .reveal ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+
+    .reveal ol {
+      padding-left: 24px;
+      margin: 0;
+    }
+
+    .reveal ol li {
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    .reveal ol li::marker {
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    /* Emphasis */
+    .reveal strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .reveal .orange {
+      color: var(--orange);
+      font-weight: 600;
+    }
+
+    /* Activity box (dark gray with white text) */
+    .reveal .activity-box {
+      background: var(--dark-gray);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 20px 0;
+      font-size: 0.78em;
+      line-height: 1.65;
+    }
+
+    .reveal .activity-box strong {
+      color: #ffffff;
+    }
+
+    .reveal .activity-box ol li::marker {
+      color: #ffffff;
+    }
+
+    .reveal .activity-box ul li::before {
+      background: #ffffff;
+    }
+
+    .reveal .activity-box .time-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      margin-top: 12px;
+    }
+
+    /* Callout box (light mint with teal border) */
+    .reveal .callout-box {
+      background: var(--light-mint);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.78em;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.5;
+    }
+
+    /* Title slide */
+    .reveal .title-slide {
+      text-align: center;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .reveal .title-slide .pre-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.7em;
+      color: var(--teal);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .reveal .title-slide h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 2.2em;
+      line-height: 1.2;
+      margin: 0 0 8px 0;
+      text-transform: none;
+    }
+
+    .reveal .title-slide .subtitle {
+      font-size: 0.85em;
+      color: var(--dark-gray);
+      margin-bottom: 40px;
+    }
+
+    .reveal .title-slide .footer {
+      font-size: 0.65em;
+      color: #9CA3AF;
+    }
+
+    /* Two-column layout */
+    .reveal .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .reveal .two-col .col {
+      font-size: 0.9em;
+    }
+
+    .reveal .two-col .col h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--teal);
+      font-size: 0.95em;
+      margin-bottom: 8px;
+    }
+
+    /* Checklist */
+    .reveal .checklist li::before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border: 2px solid var(--teal);
+      border-radius: 3px;
+      background: transparent;
+      top: 7px;
+      left: 0;
+    }
+
+    .reveal .checklist li {
+      padding-left: 26px;
+    }
+
+    /* Closing slide */
+    .reveal .closing-slide {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .reveal .closing-footer {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--teal);
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+
+    /* Progress bar */
+    .reveal .progress {
+      color: var(--teal);
+    }
+
+    /* Slide number */
+    .reveal .slide-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      color: #9CA3AF;
+    }
+
+    /* Find the Duct Tape reminder */
+    .reveal .reminder {
+      display: inline-block;
+      background: rgba(249, 115, 22, 0.08);
+      border: 1px solid rgba(249, 115, 22, 0.25);
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 0.72em;
+      color: var(--dark-gray);
+      margin-top: 12px;
+    }
+
+    .reveal .reminder .label {
+      font-weight: 600;
+      color: var(--orange);
+    }
+
+    /* Timeline for Project 2 Arc */
+    .reveal .timeline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 20px 0;
+      position: relative;
+    }
+
+    .reveal .timeline::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 5%;
+      right: 5%;
+      height: 4px;
+      background: linear-gradient(to right, var(--teal), var(--orange));
+      border-radius: 2px;
+      z-index: 0;
+    }
+
+    .reveal .timeline .phase {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 0 6px;
+    }
+
+    .reveal .timeline .phase .dot {
+      width: 14px;
+      height: 14px;
+      background: var(--teal);
+      border: 3px solid #ffffff;
+      border-radius: 50%;
+      margin: 14px auto 10px;
+      box-shadow: 0 0 0 2px var(--teal);
+    }
+
+    .reveal .timeline .phase .phase-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.65em;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .reveal .timeline .phase .phase-sessions {
+      font-size: 0.55em;
+      color: var(--teal);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .reveal .timeline .phase .phase-desc {
+      font-size: 0.52em;
+      color: var(--body-gray);
+      line-height: 1.4;
+    }
+
+    /* Scenario category label */
+    .reveal .category-label {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.6em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .reveal .category-business {
+      background: rgba(13, 148, 136, 0.1);
+      color: var(--teal);
+    }
+
+    .reveal .category-nonprofit {
+      background: rgba(249, 115, 22, 0.1);
+      color: var(--orange);
+    }
+
+    /* Scenario question styling */
+    .reveal .scenario-question {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.88em;
+      color: var(--navy);
+      font-style: italic;
+      margin: 10px 0 16px;
+    }
+
+    /* Abilities table */
+    .reveal .abilities-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 16px 0;
+      font-size: 0.75em;
+    }
+
+    .reveal .abilities-table th {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: #ffffff;
+      background: var(--navy);
+      padding: 10px 16px;
+      text-align: left;
+    }
+
+    .reveal .abilities-table th:first-child {
+      border-radius: 8px 0 0 0;
+    }
+
+    .reveal .abilities-table th:last-child {
+      border-radius: 0 8px 0 0;
+    }
+
+    .reveal .abilities-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid #E5E7EB;
+    }
+
+    .reveal .abilities-table tr:nth-child(even) td {
+      background: var(--light-mint);
+    }
+
+    .reveal .abilities-table tr:last-child td:first-child {
+      border-radius: 0 0 0 8px;
+    }
+
+    .reveal .abilities-table tr:last-child td:last-child {
+      border-radius: 0 0 8px 0;
+    }
+
+    /* Formula box for Choosing Your Subject */
+    .reveal .formula-box {
+      background: var(--light-mint);
+      border: 2px solid var(--teal);
+      border-radius: 10px;
+      padding: 14px 20px;
+      text-align: center;
+      margin: 14px 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.78em;
+      color: var(--navy);
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Title -->
+      <section class="title-slide">
+        <div class="pre-title">Session 5</div>
+        <h1>Project 2 Launch</h1>
+        <div class="subtitle">Design Thinking for MBAs</div>
+        <div class="footer">Wednesday, February 4, 2026 &ensp;|&ensp; Faculty: Patrick Ray</div>
+      </section>
+
+      <!-- Slide 2: Project 1 Debrief -->
+      <section>
+        <h2>What Did Project 1 Teach You?</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>What did you learn about <span class="orange">observing</span>?</li>
+          <li>What was harder than you expected?</li>
+          <li>What will you carry forward into Project 2?</li>
+        </ul>
+        <div class="callout-box">
+          "You now have experience with ambiguity, observation, and synthesis. Project 2 builds on all of it."
+        </div>
+      </section>
+
+      <!-- Slide 3: Project 2 Overview -->
+      <section>
+        <h2>Project 2: Team Design Challenge</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li><strong>Team-based</strong> (teams of 5)</li>
+          <li>Sessions 5 through 12 (8 sessions)</li>
+          <li>Full design cycle: empathy, framing, ideation, testing</li>
+          <li>Choose from <span class="orange">6 real-world scenarios</span></li>
+          <li>Culminates in Tell the Story of Your Project (Session 12)</li>
+        </ul>
+        <div class="callout-box">
+          "Same abilities. Higher stakes. Real collaboration."
+        </div>
+      </section>
+
+      <!-- Slide 4: The Project 2 Arc -->
+      <section>
+        <h2>The Project 2 Arc</h2>
+        <div class="title-underline"></div>
+        <div class="timeline">
+          <div class="phase">
+            <div class="dot"></div>
+            <div class="phase-label">Understand</div>
+            <div class="phase-sessions">Sessions 5-6</div>
+            <div class="phase-desc">Select scenario, form team, identify stakeholders, begin research</div>
+          </div>
+          <div class="phase">
+            <div class="dot"></div>
+            <div class="phase-label">Define</div>
+            <div class="phase-sessions">Sessions 7-8</div>
+            <div class="phase-desc">Reframe through multiple lenses, build causal loop map, bounded problem definition</div>
+          </div>
+          <div class="phase">
+            <div class="dot"></div>
+            <div class="phase-label">Ideate + Test</div>
+            <div class="phase-sessions">Sessions 9-11</div>
+            <div class="phase-desc">Generate solution concepts, frame as testable hypotheses, stress test assumptions</div>
+          </div>
+          <div class="phase">
+            <div class="dot"></div>
+            <div class="phase-label">Communicate</div>
+            <div class="phase-sessions">Session 12</div>
+            <div class="phase-desc">Present full arc with traceability from problem to solution</div>
+          </div>
+        </div>
+        <div class="callout-box">
+          "Navigate Ambiguity runs throughout. It never stops."
+        </div>
+      </section>
+
+      <!-- Slide 5: Design Abilities in Action -->
+      <section>
+        <h2>Design Abilities in Action</h2>
+        <div class="title-underline"></div>
+        <table class="abilities-table">
+          <thead>
+            <tr>
+              <th>Phase</th>
+              <th>Primary Abilities</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Understand</strong> (5-6)</td>
+              <td>Learn From Others, Synthesize Information</td>
+            </tr>
+            <tr>
+              <td><strong>Define</strong> (7-8)</td>
+              <td>Synthesize Information, Move Between Concrete and Abstract</td>
+            </tr>
+            <tr>
+              <td><strong>Ideate + Test</strong> (9-11)</td>
+              <td>Experiment Rapidly, Build and Craft Intentionally</td>
+            </tr>
+            <tr>
+              <td><strong>Communicate</strong> (12)</td>
+              <td>Communicate Deliberately, Build and Craft Intentionally</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout-box">
+          "You have already practiced these. Project 2 puts them in sequence."
+        </div>
+      </section>
+
+      <!-- Slide 6: Choosing Your Subject -->
+      <section>
+        <h2>Choosing Your Subject</h2>
+        <div class="title-underline"></div>
+        <p><strong>Scenario</strong> = broad problem space. <strong>Subject</strong> = your team's specific investigation.</p>
+        <div class="formula-box">Scenario + Subject = Your Investigation</div>
+        <p style="font-size: 0.72em; color: var(--dark-gray); margin: 8px 0 16px;">
+          <strong>Example:</strong> Scenario A (First 90 Days) + "How do new nurses navigate their first rotation at a community hospital?"
+        </p>
+        <ul>
+          <li>Access to <span class="orange">real stakeholders</span> (you need to talk to people)</li>
+          <li>Bounded scope (one organization, location, or population)</li>
+          <li>Genuine curiosity (not just what seems important)</li>
+          <li>No more than 3 stakeholder groups</li>
+        </ul>
+        <div class="callout-box">
+          "The scenario is the space. The subject is where you go within it."
+        </div>
+      </section>
+
+      <!-- Slide 7: Choose Your Problem Space -->
+      <section>
+        <h2>Choose Your Problem Space</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li><strong>6 scenarios</strong> across business and nonprofit contexts</li>
+          <li>Each provides a broad problem space with room to focus</li>
+          <li>You will narrow your scope within the scenario</li>
+          <li>Read the one-pagers, then decide</li>
+        </ul>
+        <p style="font-size: 0.75em; color: var(--dark-gray); margin-top: 20px;">Scenarios on the next slides.</p>
+      </section>
+
+      <!-- Slide 8: Scenario A -->
+      <section>
+        <h2>A: The First 90 Days</h2>
+        <div class="title-underline"></div>
+        <div class="category-label category-business">Business</div>
+        <div class="scenario-question">"How do new employees learn to navigate an organization?"</div>
+        <ul>
+          <li>Choose an organization type</li>
+          <li>Explore the new employee experience</li>
+          <li>What is not taught? Who helps?</li>
+          <li>What falls through the cracks?</li>
+        </ul>
+      </section>
+
+      <!-- Slide 9: Scenario B -->
+      <section>
+        <h2>B: Small Business Friction</h2>
+        <div class="title-underline"></div>
+        <div class="category-label category-business">Business</div>
+        <div class="scenario-question">"What makes running a small business harder than it needs to be?"</div>
+        <ul>
+          <li>Choose a small business type</li>
+          <li>Explore operational friction</li>
+          <li>What systems don't work together?</li>
+          <li>What workarounds exist?</li>
+        </ul>
+      </section>
+
+      <!-- Slide 10: Scenario C -->
+      <section>
+        <h2>C: The Feedback Gap</h2>
+        <div class="title-underline"></div>
+        <div class="category-label category-business">Business</div>
+        <div class="scenario-question">"How do organizations learn what's not working?"</div>
+        <ul>
+          <li>Explore how feedback flows (or doesn't)</li>
+          <li>Between customers, frontline staff, and decision-makers</li>
+          <li>Where does information get lost or distorted?</li>
+        </ul>
+      </section>
+
+      <!-- Slide 11: Scenario D -->
+      <section>
+        <h2>D: Access Barriers</h2>
+        <div class="title-underline"></div>
+        <div class="category-label category-nonprofit">Nonprofit / Social Impact</div>
+        <div class="scenario-question">"Why can't people access services designed for them?"</div>
+        <ul>
+          <li>Choose a service type</li>
+          <li>Explore what prevents access</li>
+          <li>What constraints does each stakeholder group face?</li>
+        </ul>
+      </section>
+
+      <!-- Slide 12: Scenario E -->
+      <section>
+        <h2>E: The Volunteer Experience</h2>
+        <div class="title-underline"></div>
+        <div class="category-label category-nonprofit">Nonprofit / Social Impact</div>
+        <div class="scenario-question">"What makes volunteering sustainable, or not?"</div>
+        <ul>
+          <li>Explore why volunteers stay or leave</li>
+          <li>What tensions exist between volunteers, staff, and those served?</li>
+        </ul>
+      </section>
+
+      <!-- Slide 13: Scenario F -->
+      <section>
+        <h2>F: Mission vs. Operations</h2>
+        <div class="title-underline"></div>
+        <div class="category-label category-nonprofit">Nonprofit / Social Impact</div>
+        <div class="scenario-question">"How do mission-driven organizations navigate competing pressures?"</div>
+        <ul>
+          <li>Explore tensions between mission impact and operational sustainability</li>
+          <li>What trade-offs get made? Who decides?</li>
+        </ul>
+      </section>
+
+      <!-- Slide 14: Team Formation -->
+      <section>
+        <h2>Form Your Teams</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <ol>
+            <li><strong>Stand up</strong> and move to the scenario station that interests you</li>
+            <li>Faculty will rebalance for team size and diversity</li>
+            <li>Hard cap: <strong>7 teams</strong></li>
+          </ol>
+          <p style="margin: 16px 0 0 0;">Once your team is set:</p>
+          <ul style="margin-top: 8px;">
+            <li>Exchange contact info</li>
+            <li>Pick a team name (optional but encouraged)</li>
+          </ul>
+          <div class="time-tag">~10 minutes</div>
+        </div>
+      </section>
+
+      <!-- Slide 15: Initial Team Work -->
+      <section>
+        <h2>Start Exploring</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin: 0 0 14px 0;">With your new team, discuss:</p>
+          <ol>
+            <li>What do you <strong>already know</strong> about this problem?</li>
+            <li>What <strong>assumptions</strong> are you making?</li>
+            <li>Who are the <strong>stakeholders</strong>? (List at least 3)</li>
+            <li>What will you <strong>investigate first</strong>?</li>
+            <li>What don't you know that you <strong>need to find out</strong>?</li>
+          </ol>
+          <p style="margin: 16px 0 0 0;">Document your answers. You will build on this.</p>
+          <div class="time-tag">~35 minutes</div>
+        </div>
+      </section>
+
+      <!-- Slide 16: Scope Constraints -->
+      <section>
+        <h2>Scope Constraints</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>Maximum <span class="orange">3 stakeholder groups</span></li>
+          <li>Bounded context (pick a specific organization, location, or population)</li>
+          <li>You don't need to solve everything</li>
+          <li><strong>Depth over breadth</strong></li>
+        </ul>
+        <div class="callout-box">
+          "The tighter your scope, the deeper your insight."
+        </div>
+      </section>
+
+      <!-- Slide 17: Closing -->
+      <section class="closing-slide">
+        <h2>What's Next</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>Monday (Session 6): <strong>Stakeholder Mapping</strong></li>
+          <li>You will map your stakeholders' concerns, constraints, and conflicts</li>
+          <li>Between now and then: start talking to each other about the problem</li>
+        </ul>
+        <div class="callout-box">
+          Problem Reflection 1 was due today. If you have not submitted, use a token.
+        </div>
+        <div class="reminder">
+          <span class="label">Find the Duct Tape:</span> Each week, identify and document one workaround or improvised fix in your notebook.
+        </div>
+        <div class="closing-footer">See you Monday!</div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      progress: true,
+      center: false,
+      width: 1280,
+      height: 720,
+      margin: 0,
+      transition: 'fade',
+      transitionSpeed: 'fast',
+      controlsTutorial: false,
+      keyboard: true
+    });
+  </script>
+</body>
+</html>
