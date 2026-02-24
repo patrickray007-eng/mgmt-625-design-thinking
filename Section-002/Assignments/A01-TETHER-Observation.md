@@ -54,7 +54,9 @@ This distributed approach is intentional. Your unique vantage point contributes 
    - When you catch yourself making an assumption, write it in the margin
    - Example: "I assumed she was waiting for someone, but I don't actually know that"
 
-4. **Stay for the full 90 minutes.**
+4. **Include timestamps or time markers** every 15-20 minutes to track your engagement throughout the session.
+
+5. **Stay for the full 90 minutes.**
    - The discipline of extended observation reveals patterns that shorter observations miss
 
 ### After Your Observation
