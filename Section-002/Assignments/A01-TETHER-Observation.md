@@ -7,13 +7,9 @@ grade_category: Notebook
 
 # TETHER Observation
 
-## Assignment Overview
+## Overview
 
-TETHER stands for **T**ake **E**xtended **T**ime to **H**old **E**verything in **R**eview. This assignment develops your capacity to observe without immediately interpreting or solving, a foundational design thinking skill.
-
-You will spend 90 uninterrupted minutes observing in an environment of your choosing. Unlike traditional campus-based fieldwork, you'll observe in your own context: your workplace, a local coffee shop, public transit, a grocery store, or another location where you can watch people interact with systems, spaces, and each other.
-
-This distributed approach is intentional. Your unique vantage point contributes to our collective understanding when we share observations in Session 2.
+Spend 90 uninterrupted minutes observing people in an environment of your choosing, then write a half-page reflection. TETHER (Take Extended Time to Hold Everything in Review) develops your capacity to observe without immediately interpreting or solving.
 
 ## Learning Objectives
 
@@ -22,84 +18,31 @@ This distributed approach is intentional. Your unique vantage point contributes 
 - Document observable behaviors, movements, and interactions
 - Reflect on the experience of observing
 
-## Instructions
+## What to Do
 
-### Before Your Observation
+1. **Choose a location** where you can observe for 90 minutes without drawing attention. Good options: workplace common area, coffee shop, grocery store, transit station, park, library.
+2. **Bring only your notebook and a pen.** Phone on silent and put away.
+3. **Observe for 90 minutes.** Document what you see, not what you think it means. Record movements, pauses, interactions, objects, and how people use the space.
+4. **Flag assumptions separately.** When you catch yourself interpreting, note it in the margin (e.g., "I assumed she was waiting for someone, but I don't actually know that").
+5. **Include timestamps** every 15-20 minutes to show sustained engagement.
+6. **Write a half-page reflection** (~250 words): What was difficult about observing without interpreting? What did you notice about your attention? What surprised you? What would you do differently?
 
-1. **Choose your location.** Select a place in your own environment where:
-   - You can observe for 90 uninterrupted minutes
-   - People interact with systems, spaces, or each other
-   - You can sit or stand comfortably without drawing attention
-   - Good options: workplace common area, coffee shop, grocery store, transit station, park, library
+## Submit
 
-2. **Prepare your materials.** Bring only:
-   - Your notebook
-   - A pen
-   - Phone on silent and put away (not for reference)
+Bring your notebook to Session 2 (Saturday, March 7) with raw observations (minimum 3-4 pages), margin assumptions, and reflection. Submitted with your notebook at Session 6.
 
-### During Your Observation (90 minutes)
+## Specifications
 
-1. **Document what you see, not what you think it means.**
-   - Movements: Where do people go? How do they move through space?
-   - Pauses: Where do people stop? What makes them hesitate?
-   - Interactions: How do people engage with each other? With objects? With the environment?
-   - Objects: What do people carry, use, touch, ignore?
-   - Spaces: How is the space organized? Where do people cluster or avoid?
-
-2. **Resist the urge to interpret or solve.**
-   - Write "Person looked at phone, then looked around, then walked to counter"
-   - NOT "Person was confused about where to go"
-
-3. **Note your assumptions separately.**
-   - When you catch yourself making an assumption, write it in the margin
-   - Example: "I assumed she was waiting for someone, but I don't actually know that"
-
-4. **Include timestamps or time markers** every 15-20 minutes to track your engagement throughout the session.
-
-5. **Stay for the full 90 minutes.**
-   - The discipline of extended observation reveals patterns that shorter observations miss
-
-### After Your Observation
-
-Write a **half-page reflection** (approximately 250 words) addressing:
-- What was difficult about observing without interpreting?
-- What did you notice about your own attention? Where did it drift?
-- What surprised you about what you observed?
-- What might you do differently next time?
-
-## Deliverables
-
-Bring to Session 2 (Saturday, March 7):
-- [ ] Notebook with 90 minutes of raw observations (minimum 3-4 pages)
-- [ ] Assumptions noted separately in margins
-- [ ] Half-page written reflection
-
-## Grading
-
-This assignment is graded as part of your **Notebook** grade. Your TETHER observation will be submitted with your notebook at Session 6. Credit is awarded based on the number of specifications met.
-
-### Specifications
+This is graded as part of your **Notebook** grade.
 
 **1. Observation Duration and Depth**
-
-| Specification Met | Specification Not Met |
-|-------------------|----------------------|
-| Observations clearly reflect 90 minutes of sustained attention. Notes span at least 3-4 pages and include multiple types of observations (movements, interactions, objects, spaces). Timestamps or time markers indicate sustained engagement throughout the observation period. | Observations appear rushed or superficial. Notes are sparse (fewer than 2 pages) or repetitive. No evidence of sustained attention over the full 90 minutes. Observations cluster around a single moment rather than spanning the full period. |
+Met: Observations reflect 90 minutes of sustained attention, span 3-4+ pages, include multiple observation types (movements, interactions, objects, spaces), and show timestamps throughout.
 
 **2. Descriptive vs. Interpretive**
-
-| Specification Met | Specification Not Met |
-|-------------------|----------------------|
-| Observations focus on observable behaviors and facts. Language describes what happened without inferring motivation, emotion, or meaning. When interpretations appear, they are flagged as assumptions. Example: "Woman checked watch three times in two minutes" rather than "Woman was impatient." | Observations are primarily interpretive or judgmental. Notes assume motivations, emotions, or intentions without observable evidence. Assumptions are presented as facts. Example: "Rude customer ignored the barista" rather than describing the observable behavior. |
+Met: Observations focus on observable behaviors and facts without inferring motivation or meaning. Interpretations are flagged as assumptions.
 
 **3. Assumption Awareness**
-
-| Specification Met | Specification Not Met |
-|-------------------|----------------------|
-| Margins or separate section includes at least 3-5 assumptions the observer caught themselves making. Assumptions are specific and connected to observations. Demonstrates metacognitive awareness of the observer's own biases and inferences. | No assumptions identified, or assumptions are vague/generic. No evidence of reflection on the observer's own interpretive tendencies. Observer appears unaware of the difference between observation and inference. |
+Met: At least 3-5 specific assumptions identified in margins, connected to observations, demonstrating metacognitive awareness of the observer's biases.
 
 **4. Reflection Quality**
-
-| Specification Met | Specification Not Met |
-|-------------------|----------------------|
-| Reflection is approximately 250 words and addresses all prompts: difficulty of observing without interpreting, attention patterns, surprises, and future adjustments. Shows genuine engagement with the experience and specific examples from the observation. | Reflection is missing, significantly under length, or superficial. Does not address the prompts or provides only generic responses without specific examples. Does not demonstrate learning from the experience. |
+Met: ~250 words addressing all prompts (difficulty of observing without interpreting, attention patterns, surprises, future adjustments) with specific examples from the observation.

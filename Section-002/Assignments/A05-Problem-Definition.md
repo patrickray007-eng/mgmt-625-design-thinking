@@ -8,11 +8,9 @@ weight: 10%
 
 # Problem Definition
 
-## Assignment Overview
+## Overview
 
-This document synthesizes your team's empathy work ([[A03-Stakeholder-Research|stakeholder research]], [[A04-Causal-Loop-Map|causal loop analysis]], and observations) into a clear, bounded problem definition. It also introduces your initial solution hypotheses, grounded in the insights from your research.
-
-This is the written foundation for your [[A06-Final-Presentation|Final Presentation]]. The problem definition demonstrates that you've earned the right to propose solutions by first deeply understanding the problem.
+Synthesize your team's empathy work ([[A03-Stakeholder-Research|stakeholder research]], [[A04-Causal-Loop-Map|causal loop analysis]], and observations) into a clear, bounded problem definition with initial solution hypotheses. This is the written foundation for your [[A06-Final-Presentation|Final Presentation]].
 
 ## Learning Objectives
 
@@ -21,106 +19,34 @@ This is the written foundation for your [[A06-Final-Presentation|Final Presentat
 - Connect problem definition to evidence from empathy work
 - Frame solution concepts as testable hypotheses linked to specific insights
 
-## Instructions
+## What to Do
 
-### Document Structure
+1. **Write a problem statement** that identifies who experiences the problem, what it is (observable, not assumed), how it affects stakeholders (including how it makes them feel), why it matters, and what's in/out of scope.
+2. **Summarize your evidence.** Key findings from [[A03-Stakeholder-Research|stakeholder research]], insights from [[A04-Causal-Loop-Map|causal loop analysis]], and how different team members' research contexts contributed. Make clear your definition is grounded in evidence.
+3. **Analyze stakeholder tensions.** Where do interests conflict? What trade-offs exist? Who would need to change behavior?
+4. **Propose 2-3 solution hypotheses** framed as testable statements: "We believe that [solution] will [outcome] for [stakeholder] because [insight from research]." For each, identify the riskiest assumption.
+5. **Create a traceability map** (simple visual) showing how your hypotheses trace back to specific stakeholder insights, causal loop dynamics, and observed problems.
 
-Your Problem Definition document should include:
+## Submit
 
-#### 1. Problem Statement
+Problem Definition document (PDF) to Canvas before Session 5 (Saturday, April 4).
 
-Write a clear, bounded problem statement that:
-- Identifies **who** experiences the problem (specific stakeholder group)
-- Describes **what** the problem is (observable, not assumed)
-- Explains **how** the problem affects stakeholders, including how it makes them feel
-- Explains **why** it matters (impact on stakeholders)
-- Indicates **scope** (what's included and excluded)
+## Specifications
 
-Good example: *"Mid-level managers at healthcare organizations struggle to surface patient feedback to senior leadership because existing reporting systems prioritize quantitative metrics over qualitative insights. These managers feel frustrated and powerless, knowing that patient experience issues keep recurring but unable to make leadership aware. The result is a growing sense of disconnection between frontline care and organizational decision-making."*
+**1. Problem Statement Quality**
+Met: Identifies specific stakeholders, an observable problem, and clear scope. Problem is bounded and could guide solution development.
 
-Weak example: *"Communication in organizations is broken."*
+**2. Evidence Grounding**
+Met: Includes specific findings from team research (quotes, observations, examples). Clear connection between research and problem definition.
 
-#### 2. Evidence Summary
+**3. Stakeholder Tension Analysis**
+Met: Identifies genuine tensions between stakeholder groups. Explains why the problem persists and why solutions may face resistance.
 
-Summarize the research that led to this problem definition:
-- Key findings from [[A03-Stakeholder-Research|stakeholder research]] (with specific examples)
-- Insights from [[A04-Causal-Loop-Map|causal loop analysis]] (which dynamics matter most)
-- How different team members' research contexts contributed to the understanding
+**4. Hypothesis Quality**
+Met: 2-3 testable hypotheses linked to specific research insights, with riskiest assumptions identified. Hypotheses are distinct approaches, not variations of one idea.
 
-This section should make clear that your problem definition is **grounded in evidence**, not assumption.
+**5. Traceability**
+Met: Visual shows clear logic chain from research to insights to problem to hypotheses. Reader can follow how the team moved from empathy to solution concepts.
 
-#### 3. Stakeholder Tensions
-
-Identify the key tensions between stakeholders:
-- Where do stakeholder interests conflict?
-- What trade-offs exist in the current system?
-- Who would need to change behavior for the problem to be solved?
-
-#### 4. Solution Hypotheses
-
-Propose 2-3 solution concepts framed as testable hypotheses:
-
-Format: *"We believe that [solution concept] will [expected outcome] for [stakeholder] because [insight from research]."*
-
-For each hypothesis:
-- What specific insight from your research supports this direction?
-- What would have to be true for this solution to work?
-- What's the riskiest assumption?
-
-#### 5. Traceability Map (visual)
-
-Create a simple visual showing how your solution hypotheses trace back to:
-- Specific stakeholder insights
-- Causal loop dynamics
-- Observed problems
-
-This demonstrates the logic chain from empathy to solution.
-
-## Deliverables
-
-Submit to Canvas before Session 5 (Saturday, April 4):
-- [ ] Problem Definition document (PDF)
-
-## Grading Rubric (Specifications-Based)
-
-This assignment is graded on a **Meets Specifications / Revise** basis. All team members receive the same grade.
-
-### Specification 1: Problem Statement Quality
-
-| Specification Met | Specification Not Met |
-|-------------------|----------------------|
-| Problem statement identifies specific stakeholders, observable problem, and clear scope. Problem is bounded (not trying to solve everything). Statement could guide solution development, making it clear what would and wouldn't address this problem. | Problem statement is vague, unbounded, or too broad. Stakeholders are generic ("people" or "users"). Problem is assumed rather than observed. Scope is unclear and could mean anything. |
-
-### Specification 2: Evidence Grounding
-
-| Specification Met | Specification Not Met |
-|-------------------|----------------------|
-| Evidence summary includes specific findings from team's research: quotes, observations, examples. Clear connection between research and problem definition. Reader can see how empathy work led to this understanding. Problem could not have been defined this way without the research. | Evidence is thin, generic, or missing. Problem definition could have been written on day one without research. No specific quotes or observations. Research section reads like filler rather than foundation. |
-
-### Specification 3: Stakeholder Tension Analysis
-
-| Specification Met | Specification Not Met |
-|-------------------|----------------------|
-| Identifies genuine tensions between stakeholder groups. Explains why the problem persists (competing interests, structural constraints). Shows understanding that solutions may create trade-offs or resistance. | No tensions identified, or tensions are superficial. Assumes all stakeholders want the same thing. Does not address why the problem hasn't already been solved. |
-
-### Specification 4: Hypothesis Quality
-
-| Specification Met | Specification Not Met |
-|-------------------|----------------------|
-| 2-3 solution hypotheses are framed as testable statements with clear if/then logic. Each hypothesis is linked to a specific insight from research. Riskiest assumptions are identified for each. Hypotheses are distinct approaches, not variations of one idea. | Hypotheses are vague or not testable. No connection to research insights. Solutions could have been proposed without empathy work. Assumptions not identified. All hypotheses are essentially the same approach. |
-
-### Specification 5: Traceability
-
-| Specification Met | Specification Not Met |
-|-------------------|----------------------|
-| Traceability map (or equivalent visual) shows clear logic chain from research → insights → problem → hypotheses. Reader can follow how the team moved from empathy to solution concepts. Evidence and ideas are connected, not just listed. | No traceability visual, or visual doesn't show meaningful connections. Research and solutions appear disconnected. Logic chain is missing or unclear. |
-
-### Specification 6: Document Completeness
-
-| Specification Met | Specification Not Met |
-|-------------------|----------------------|
-| All five sections present and complete. Writing is clear and professional. Formatting aids readability. Each section has sufficient depth to demonstrate genuine engagement. | Missing sections or significantly incomplete. Writing is unclear or disorganized. Sections are thin or padded with irrelevant content. |
-
----
-
-**Overall:** Assignment meets specifications when ALL SIX specifications are met. If any specification is not met, the assignment should be revised and resubmitted.
+**6. Document Completeness**
+Met: All five sections present and complete. Writing is clear and professional with sufficient depth.
