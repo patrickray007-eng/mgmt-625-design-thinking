@@ -28,7 +28,9 @@
     }
 
     .reveal .slides section {
+      box-sizing: border-box;
       padding: 40px 60px;
+      overflow: hidden;
       background: #ffffff;
       background-image: radial-gradient(ellipse at top right, rgba(13, 148, 136, 0.04) 0%, transparent 60%);
     }
@@ -109,6 +111,8 @@
 
     /* Activity box (dark gray with white text) */
     .reveal .activity-box {
+      box-sizing: border-box;
+      max-width: 100%;
       background: var(--dark-gray);
       color: #ffffff;
       border-radius: 12px;
@@ -116,6 +120,11 @@
       margin: 20px 0;
       font-size: 0.78em;
       line-height: 1.65;
+    }
+
+    .reveal .activity-box p,
+    .reveal .activity-box li {
+      color: #ffffff;
     }
 
     .reveal .activity-box strong {
@@ -159,6 +168,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      height: 100%;
     }
 
     .reveal .title-slide .pre-title {
@@ -413,10 +423,25 @@
         <div class="pre-title">Session 1</div>
         <h1>Course Intro +<br>Navigate Ambiguity</h1>
         <div class="subtitle">Design Thinking for MBAs (Hybrid Section)</div>
-        <div class="footer">Thursday, February 26, 2026 &ensp;|&ensp; 6:30 PM &ensp;|&ensp; Online (Zoom) &ensp;|&ensp; Instructor: Patrick Ray</div>
+        <div class="footer">Thursday, February 26, 2026 &ensp;|&ensp; 6:30 PM &ensp;|&ensp; Online (Zoom) &ensp;|&ensp; Faculty: Patrick Ray</div>
       </section>
 
-      <!-- Slide 2: Welcome + Chat Prompt -->
+      <!-- Slide 2: About Patrick - Career Path -->
+      <section>
+        <img src="about-career-path.png" alt="About Patrick Ray: Career Path" style="max-width: 100%; max-height: 100%; object-fit: contain; margin: auto; display: block;">
+      </section>
+
+      <!-- Slide 3: About Patrick - Tour Route -->
+      <section>
+        <img src="about-tour-route.png" alt="About Patrick Ray: Tour Route" style="max-width: 100%; max-height: 100%; object-fit: contain; margin: auto; display: block;">
+      </section>
+
+      <!-- Slide 4: About Patrick - Personal -->
+      <section>
+        <img src="about-personal.png" alt="About Patrick Ray: Personal" style="max-width: 100%; max-height: 100%; object-fit: contain; margin: auto; display: block;">
+      </section>
+
+      <!-- Slide 5: Welcome + Chat Prompt -->
       <section>
         <h2>Welcome</h2>
         <div class="title-underline"></div>
@@ -431,7 +456,72 @@
         </div>
       </section>
 
-      <!-- Slide 3: Course Overview -->
+      <!-- Slide 3: Leadership Frame -->
+      <section>
+        <h2>Why This Course</h2>
+        <div class="title-underline"></div>
+        <div class="callout-box" style="font-size: 0.85em; font-style: normal;">
+          Every one of you will face problems in your career where the case study doesn't exist yet. Where the data is ambiguous, the stakeholders disagree, and the "right answer" depends on questions nobody has thought to ask. This course gives you a structured process for those moments.
+        </div>
+        <p style="margin-top: 24px; margin-bottom: 12px;"><strong>What we're building over six sessions:</strong></p>
+        <div style="display: flex; align-items: center; gap: 0; margin-top: 8px;">
+          <div style="background: var(--teal); color: #fff; border-radius: 8px; padding: 12px 16px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.72em; flex: 1;">Primary Research<br>Methods</div>
+          <div style="color: var(--teal); font-size: 1.4em; padding: 0 6px;">&#8594;</div>
+          <div style="background: var(--teal); color: #fff; border-radius: 8px; padding: 12px 16px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.72em; flex: 1;">Systems<br>Modeling</div>
+          <div style="color: var(--teal); font-size: 1.4em; padding: 0 6px;">&#8594;</div>
+          <div style="background: var(--teal); color: #fff; border-radius: 8px; padding: 12px 16px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.72em; flex: 1;">Problem<br>Definition</div>
+          <div style="color: var(--teal); font-size: 1.4em; padding: 0 6px;">&#8594;</div>
+          <div style="background: var(--teal); color: #fff; border-radius: 8px; padding: 12px 16px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.72em; flex: 1;">Hypothesis<br>Testing</div>
+        </div>
+        <p style="margin-top: 16px; font-size: 0.78em; color: var(--dark-gray);">Each phase has specific analytical tools. Each deliverable asks you to show your reasoning.</p>
+      </section>
+
+      <!-- Slide 4: Seven Design Abilities -->
+      <section>
+        <h2>Seven Design Abilities</h2>
+        <div class="title-underline"></div>
+        <p style="margin-bottom: 16px;">These aren't abstract concepts. They're professional competencies.</p>
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 35%;">Ability</th>
+              <th>When You'll Use It</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Navigate Ambiguity</strong></td>
+              <td>Leading a team through a reorg when nobody knows the new structure yet</td>
+            </tr>
+            <tr>
+              <td><strong>Learn From Others</strong></td>
+              <td>Entering a new market when your assumptions about the customer are wrong</td>
+            </tr>
+            <tr>
+              <td><strong>Synthesize Information</strong></td>
+              <td>40 customer interviews, and you need the three patterns that matter</td>
+            </tr>
+            <tr>
+              <td><strong>Experiment Rapidly</strong></td>
+              <td>Your CEO wants a recommendation by Friday and you have three approaches</td>
+            </tr>
+            <tr>
+              <td><strong>Move Between Concrete &amp; Abstract</strong></td>
+              <td>A frontline employee describes a workaround. You need to find the structural problem it reveals.</td>
+            </tr>
+            <tr>
+              <td><strong>Build &amp; Craft Intentionally</strong></td>
+              <td>Rough concept for your board vs. polished deck for investors. Different resolution for different feedback.</td>
+            </tr>
+            <tr>
+              <td><strong>Communicate Deliberately</strong></td>
+              <td>Recommending a strategy where the reasoning matters as much as the answer</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Slide 5: Course Overview -->
       <section>
         <h2>Course at a Glance</h2>
         <div class="title-underline"></div>
@@ -597,9 +687,14 @@
         <h2>Watch. Write.</h2>
         <div class="title-underline"></div>
         <p style="font-size: 1em; color: var(--navy); margin-bottom: 24px;">Observe what you see. Write what you notice.</p>
-        <div style="height: 280px; background: #0F172A; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-          <p style="color: #64748B; font-size: 0.8em; font-style: italic; margin: 0;">[Screen share: NYC 1910s, ~4 min excerpt]</p>
-        </div>
+        <a href="https://www.youtube.com/watch?v=hZ1OgQL9_Cw&t=90" target="_blank" style="display: flex; height: 280px; background: #0F172A; border-radius: 12px; align-items: center; justify-content: center; text-decoration: none; cursor: pointer;">
+          <div style="text-align: center;">
+            <div style="width: 68px; height: 48px; background: #FF0000; border-radius: 12px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center;">
+              <div style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 18px solid #fff; margin-left: 4px;"></div>
+            </div>
+            <p style="color: #94A3B8; font-size: 0.75em; margin: 0;">Click to play: NYC 1910s (~4 min excerpt)</p>
+          </div>
+        </a>
       </section>
 
       <!-- Slide 9: Chat Drop 1 -->
@@ -617,9 +712,14 @@
         <h2>Watch. Write.</h2>
         <div class="title-underline"></div>
         <p style="font-size: 1em; color: var(--navy); margin-bottom: 24px;">Keep observing. Keep writing.</p>
-        <div style="height: 280px; background: #0F172A; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-          <p style="color: #64748B; font-size: 0.8em; font-style: italic; margin: 0;">[Screen share: Tokyo Shibuya (Rambalac), ~3 min excerpt]</p>
-        </div>
+        <a href="https://www.youtube.com/watch?v=CYPwPA08KE4" target="_blank" style="display: flex; height: 280px; background: #0F172A; border-radius: 12px; align-items: center; justify-content: center; text-decoration: none; cursor: pointer;">
+          <div style="text-align: center;">
+            <div style="width: 68px; height: 48px; background: #FF0000; border-radius: 12px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center;">
+              <div style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 18px solid #fff; margin-left: 4px;"></div>
+            </div>
+            <p style="color: #94A3B8; font-size: 0.75em; margin: 0;">Click to play: Tokyo Shibuya, Rambalac (~3 min excerpt)</p>
+          </div>
+        </a>
       </section>
 
       <!-- Slide 11: Chat Drop 2 -->
@@ -637,20 +737,30 @@
         <h2>Watch. Write.</h2>
         <div class="title-underline"></div>
         <p style="font-size: 1em; color: var(--navy); margin-bottom: 24px;">Last one. Watch closely.</p>
-        <div style="height: 280px; background: #0F172A; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-          <p style="color: #64748B; font-size: 0.8em; font-style: italic; margin: 0;">[Screen share: Stainless: Dadar (Adam Magyar), ~2 min excerpt]</p>
-        </div>
+        <a href="https://vimeo.com/467675747" target="_blank" style="display: flex; height: 280px; background: #0F172A; border-radius: 12px; align-items: center; justify-content: center; text-decoration: none; cursor: pointer;">
+          <div style="text-align: center;">
+            <div style="width: 68px; height: 48px; background: #1AB7EA; border-radius: 12px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center;">
+              <div style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 18px solid #fff; margin-left: 4px;"></div>
+            </div>
+            <p style="color: #94A3B8; font-size: 0.75em; margin: 0;">Click to play: Stainless, Dadar (Adam Magyar, ~2 min excerpt)</p>
+          </div>
+        </a>
       </section>
 
       <!-- Slide 13: Silent Writing -->
       <section>
         <div class="silence-box" style="margin-top: 140px;">
-          <p style="margin: 0 0 16px 0; font-size: 1.1em; color: #E2E8F0; font-style: normal;">Two minutes of silent writing.</p>
-          <p style="margin: 0; font-size: 0.9em;">Write whatever is in your head. Don't filter it.</p>
+          <p style="margin: 0 0 16px 0; font-size: 1.1em; color: #ffffff; font-style: normal;">Two minutes of silent writing.</p>
+          <p style="margin: 0; font-size: 0.9em; color: #CBD5E1;">Write whatever is in your head. Don't filter it.</p>
         </div>
       </section>
 
-      <!-- Slide 14: Debrief -->
+      <!-- Slide 14: Transition -->
+      <section class="title-slide">
+        <h1>Make Sense of It</h1>
+      </section>
+
+      <!-- Slide 15: Debrief -->
       <section>
         <h2>Make Sense of It</h2>
         <div class="title-underline"></div>
@@ -670,12 +780,23 @@
         <div class="callout-box" style="font-size: 0.85em; font-style: normal;">
           What you just experienced is <strong>Navigate Ambiguity</strong>. Sitting with incomplete information and resisting the urge to resolve it prematurely. That's the first of seven design abilities, and it's the hardest one.
         </div>
-        <p style="margin-top: 20px;">This ability shows up throughout the course:</p>
-        <ul>
-          <li><strong>TETHER observation</strong>: Watching without interpreting</li>
-          <li><strong>Research period</strong>: Gathering data before defining the problem</li>
-          <li><strong>Problem definition</strong>: Resisting premature solutions</li>
-        </ul>
+        <div class="two-col" style="margin-top: 20px;">
+          <div class="col">
+            <h3>In Your Career</h3>
+            <ul>
+              <li><strong>Consulting</strong>: Diagnosing the real problem vs. confirming your first hypothesis</li>
+              <li><strong>Leadership</strong>: Reacting to symptoms vs. understanding the system</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>In This Course</h3>
+            <ul>
+              <li><strong>TETHER</strong>: Watching without interpreting</li>
+              <li><strong>Research</strong>: Gathering data before defining the problem</li>
+              <li><strong>Problem definition</strong>: Resisting premature solutions</li>
+            </ul>
+          </div>
+        </div>
         <div class="chat-prompt" style="margin-top: 16px;">
           <div class="chat-icon">THINK ABOUT THIS</div>
           Where in your work do you feel pressure to have the answer immediately?
@@ -733,7 +854,26 @@
         </div>
       </section>
 
-      <!-- Slide 18: Closing -->
+      <!-- Slide 18: Find the Duct Tape -->
+      <section>
+        <h2>Find the Duct Tape</h2>
+        <div class="title-underline"></div>
+        <p>One more ongoing practice that runs the entire course.</p>
+        <div class="activity-box">
+          <p style="margin: 0 0 16px 0;">Each week, identify one <strong>"duct tape" solution</strong> you encounter in the wild: a workaround, an improvised fix, a hack someone uses because the real solution doesn't exist.</p>
+          <p style="margin: 0;">Document it in your notebook:</p>
+          <ol style="margin-top: 12px;">
+            <li>What is the workaround?</li>
+            <li>What problem does it solve?</li>
+            <li>Why doesn't the real fix exist?</li>
+          </ol>
+        </div>
+        <div class="callout-box" style="font-style: normal;">
+          Over the course, your collection will start to show patterns about how systems fail and how people adapt. That's design thinking in action.
+        </div>
+      </section>
+
+      <!-- Slide 19: Closing -->
       <section class="closing-slide">
         <h2>What's Next</h2>
         <div class="title-underline"></div>
@@ -743,9 +883,6 @@
           <li>In-person at <strong>McNair Hall 216</strong></li>
           <li>Bring your notebook with completed TETHER</li>
         </ul>
-        <div class="reminder">
-          <span class="label">Find the Duct Tape:</span> Each week, identify and document one workaround or improvised fix in your notebook.
-        </div>
         <p style="margin-top: 16px; font-size: 0.82em;">Start thinking about where you'll do your TETHER. The location matters.</p>
         <div class="closing-footer">See you March 7.</div>
       </section>
