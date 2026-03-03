@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 2: Observation Debrief + Team Formation</title>
+  <!-- Icons: Lucide (https://lucide.dev), ISC License -->
+  <!-- Presentation: reveal.js (https://revealjs.com), MIT License -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    /* Build-Slides Theme
+       Shared design system for reveal.js course presentations.
+       Embedded into each HTML deck at generation time. */
+
+    :root {
+      --teal: #0D9488;
+      --navy: #1E3A5F;
+      --orange: #F97316;
+      --dark-gray: #4B5563;
+      --light-mint: #F0FDFA;
+      --body-gray: #374151;
+    }
+
+    /* ── Base ── */
+
+    .reveal {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 28px;
+      color: var(--body-gray);
+    }
+
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slides section {
+      box-sizing: border-box;
+      padding: 40px 60px;
+      overflow: hidden;
+      background: #ffffff;
+      background-image: radial-gradient(ellipse at top right, rgba(13, 148, 136, 0.04) 0%, transparent 60%);
+    }
+
+    /* ── Slide Titles ── */
+
+    .reveal h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.6em;
+      margin-bottom: 4px;
+      text-transform: none;
+    }
+
+    .reveal .title-underline {
+      width: 80px;
+      height: 4px;
+      background: var(--teal);
+      border-radius: 2px;
+      margin-bottom: 30px;
+    }
+
+    /* ── Body Text ── */
+
+    .reveal p, .reveal li {
+      font-size: 0.82em;
+      line-height: 1.6;
+      color: var(--body-gray);
+    }
+
+    .reveal ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .reveal ul li {
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .reveal ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+
+    .reveal ol {
+      padding-left: 24px;
+      margin: 0;
+    }
+
+    .reveal ol li {
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    .reveal ol li::marker {
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    /* ── Emphasis ── */
+
+    .reveal strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .reveal .orange {
+      color: var(--orange);
+      font-weight: 600;
+    }
+
+    /* ── Activity Box (dark gray, white text) ── */
+
+    .reveal .activity-box {
+      box-sizing: border-box;
+      max-width: 100%;
+      background: var(--dark-gray);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin: 20px 0;
+      font-size: 0.78em;
+      line-height: 1.65;
+    }
+
+    .reveal .activity-box p,
+    .reveal .activity-box li {
+      color: #ffffff;
+    }
+
+    .reveal .activity-box strong {
+      color: #ffffff;
+    }
+
+    .reveal .activity-box ol li::marker {
+      color: #ffffff;
+    }
+
+    .reveal .activity-box ul li::before {
+      background: #ffffff;
+    }
+
+    .reveal .activity-box .time-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 3px 12px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      margin-top: 12px;
+    }
+
+    /* ── Callout Box (light mint, teal border) ── */
+
+    .reveal .callout-box {
+      background: var(--light-mint);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 0.78em;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.5;
+    }
+
+    /* ── Title Slide ── */
+
+    .reveal .title-slide {
+      text-align: center;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .reveal .title-slide .pre-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.7em;
+      color: var(--teal);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .reveal .title-slide h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 2.2em;
+      line-height: 1.2;
+      margin: 0 0 8px 0;
+      text-transform: none;
+    }
+
+    .reveal .title-slide .subtitle {
+      font-size: 0.85em;
+      color: var(--dark-gray);
+      margin-bottom: 40px;
+    }
+
+    .reveal .title-slide .footer {
+      font-size: 0.65em;
+      color: #9CA3AF;
+    }
+
+    /* ── Two-Column Layout ── */
+
+    .reveal .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .reveal .two-col .col {
+      font-size: 0.9em;
+    }
+
+    .reveal .two-col .col h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--teal);
+      font-size: 0.95em;
+      margin-bottom: 8px;
+    }
+
+    /* ── Checklist ── */
+
+    .reveal .checklist li::before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      border: 2px solid var(--teal);
+      border-radius: 3px;
+      background: transparent;
+      top: 7px;
+      left: 0;
+    }
+
+    .reveal .checklist li {
+      padding-left: 26px;
+    }
+
+    /* ── Closing Slide ── */
+
+    .reveal .closing-slide {
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* ── Progress Bar ── */
+
+    .reveal .progress {
+      color: var(--teal);
+    }
+
+    /* ── Slide Number ── */
+
+    .reveal .slide-number {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      color: #9CA3AF;
+    }
+
+    /* ── Find the Duct Tape Reminder (MGMT 625) ── */
+
+    .reveal .reminder {
+      display: inline-block;
+      background: rgba(249, 115, 22, 0.08);
+      border: 1px solid rgba(249, 115, 22, 0.25);
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 0.72em;
+      color: var(--dark-gray);
+      margin-top: 12px;
+    }
+
+    .reveal .reminder .label {
+      font-weight: 600;
+      color: var(--orange);
+    }
+
+    /* ── Term Boxes (jargon chips) ── */
+
+    .term-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .term-box {
+      background: var(--light-mint);
+      border: 1.5px solid var(--teal);
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.78em;
+      color: var(--navy);
+    }
+
+    /* ── Concept Cards ── */
+
+    .card-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 16px 0;
+    }
+
+    .card-row.three-col {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .concept-card {
+      background: #ffffff;
+      border: 1.5px solid #E5E7EB;
+      border-radius: 10px;
+      padding: 20px 22px;
+      font-size: 0.78em;
+      line-height: 1.55;
+    }
+
+    .concept-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--teal);
+      font-size: 1.05em;
+      margin: 0 0 8px 0;
+    }
+
+    .concept-card p {
+      margin: 4px 0;
+      font-size: 1em;
+    }
+
+    .concept-card .card-label {
+      font-size: 0.85em;
+      color: #9CA3AF;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .concept-card.highlight {
+      border-color: var(--teal);
+      background: var(--light-mint);
+    }
+
+    /* ── Lucide Icon Defaults ── */
+
+    .reveal .activity-box i[data-lucide] {
+      width: 18px;
+      height: 18px;
+      color: #ffffff;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    .reveal .callout-box i[data-lucide] {
+      width: 16px;
+      height: 16px;
+      color: var(--teal);
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+
+    .reveal i[data-lucide] {
+      width: 20px;
+      height: 20px;
+      color: var(--teal);
+      vertical-align: middle;
+    }
+
+    /* ── Schedule table ── */
+
+    .reveal table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.72em;
+      margin: 12px 0;
+    }
+
+    .reveal table th {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--navy);
+      text-align: left;
+      padding: 8px 12px;
+      border-bottom: 2px solid var(--teal);
+    }
+
+    .reveal table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid #E5E7EB;
+      color: var(--body-gray);
+    }
+
+    .reveal table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* ── Scenario Card ── */
+
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 16px 0;
+    }
+
+    .scenario-card {
+      background: #ffffff;
+      border: 1.5px solid #E5E7EB;
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 0.72em;
+      line-height: 1.5;
+    }
+
+    .scenario-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--teal);
+      font-size: 1em;
+      margin: 0 0 4px 0;
+    }
+
+    .scenario-card .scenario-label {
+      font-size: 0.85em;
+      color: #9CA3AF;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+
+    .scenario-card p {
+      margin: 4px 0;
+      font-size: 1em;
+      color: var(--body-gray);
+    }
+
+    /* ── AEIOU Letter Styling ── */
+
+    .aeiou-letter {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--teal);
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Title -->
+      <section class="title-slide">
+        <div class="pre-title">Session 2</div>
+        <h1>Observation Debrief +<br>Team Formation</h1>
+        <div class="subtitle">Design Thinking for MBAs (Hybrid Section)</div>
+        <div class="footer">Saturday, March 7, 2026 &ensp;|&ensp; 8:00 AM &ensp;|&ensp; McNair Hall 216 &ensp;|&ensp; Faculty: Patrick Ray</div>
+      </section>
+
+      <!-- Slide 2: Welcome -->
+      <section>
+        <h2>Good Morning</h2>
+        <div class="title-underline"></div>
+        <p>Welcome to your first in-person session. Two halves today:</p>
+        <div class="two-col" style="margin-top: 16px;">
+          <div class="col">
+            <h3>Morning</h3>
+            <ul>
+              <li>Share and debrief your TETHER observations</li>
+              <li>Name the AEIOU framework</li>
+              <li>Practice problem framing</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Midday</h3>
+            <ul>
+              <li>Launch Project 2</li>
+              <li>Select scenarios and form teams</li>
+              <li>Begin initial team exploration</li>
+            </ul>
+          </div>
+        </div>
+        <div class="reminder" style="margin-top: 20px;">
+          <span class="label">Find the Duct Tape:</span> Have you spotted a workaround this week? Get it into your notebook.
+        </div>
+      </section>
+
+      <!-- Slide 3: Check-In -->
+      <section>
+        <h2>Check-In</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin: 0 0 12px 0;"><i data-lucide="message-circle"></i> <strong>Quick round the room:</strong></p>
+          <p style="margin: 0; font-size: 1.1em;">One surprising thing from your TETHER observation.</p>
+          <span class="time-tag"><i data-lucide="clock"></i> 10 minutes</span>
+        </div>
+        <div class="callout-box" style="font-style: normal;">
+          You each observed in a completely different environment. That diversity is the data.
+        </div>
+      </section>
+
+      <!-- Slide 4: TETHER Observation Sharing -->
+      <section>
+        <h2>Share Your Observations</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin: 0 0 12px 0;"><i data-lucide="eye"></i> <strong>Post your key observations on the wall</strong></p>
+          <ul>
+            <li>One observation per sticky note, or key findings on a sheet</li>
+            <li>Label with your name and location observed</li>
+          </ul>
+          <p style="margin: 16px 0 12px 0;"><strong>Then: Silent gallery walk.</strong> Read what everyone posted.</p>
+          <ul>
+            <li>Look for patterns across contexts</li>
+            <li>Look for what's unique to someone else's environment</li>
+          </ul>
+          <p style="margin: 16px 0 0 0;"><strong>Capture in your notebook:</strong> 3 patterns you noticed across observations. 1 thing someone else caught that you missed.</p>
+          <span class="time-tag"><i data-lucide="clock"></i> 30 minutes</span>
+        </div>
+      </section>
+
+      <!-- Slide 5: Debrief - What Did You Notice? -->
+      <section>
+        <h2>What Did You Notice?</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>What <span class="orange">patterns</span> emerged across your very different environments?</li>
+          <li>What did you notice about <strong>noticing</strong>? Was 90 minutes long enough? Too long?</li>
+          <li>How did your <strong>environment</strong> shape what you observed?</li>
+          <li>What did someone else catch that you <span class="orange">completely missed</span>?</li>
+          <li>Where did you slip from <strong>observing</strong> into <strong>interpreting</strong>?</li>
+        </ul>
+        <div class="callout-box" style="font-style: normal;">
+          "This is data from completely different worlds. A single-campus class can't produce this."
+        </div>
+      </section>
+
+      <!-- Slide 6: Name - AEIOU Framework -->
+      <section>
+        <h2>A Framework for Observation</h2>
+        <div class="title-underline"></div>
+        <p style="margin-bottom: 16px;">You already did this intuitively. Now let's name what you were doing.</p>
+        <div class="card-row" style="grid-template-columns: 1fr 1fr 1fr; margin-bottom: 16px;">
+          <div class="concept-card highlight">
+            <h3><span class="aeiou-letter">A</span>ctivities</h3>
+            <p>What are people doing?</p>
+          </div>
+          <div class="concept-card highlight">
+            <h3><span class="aeiou-letter">E</span>nvironments</h3>
+            <p>What is the space like?</p>
+          </div>
+          <div class="concept-card highlight">
+            <h3><span class="aeiou-letter">I</span>nteractions</h3>
+            <p>How do people engage with each other and objects?</p>
+          </div>
+        </div>
+        <div class="card-row" style="grid-template-columns: 1fr 1fr;">
+          <div class="concept-card highlight">
+            <h3><span class="aeiou-letter">O</span>bjects</h3>
+            <p>What things are present?</p>
+          </div>
+          <div class="concept-card highlight">
+            <h3><span class="aeiou-letter">U</span>sers</h3>
+            <p>Who are the people? What are their roles?</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 7: AEIOU Applied -->
+      <section>
+        <h2>Apply AEIOU to Your TETHER</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin: 0 0 12px 0;"><i data-lucide="notebook-pen"></i> <strong>Look at your TETHER notes.</strong></p>
+          <ul>
+            <li>Which of the five elements did you naturally gravitate toward?</li>
+            <li>Which did you miss entirely?</li>
+          </ul>
+          <span class="time-tag"><i data-lucide="clock"></i> 5 minutes</span>
+        </div>
+        <div class="callout-box" style="font-style: normal;">
+          AEIOU is a scaffold, not a rigid template. It helps you notice what you're not noticing.
+        </div>
+      </section>
+
+      <!-- Slide 8: Break -->
+      <section class="title-slide">
+        <h1>Break</h1>
+        <div class="subtitle">15 minutes. Stretch, refill coffee, decompress.</div>
+      </section>
+
+      <!-- Slide 9: Problem Framing -->
+      <section>
+        <h2>From Observation to Problem</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin: 0 0 12px 0;"><i data-lucide="pencil"></i> <strong>Individual work. Review your TETHER observations.</strong></p>
+          <ul>
+            <li>What problem did you observe?</li>
+            <li>Who experiences it?</li>
+            <li>What makes it persist?</li>
+          </ul>
+          <p style="margin: 16px 0 0 0;">Draft a preliminary problem statement:<br>
+          <em>"The problem I observed is __________ because __________."</em></p>
+          <span class="time-tag"><i data-lucide="clock"></i> 25 minutes</span>
+        </div>
+        <p style="margin-top: 12px; font-size: 0.78em; color: var(--dark-gray);">You're naming what you saw, not fixing it.</p>
+      </section>
+
+      <!-- Slide 10: Share Problem Framings -->
+      <section>
+        <h2>Share Problem Framings</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin: 0 0 12px 0;"><i data-lucide="users"></i> <strong>Small groups of 3-4.</strong></p>
+          <ul>
+            <li>Share your problem statement</li>
+            <li>What's the difference between a symptom and a root cause in what you described?</li>
+            <li>Where did you jump to solutions?</li>
+          </ul>
+          <span class="time-tag"><i data-lucide="clock"></i> 20 minutes</span>
+        </div>
+      </section>
+
+      <!-- Slide 11: Problem Framing Discussion -->
+      <section>
+        <h2>What Did We Hear?</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>What's the difference between a <span class="orange">symptom</span> and a <strong>root cause</strong>?</li>
+          <li>Where did you <strong>jump to solutions</strong>?</li>
+          <li>How did different contexts produce different problems?</li>
+        </ul>
+        <div class="callout-box" style="font-style: normal;">
+          These problems came from completely different environments, and yet some of the underlying dynamics are similar. That's synthesis at work.
+        </div>
+      </section>
+
+      <!-- Slide 12: Transition to Project 2 -->
+      <section class="title-slide">
+        <div class="pre-title" style="color: var(--orange);">Project 1 Complete</div>
+        <h1>Launching Project 2</h1>
+        <div class="subtitle">From individual observation to team design challenge</div>
+      </section>
+
+      <!-- Slide 13: Project 2 Arc -->
+      <section>
+        <h2>Where Project 2 Is Headed</h2>
+        <div class="title-underline"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>Session</th>
+              <th>What Happens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>2 (Today)</strong></td>
+              <td>Form teams, pick a scenario, map what you can access</td>
+            </tr>
+            <tr>
+              <td><strong>3</strong></td>
+              <td>Stakeholder mapping. Design your distributed research plan.</td>
+            </tr>
+            <tr>
+              <td><strong>Research Gap</strong></td>
+              <td>Two weeks of fieldwork. Each member researches in their own context.</td>
+            </tr>
+            <tr>
+              <td><strong>4</strong></td>
+              <td>Synthesize research, build causal loop map, define the problem</td>
+            </tr>
+            <tr>
+              <td><strong>5</strong></td>
+              <td>Present. Full arc from problem to solution. Stress test assumptions.</td>
+            </tr>
+            <tr>
+              <td><strong>6</strong></td>
+              <td>Reflect on the whole process</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout-box" style="font-style: normal;">
+          Five people, five different environments, five different perspectives on the same problem. That's the hybrid advantage.
+        </div>
+      </section>
+
+      <!-- Slide 14: Choosing Your Subject -->
+      <section>
+        <h2>Scenario vs. Subject</h2>
+        <div class="title-underline"></div>
+        <p style="margin-bottom: 16px;">A <strong>scenario</strong> is the broad problem space. A <strong>subject</strong> is your team's specific investigation within it.</p>
+        <div class="two-col">
+          <div class="col">
+            <h3>Examples</h3>
+            <ul>
+              <li><strong>Scenario A</strong> + Subject: "How do new nurses navigate their first rotation at a community hospital?"</li>
+              <li><strong>Scenario D</strong> + Subject: "Why do eligible families in one school district not use the free tutoring program?"</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>How to Choose Well</h3>
+            <ul>
+              <li>Pick a subject where your team can <span class="orange">access real stakeholders</span></li>
+              <li>Keep it bounded: one organization, one location, or one population</li>
+              <li>Follow genuine curiosity</li>
+              <li>Aim for no more than 3 stakeholder groups</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 15: Scenarios (Business) -->
+      <section>
+        <h2>Project 2 Scenarios: Business</h2>
+        <div class="title-underline"></div>
+        <div class="card-row" style="grid-template-columns: 1fr 1fr 1fr;">
+          <div class="concept-card">
+            <div class="card-label">Scenario A</div>
+            <h3>The First 90 Days</h3>
+            <p><em>How do new employees learn to navigate an organization?</em></p>
+            <p>What isn't taught? Who helps? What falls through the cracks?</p>
+          </div>
+          <div class="concept-card">
+            <div class="card-label">Scenario B</div>
+            <h3>Small Business Friction</h3>
+            <p><em>What makes running a small business harder than it needs to be?</em></p>
+            <p>What systems don't work together? What workarounds exist?</p>
+          </div>
+          <div class="concept-card">
+            <div class="card-label">Scenario C</div>
+            <h3>The Feedback Gap</h3>
+            <p><em>How do organizations learn what's not working?</em></p>
+            <p>How does feedback flow between customers, frontline staff, and decision-makers?</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 16: Scenarios (Nonprofit) -->
+      <section>
+        <h2>Project 2 Scenarios: Nonprofit</h2>
+        <div class="title-underline"></div>
+        <div class="card-row" style="grid-template-columns: 1fr 1fr 1fr;">
+          <div class="concept-card">
+            <div class="card-label">Scenario D</div>
+            <h3>Access Barriers</h3>
+            <p><em>Why can't people access services designed for them?</em></p>
+            <p>What prevents access? What constraints does each stakeholder group face?</p>
+          </div>
+          <div class="concept-card">
+            <div class="card-label">Scenario E</div>
+            <h3>The Volunteer Experience</h3>
+            <p><em>What makes volunteering sustainable, or not?</em></p>
+            <p>Why do volunteers stay or leave? What tensions exist?</p>
+          </div>
+          <div class="concept-card">
+            <div class="card-label">Scenario F</div>
+            <h3>Mission vs. Operations</h3>
+            <p><em>How do mission-driven organizations navigate competing pressures?</em></p>
+            <p>What trade-offs get made between mission impact and operational sustainability?</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 17: Scenario Selection -->
+      <section>
+        <h2>Choose Your Scenario</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin: 0 0 12px 0;"><i data-lucide="search"></i> <strong>Read the scenario one-pagers at each station.</strong></p>
+          <p style="margin: 0;">Think about who you could observe or interview in your world. Which scenario connects to people and environments you can actually reach?</p>
+          <span class="time-tag"><i data-lucide="clock"></i> 15 minutes</span>
+        </div>
+        <div class="callout-box" style="font-style: normal;">
+          Between the members of your future team, you can reach stakeholders in different cities, different industries, different organizations. Choose based on combined access.
+        </div>
+      </section>
+
+      <!-- Slide 18: Team Formation -->
+      <section>
+        <h2>Form Your Teams</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin: 0 0 12px 0;"><i data-lucide="users"></i> <strong>Move to the scenario station that interests you.</strong></p>
+          <ul>
+            <li>Target team size: ~5 people</li>
+            <li>We'll balance for size and diversity of contexts</li>
+            <li>Exchange contact info once teams are set</li>
+          </ul>
+          <span class="time-tag"><i data-lucide="clock"></i> 15 minutes</span>
+        </div>
+      </section>
+
+      <!-- Slide 19: Break -->
+      <section class="title-slide">
+        <h1>Break</h1>
+        <div class="subtitle">15 minutes. You'll need the energy for the next block.</div>
+      </section>
+
+      <!-- Slide 20: Team Work -->
+      <section>
+        <h2>Initial Team Exploration</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin: 0 0 12px 0;"><i data-lucide="users"></i> <strong>Work with your team. Start exploring your scenario.</strong></p>
+          <ol>
+            <li>What do you already know about this problem?</li>
+            <li>What assumptions are you making?</li>
+            <li>Who are potential stakeholders? (List at least 4-5, including at least one extreme user)</li>
+            <li>What contexts can each team member access? <span class="orange">Map your combined reach.</span></li>
+            <li>What don't you know that you need to find out?</li>
+          </ol>
+          <span class="time-tag"><i data-lucide="clock"></i> 45 minutes</span>
+        </div>
+      </section>
+
+      <!-- Slide 21: Combined Reach -->
+      <section>
+        <h2>Map Your Combined Reach</h2>
+        <div class="title-underline"></div>
+        <p style="margin-bottom: 16px;">Your team's diverse contexts are your research superpower.</p>
+        <div class="two-col">
+          <div class="col">
+            <h3>For Each Member</h3>
+            <ul>
+              <li>What workplaces can you access?</li>
+              <li>What neighborhoods or communities?</li>
+              <li>What organizations or industries?</li>
+              <li>Who do you know that connects to this scenario?</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>As a Team</h3>
+            <ul>
+              <li>Where do your contexts overlap?</li>
+              <li>Where are the gaps?</li>
+              <li>Which stakeholders can each person reach?</li>
+              <li>What specific <strong>subject</strong> within your scenario will you investigate?</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 22: Share Combined Reach -->
+      <section>
+        <h2>Share Your Combined Reach</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin: 0 0 12px 0;"><i data-lucide="presentation"></i> <strong>Each team: brief share-out.</strong></p>
+          <ul>
+            <li>Which scenario did you choose?</li>
+            <li>What's your subject within it?</li>
+            <li>What diverse contexts can your team tap?</li>
+          </ul>
+          <span class="time-tag"><i data-lucide="clock"></i> 20 minutes</span>
+        </div>
+      </section>
+
+      <!-- Slide 23: What's Next -->
+      <section class="closing-slide">
+        <h2>What's Next</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li><strong>Session 3</strong>: Thursday, March 12, 6:30 PM (Online, Zoom)</li>
+          <li>Stakeholder mapping and distributed research planning</li>
+          <li>Then: two-week research gap where each team member conducts fieldwork in their own context</li>
+        </ul>
+        <p style="margin-top: 20px;"><i data-lucide="file-text"></i> <strong>Due Session 3:</strong> Problem Reflection (400-600 words on your Project 1 observation experience)</p>
+        <p style="margin-top: 8px; font-size: 0.82em;">Start thinking about which stakeholders you can access. Session 3 is where you build the research plan.</p>
+        <div class="reminder">
+          <span class="label">Find the Duct Tape:</span> Each week, identify and document one workaround or improvised fix in your notebook.
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      progress: true,
+      center: false,
+      width: 1280,
+      height: 720,
+      margin: 0,
+      transition: 'fade',
+      transitionSpeed: 'fast',
+      controlsTutorial: false,
+      keyboard: true
+    });
+    lucide.createIcons();
+  </script>
+</body>
+</html>
