@@ -8,30 +8,36 @@
 
 - Sharing and comparing TETHER observations from diverse environments
 - The AEIOU framework (Activities, Environments, Interactions, Objects, Users)
+- METRORail field trip: live AEIOU observation
 - Moving from observation to problem identification
 - Project 2 scenarios and the full project arc (Sessions 2-6)
 - Team formation around shared scenario interest
 
 ## What We'll Do
 
-**Morning (8:00-10:20)**
-- Share TETHER observations with the class. Post key findings, walk the room, spot patterns across different contexts.
-- Debrief: What did you notice about noticing? What did others catch that you missed?
+**Morning Classroom (8:00-8:50)**
+- Share TETHER observations and duct tape findings with the class
 - Learn the AEIOU framework and apply it retroactively to your observations
-- Individual problem framing from your TETHER. Draft a preliminary problem statement.
-- Share problem framings in small groups
+- Prepare for a field trip
 
-**Midday (10:20-12:30)**
-- Preview the full Project 2 arc and the 6 scenarios (business and nonprofit)
+**Field Trip (8:50-9:30)**
+- Walk to the METRORail station, ride 3 stops north, and ride back
+- Practice AEIOU observation live on the transit system
+- Bring $1.25 fare (tap a credit card or phone at the platform validator)
+
+**Afternoon Classroom (9:45-12:30)**
+- Debrief field trip observations and draft problem statements
+- Hear the GE Adventure Series story and preview Project 2
 - Read scenario one-pagers and choose based on interest and access to stakeholders
 - Form teams (~5 people per scenario)
+- Practice empathy interviewing with your new team
 - Begin initial team exploration: What do you already know? Who can you access? Map your team's combined reach
-- Preview the research period and upcoming assignments
 
 ## What to Bring
 
 - Completed TETHER observation in your notebook (minimum 3-4 pages of raw observations + half-page reflection)
 - Notebook and pen
+- A way to pay $1.25 transit fare (credit card or phone with Apple Pay/Google Pay)
 
 ## Assignments
 

@@ -4,17 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Session 2: Observation Debrief + Team Formation</title>
-  <!-- Icons: Lucide (https://lucide.dev), ISC License -->
-  <!-- Presentation: reveal.js (https://revealjs.com), MIT License -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <style>
-    /* Build-Slides Theme
-       Shared design system for reveal.js course presentations.
-       Embedded into each HTML deck at generation time. */
-
     :root {
       --teal: #0D9488;
       --navy: #1E3A5F;
@@ -23,8 +16,6 @@
       --light-mint: #F0FDFA;
       --body-gray: #374151;
     }
-
-    /* ── Base ── */
 
     .reveal {
       font-family: 'Open Sans', sans-serif;
@@ -44,8 +35,7 @@
       background-image: radial-gradient(ellipse at top right, rgba(13, 148, 136, 0.04) 0%, transparent 60%);
     }
 
-    /* ── Slide Titles ── */
-
+    /* Slide titles */
     .reveal h2 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
@@ -63,8 +53,7 @@
       margin-bottom: 30px;
     }
 
-    /* ── Body Text ── */
-
+    /* Body text */
     .reveal p, .reveal li {
       font-size: 0.82em;
       line-height: 1.6;
@@ -109,8 +98,7 @@
       font-weight: 700;
     }
 
-    /* ── Emphasis ── */
-
+    /* Emphasis */
     .reveal strong {
       color: var(--navy);
       font-weight: 600;
@@ -121,8 +109,7 @@
       font-weight: 600;
     }
 
-    /* ── Activity Box (dark gray, white text) ── */
-
+    /* Activity box (dark gray with white text) */
     .reveal .activity-box {
       box-sizing: border-box;
       max-width: 100%;
@@ -161,8 +148,7 @@
       margin-top: 12px;
     }
 
-    /* ── Callout Box (light mint, teal border) ── */
-
+    /* Callout box (light mint with teal border) */
     .reveal .callout-box {
       background: var(--light-mint);
       border-left: 4px solid var(--teal);
@@ -175,14 +161,14 @@
       line-height: 1.5;
     }
 
-    /* ── Title Slide ── */
-
+    /* Title slide */
     .reveal .title-slide {
       text-align: center;
       display: flex !important;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      height: 100%;
     }
 
     .reveal .title-slide .pre-title {
@@ -216,8 +202,7 @@
       color: #9CA3AF;
     }
 
-    /* ── Two-Column Layout ── */
-
+    /* Two-column layout */
     .reveal .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -237,8 +222,58 @@
       margin-bottom: 8px;
     }
 
-    /* ── Checklist ── */
+    /* Three-column layout */
+    .reveal .three-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
 
+    .reveal .three-col .col {
+      font-size: 0.85em;
+    }
+
+    .reveal .three-col .col h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--teal);
+      font-size: 0.9em;
+      margin-bottom: 8px;
+    }
+
+    /* Phase box for course structure */
+    .reveal .phase-box {
+      background: var(--light-mint);
+      border-radius: 10px;
+      padding: 18px 20px;
+      text-align: center;
+    }
+
+    .reveal .phase-box .phase-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--teal);
+      font-size: 0.75em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .reveal .phase-box .phase-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 0.9em;
+      margin-bottom: 4px;
+    }
+
+    .reveal .phase-box .phase-sessions {
+      font-size: 0.72em;
+      color: var(--dark-gray);
+    }
+
+    /* Checklist */
     .reveal .checklist li::before {
       content: '';
       width: 14px;
@@ -254,30 +289,66 @@
       padding-left: 26px;
     }
 
-    /* ── Closing Slide ── */
+    /* Video label */
+    .reveal .video-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.65em;
+      color: var(--teal);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
 
+    /* Chat prompt box */
+    .reveal .chat-prompt {
+      background: rgba(13, 148, 136, 0.08);
+      border: 1px solid rgba(13, 148, 136, 0.25);
+      border-radius: 10px;
+      padding: 18px 24px;
+      margin: 16px 0;
+      font-size: 0.82em;
+      text-align: center;
+      color: var(--navy);
+    }
+
+    .reveal .chat-prompt .chat-icon {
+      font-size: 0.7em;
+      color: var(--teal);
+      font-weight: 600;
+      margin-bottom: 6px;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    /* Closing slide */
     .reveal .closing-slide {
       display: flex !important;
       flex-direction: column;
       justify-content: center;
     }
 
-    /* ── Progress Bar ── */
+    .reveal .closing-footer {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--teal);
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
 
+    /* Progress bar */
     .reveal .progress {
       color: var(--teal);
     }
 
-    /* ── Slide Number ── */
-
+    /* Slide number */
     .reveal .slide-number {
       font-family: 'Montserrat', sans-serif;
       font-size: 12px;
       color: #9CA3AF;
     }
 
-    /* ── Find the Duct Tape Reminder (MGMT 625) ── */
-
+    /* Find the Duct Tape reminder */
     .reveal .reminder {
       display: inline-block;
       background: rgba(249, 115, 22, 0.08);
@@ -294,101 +365,20 @@
       color: var(--orange);
     }
 
-    /* ── Term Boxes (jargon chips) ── */
-
-    .term-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin: 16px 0;
-    }
-
-    .term-box {
-      background: var(--light-mint);
-      border: 1.5px solid var(--teal);
-      border-radius: 8px;
-      padding: 10px 18px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      font-size: 0.78em;
-      color: var(--navy);
-    }
-
-    /* ── Concept Cards ── */
-
-    .card-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin: 16px 0;
-    }
-
-    .card-row.three-col {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .concept-card {
-      background: #ffffff;
-      border: 1.5px solid #E5E7EB;
+    /* Silence indicator */
+    .reveal .silence-box {
+      background: #1E293B;
+      color: #94A3B8;
       border-radius: 10px;
-      padding: 20px 22px;
-      font-size: 0.78em;
-      line-height: 1.55;
-    }
-
-    .concept-card h3 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      color: var(--teal);
-      font-size: 1.05em;
-      margin: 0 0 8px 0;
-    }
-
-    .concept-card p {
-      margin: 4px 0;
-      font-size: 1em;
-    }
-
-    .concept-card .card-label {
-      font-size: 0.85em;
-      color: #9CA3AF;
-      text-transform: uppercase;
+      padding: 24px 32px;
+      margin: 20px 0;
+      text-align: center;
+      font-size: 0.82em;
+      font-style: italic;
       letter-spacing: 1px;
-      margin-bottom: 4px;
     }
 
-    .concept-card.highlight {
-      border-color: var(--teal);
-      background: var(--light-mint);
-    }
-
-    /* ── Lucide Icon Defaults ── */
-
-    .reveal .activity-box i[data-lucide] {
-      width: 18px;
-      height: 18px;
-      color: #ffffff;
-      vertical-align: middle;
-      margin-right: 6px;
-    }
-
-    .reveal .callout-box i[data-lucide] {
-      width: 16px;
-      height: 16px;
-      color: var(--teal);
-      vertical-align: middle;
-      margin-right: 4px;
-    }
-
-    .reveal i[data-lucide] {
-      width: 20px;
-      height: 20px;
-      color: var(--teal);
-      vertical-align: middle;
-    }
-
-    /* ── Schedule table ── */
-
+    /* Schedule table */
     .reveal table {
       width: 100%;
       border-collapse: collapse;
@@ -415,55 +405,67 @@
       border-bottom: none;
     }
 
-    /* ── Scenario Card ── */
-
-    .scenario-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin: 16px 0;
-    }
-
-    .scenario-card {
-      background: #ffffff;
-      border: 1.5px solid #E5E7EB;
-      border-radius: 10px;
-      padding: 16px 20px;
-      font-size: 0.72em;
-      line-height: 1.5;
-    }
-
-    .scenario-card h3 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      color: var(--teal);
-      font-size: 1em;
-      margin: 0 0 4px 0;
-    }
-
-    .scenario-card .scenario-label {
-      font-size: 0.85em;
-      color: #9CA3AF;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 4px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-    }
-
-    .scenario-card p {
-      margin: 4px 0;
-      font-size: 1em;
-      color: var(--body-gray);
-    }
-
-    /* ── AEIOU Letter Styling ── */
-
-    .aeiou-letter {
+    /* TETHER acronym styling */
+    .reveal .tether-letter {
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       color: var(--teal);
       font-size: 1.1em;
+    }
+
+    /* Design abilities: highlighted vs not */
+    .reveal .ability-active {
+      background: var(--teal);
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 10px 16px;
+      margin-bottom: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.78em;
+    }
+
+    .reveal .ability-inactive {
+      background: #F3F4F6;
+      color: #9CA3AF;
+      border-radius: 8px;
+      padding: 10px 16px;
+      margin-bottom: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 0.78em;
+    }
+
+    /* Scenario card */
+    .reveal .scenario-card {
+      background: var(--light-mint);
+      border-radius: 10px;
+      padding: 20px 22px;
+      font-size: 0.82em;
+    }
+
+    .reveal .scenario-card .scenario-label {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--teal);
+      font-size: 0.8em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .reveal .scenario-card .scenario-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 1em;
+      margin-bottom: 6px;
+    }
+
+    .reveal .scenario-card p {
+      margin: 0;
+      font-size: 0.92em;
+      color: var(--body-gray);
     }
   </style>
 </head>
@@ -476,423 +478,517 @@
         <div class="pre-title">Session 2</div>
         <h1>Observation Debrief +<br>Team Formation</h1>
         <div class="subtitle">Design Thinking for MBAs (Hybrid Section)</div>
-        <div class="footer">Saturday, March 7, 2026 &ensp;|&ensp; 8:00 AM &ensp;|&ensp; McNair Hall 216 &ensp;|&ensp; Faculty: Patrick Ray</div>
+        <div class="footer">Saturday, March 7, 2026 &ensp;|&ensp; 8:00 AM &ensp;|&ensp; In-Person (McNair Hall 216) &ensp;|&ensp; Faculty: Patrick Ray</div>
       </section>
 
-      <!-- Slide 2: Welcome -->
+      <!-- Slide 2: Today's Plan -->
       <section>
-        <h2>Good Morning</h2>
+        <h2>Today's Plan</h2>
         <div class="title-underline"></div>
-        <p>Welcome to your first in-person session. Two halves today:</p>
+        <div class="three-col">
+          <div class="col">
+            <div class="phase-box">
+              <div class="phase-label">Morning</div>
+              <div class="phase-name">Observation Tools</div>
+              <div class="phase-sessions">Duct Tape debrief, AEIOU framework</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="phase-box">
+              <div class="phase-label">Field Trip</div>
+              <div class="phase-name">AEIOU Live</div>
+              <div class="phase-sessions">METRORail ride, paired observation</div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="phase-box">
+              <div class="phase-label">Afternoon</div>
+              <div class="phase-name">Project 2 Launch</div>
+              <div class="phase-sessions">Scenarios, teams, research planning</div>
+            </div>
+          </div>
+        </div>
+        <p style="margin-top: 28px;">Three arcs, one through-line: learning to see what's actually happening before deciding what it means.</p>
+      </section>
+
+      <!-- Slide 3: Find the Duct Tape -->
+      <section>
+        <h2>Find the Duct Tape</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin: 0 0 16px 0;">You've been looking for workarounds and improvised fixes since Session 1. <strong>What did you find?</strong></p>
+          <ol style="margin-top: 12px;">
+            <li>What's the fix?</li>
+            <li>What's the real problem underneath?</li>
+            <li>Why hasn't the real fix happened?</li>
+          </ol>
+          <div class="time-tag">3-4 volunteers share with the class</div>
+        </div>
+      </section>
+
+      <!-- Slide 4: AEIOU Framework -->
+      <section>
+        <h2>AEIOU: An Observation Framework</h2>
+        <div class="title-underline"></div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; margin-bottom: 16px;">
+          <div style="font-size: 0.78em; line-height: 1.55;">
+            <strong style="color: var(--teal); font-family: 'Montserrat', sans-serif; font-size: 1.1em;">A</strong><strong> = Activities</strong><br>
+            What are people doing? Tasks, routines, sequences?
+          </div>
+          <div style="font-size: 0.78em; line-height: 1.55;">
+            <strong style="color: var(--teal); font-family: 'Montserrat', sans-serif; font-size: 1.1em;">E</strong><strong> = Environments</strong><br>
+            What's the space like? How does it shape behavior?
+          </div>
+          <div style="font-size: 0.78em; line-height: 1.55;">
+            <strong style="color: var(--teal); font-family: 'Montserrat', sans-serif; font-size: 1.1em;">I</strong><strong> = Interactions</strong><br>
+            Between people? Between people and objects or systems?
+          </div>
+          <div style="font-size: 0.78em; line-height: 1.55;">
+            <strong style="color: var(--teal); font-family: 'Montserrat', sans-serif; font-size: 1.1em;">O</strong><strong> = Objects</strong><br>
+            What tools, artifacts, devices are present? What's missing?
+          </div>
+          <div style="font-size: 0.78em; line-height: 1.55;">
+            <strong style="color: var(--teal); font-family: 'Montserrat', sans-serif; font-size: 1.1em;">U</strong><strong> = Users</strong><br>
+            Who's here? Who's NOT here? Different types?
+          </div>
+        </div>
+        <div class="callout-box" style="font-style: normal;">
+          In consulting, this is one way to structure a site visit. In product development, it's a useful lens for documenting user behavior.
+        </div>
+      </section>
+
+      <!-- Slide 5: AEIOU Applied -->
+      <section>
+        <h2>AEIOU Applied</h2>
+        <div class="title-underline"></div>
+        <p>Look at your TETHER notes. Which of these five did you naturally gravitate toward? Which did you miss?</p>
+        <div class="chat-prompt" style="margin-top: 20px;">
+          <div class="chat-icon">REFLECT</div>
+          Most people over-index on Activities and under-index on Environment and Users. Where did you land?
+        </div>
+        <div class="callout-box" style="font-style: normal; margin-top: 20px;">
+          <strong>Design Ability: Move Between Concrete and Abstract.</strong> AEIOU helps you do this. You zoom into a specific interaction, then zoom out to ask what it means for the system.
+        </div>
+      </section>
+
+      <!-- Slide 6: Train Ride Instructions -->
+      <section>
+        <h2>Train Ride: AEIOU in the Field</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin: 0 0 14px 0;">You just learned the AEIOU framework from your own notes. <strong>Now use it live.</strong></p>
+          <ul style="margin-top: 8px;">
+            <li>Pair up. You'll observe together and compare notes after.</li>
+            <li>Use AEIOU on everything you see: the walk, the platform, the train, the riders, the stations.</li>
+            <li>We ride 3 stops north and come back. About an hour total.</li>
+            <li>One question to hold: <strong>who was this system designed for, and who's using it right now?</strong></li>
+          </ul>
+        </div>
+        <div class="reminder" style="margin-top: 12px;">
+          <span class="label">Fare note:</span> Tap a credit card or phone at the platform validator before boarding ($1.25).
+        </div>
+      </section>
+
+      <!-- Field Trip Debrief -->
+      <section>
+        <h2>Field Trip Debrief</h2>
+        <div class="title-underline"></div>
+        <div class="two-col">
+          <div class="col">
+            <div class="activity-box" style="margin: 0;">
+              <p style="margin: 0 0 8px 0;"><strong>Share AEIOU observations</strong></p>
+              <ul>
+                <li>What did you notice in each category?</li>
+                <li>What surprised you?</li>
+                <li>Who was this system designed for, and who's using it right now?</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <div class="chat-prompt" style="text-align: left; margin: 0;">
+              <div class="chat-icon" style="text-align: left;">DISCUSS</div>
+              <ul style="margin: 8px 0 0 0; font-size: 0.95em;">
+                <li>How was observing on a train different from your TETHER?</li>
+                <li>What did the E category reveal about the U category?</li>
+                <li>Turn one observation into a problem statement: "The problem is X <span class="orange">because</span> Y."</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 7a: GE Adventure Series - The Problem -->
+      <section>
+        <div class="video-label">GE Adventure Series &ensp;|&ensp; <a href="https://www.ideou.com/blogs/inspiration/from-design-thinking-to-creative-confidence" target="_blank" style="color: var(--teal); text-decoration: none; font-size: 0.85em;">Source: IDEO U</a></div>
+        <h2>The Problem</h2>
+        <div class="title-underline"></div>
+        <div class="two-col" style="align-items: center;">
+          <div class="col">
+            <ul>
+              <li><strong>Doug Dietz</strong>, industrial designer at GE Healthcare. Two years designing a new MRI scanner.</li>
+              <li>Went to see it installed. Watched a little girl walking toward his machine, crying. A nurse was waiting with sedation.</li>
+              <li><strong>80% of pediatric patients</strong> required sedation. Not because the scan hurt. Because the experience was terrifying.</li>
+            </ul>
+            <div class="callout-box" style="font-style: normal; margin-bottom: 0;">
+              A cold room, loud sounds, a giant machine, strange instructions from strangers.
+            </div>
+          </div>
+          <div class="col" style="text-align: center;">
+            <img src="mri-standard.jpg" alt="Standard MRI scanner in a clinical room" style="width: 100%; border-radius: 8px;">
+            <p style="font-size: 0.6em; color: var(--dark-gray); margin-top: 6px;">What a child sees walking into this room.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 7b: GE Adventure Series - The Observation -->
+      <section>
+        <div class="video-label">GE Adventure Series</div>
+        <h2>The Observation</h2>
+        <div class="title-underline"></div>
+        <ul>
+          <li>Dietz went to Stanford's d.school, learned design thinking, then went back to the field.</li>
+          <li>But not to the hospital first. He went to a <strong>daycare</strong>. Watched how kids interact with unfamiliar environments.</li>
+          <li>Shadowed child life specialists. Interviewed families, doctors, nurses, technicians.</li>
+        </ul>
+        <div class="callout-box" style="font-style: normal; margin-top: 20px;">
+          Key finding: The machine wasn't the problem. The room was the problem. The hallway was the problem. The entire environment was designed for the machine, not for the person inside it.
+        </div>
+      </section>
+
+      <!-- Slide 7c: GE Adventure Series - The Solution -->
+      <section>
+        <div class="video-label">GE Adventure Series</div>
+        <h2>The Solution</h2>
+        <div class="title-underline"></div>
+        <div class="two-col" style="align-items: center;">
+          <div class="col">
+            <ul>
+              <li>Themed decals on existing rooms: pirate ships, jungle safaris, space voyages</li>
+              <li>Technicians got scripts: "Hold very still so the pirates don't find you."</li>
+              <li>Same machine. Completely different experience.</li>
+              <li><strong>Sedation rates: 80% down to roughly 10%.</strong> Patient satisfaction up 90%.</li>
+            </ul>
+          </div>
+          <div class="col">
+            <img src="ge-adventure-pirate.jpg" alt="GE Adventure Series: Pirate Room CT Scanner" style="width: 100%; max-height: 320px; object-fit: cover; border-radius: 8px;">
+          </div>
+        </div>
+        <div class="callout-box" style="font-style: normal;">
+          The fix cost a fraction of a hardware redesign. That's what observation can do.
+        </div>
+      </section>
+
+      <!-- Slide 7d: GE Adventure Series - The Rooms -->
+      <section>
+        <div class="video-label">GE Adventure Series</div>
+        <h2>Same Machine, Different Room</h2>
+        <div class="title-underline"></div>
+        <div class="two-col" style="gap: 20px;">
+          <div class="col">
+            <img src="ge-adventure-mri.jpg" alt="GE Adventure Series: Space Adventure MRI" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 8px;">
+            <p style="font-size: 0.65em; color: var(--dark-gray); margin-top: 6px; text-align: center;">Space Adventure</p>
+          </div>
+          <div class="col">
+            <img src="ge-adventure-series.jpg" alt="GE Adventure Series: Train Adventure MRI" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 8px;">
+            <p style="font-size: 0.65em; color: var(--dark-gray); margin-top: 6px; text-align: center;">City Adventure</p>
+          </div>
+        </div>
+        <p style="margin-top: 16px; text-align: center; font-size: 0.82em; color: var(--navy); font-weight: 600;">The entire environment was designed for the machine, not for the person inside it.</p>
+        <p style="margin-top: 12px; text-align: center; font-size: 0.65em; color: var(--dark-gray);">Read the full story: <a href="https://www.ideou.com/blogs/inspiration/from-design-thinking-to-creative-confidence" target="_blank" style="color: var(--teal);">From Design Thinking to Creative Confidence</a> (IDEO U)</p>
+      </section>
+
+      <!-- Slide 8: Project 2 Overview -->
+      <section>
+        <h2>Project 2: The Journey</h2>
+        <div class="title-underline"></div>
+        <div style="display: flex; align-items: center; gap: 0; margin-top: 16px; margin-bottom: 24px;">
+          <div style="background: var(--teal); color: #fff; border-radius: 8px; padding: 12px 14px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.62em; flex: 1;">Today<br><span style="font-weight: 400; font-size: 0.9em;">Teams +<br>Scenarios</span></div>
+          <div style="color: var(--teal); font-size: 1.4em; padding: 0 4px;">&#8594;</div>
+          <div style="background: var(--teal); color: #fff; border-radius: 8px; padding: 12px 14px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.62em; flex: 1;">Session 3<br><span style="font-weight: 400; font-size: 0.9em;">Stakeholder Map +<br>Research Plan</span></div>
+          <div style="color: var(--teal); font-size: 1.4em; padding: 0 4px;">&#8594;</div>
+          <div style="background: var(--teal); color: #fff; border-radius: 8px; padding: 12px 14px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.62em; flex: 1;">2 Weeks<br><span style="font-weight: 400; font-size: 0.9em;">Distributed<br>Fieldwork</span></div>
+          <div style="color: var(--teal); font-size: 1.4em; padding: 0 4px;">&#8594;</div>
+          <div style="background: var(--teal); color: #fff; border-radius: 8px; padding: 12px 14px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.62em; flex: 1;">Session 4<br><span style="font-weight: 400; font-size: 0.9em;">Synthesize +<br>Causal Loops</span></div>
+          <div style="color: var(--teal); font-size: 1.4em; padding: 0 4px;">&#8594;</div>
+          <div style="background: var(--teal); color: #fff; border-radius: 8px; padding: 12px 14px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.62em; flex: 1;">Session 5<br><span style="font-weight: 400; font-size: 0.9em;">Present +<br>Stress Test</span></div>
+          <div style="color: var(--teal); font-size: 1.4em; padding: 0 4px;">&#8594;</div>
+          <div style="background: var(--teal); color: #fff; border-radius: 8px; padding: 12px 14px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.62em; flex: 1;">Session 6<br><span style="font-weight: 400; font-size: 0.9em;">Reflect</span></div>
+        </div>
+        <p style="font-size: 0.78em; color: var(--dark-gray);">Your team picks a scenario today, investigates it in the field, then presents a systems-level analysis of what you found.</p>
+      </section>
+
+      <!-- Slide 9: All Scenarios -->
+      <section>
+        <h2>Project 2 Scenarios</h2>
+        <div class="title-underline"></div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px;">
+          <div class="scenario-card" style="padding: 14px 16px;">
+            <div class="scenario-label" style="font-size: 0.7em;">Scenario A</div>
+            <div class="scenario-name" style="font-size: 0.88em;">The First 90 Days</div>
+            <p style="font-size: 0.78em;">How do new employees learn to navigate an organization?</p>
+          </div>
+          <div class="scenario-card" style="padding: 14px 16px;">
+            <div class="scenario-label" style="font-size: 0.7em;">Scenario B</div>
+            <div class="scenario-name" style="font-size: 0.88em;">Small Business Friction</div>
+            <p style="font-size: 0.78em;">What makes running a small business harder than it needs to be?</p>
+          </div>
+          <div class="scenario-card" style="padding: 14px 16px;">
+            <div class="scenario-label" style="font-size: 0.7em;">Scenario C</div>
+            <div class="scenario-name" style="font-size: 0.88em;">The Feedback Gap</div>
+            <p style="font-size: 0.78em;">How do organizations learn what's not working?</p>
+          </div>
+          <div class="scenario-card" style="padding: 14px 16px;">
+            <div class="scenario-label" style="font-size: 0.7em;">Scenario D</div>
+            <div class="scenario-name" style="font-size: 0.88em;">Access Barriers</div>
+            <p style="font-size: 0.78em;">Why can't people access services designed for them?</p>
+          </div>
+          <div class="scenario-card" style="padding: 14px 16px;">
+            <div class="scenario-label" style="font-size: 0.7em;">Scenario E</div>
+            <div class="scenario-name" style="font-size: 0.88em;">Volunteer Experience</div>
+            <p style="font-size: 0.78em;">What makes volunteering sustainable, or not?</p>
+          </div>
+          <div class="scenario-card" style="padding: 14px 16px;">
+            <div class="scenario-label" style="font-size: 0.7em;">Scenario F</div>
+            <div class="scenario-name" style="font-size: 0.88em;">Mission vs. Operations</div>
+            <p style="font-size: 0.78em;">How do mission-driven organizations navigate competing pressures?</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 10: Choosing Your Subject -->
+      <section>
+        <h2>Choosing Your Subject</h2>
+        <div class="title-underline"></div>
+        <p style="margin-bottom: 16px;">A <span class="orange">scenario</span> is a broad problem space. A <span class="orange">subject</span> is your team's specific investigation within it.</p>
         <div class="two-col" style="margin-top: 16px;">
           <div class="col">
-            <h3>Morning</h3>
-            <ul>
-              <li>Share and debrief your TETHER observations</li>
-              <li>Name the AEIOU framework</li>
-              <li>Practice problem framing</li>
-            </ul>
+            <div class="callout-box" style="font-style: normal; margin: 0;">
+              <p style="margin: 0 0 8px 0;"><strong>Good subjects are:</strong></p>
+              <ul>
+                <li>Bounded: one organization, one location, or one population</li>
+                <li>Accessible: you can reach real stakeholders</li>
+                <li>Curious: you genuinely want to know the answer</li>
+              </ul>
+            </div>
           </div>
           <div class="col">
-            <h3>Midday</h3>
-            <ul>
-              <li>Launch Project 2</li>
-              <li>Select scenarios and form teams</li>
-              <li>Begin initial team exploration</li>
-            </ul>
+            <div style="font-size: 0.78em; line-height: 1.6;">
+              <p style="margin: 0 0 6px 0;"><strong>Examples:</strong></p>
+              <p style="margin: 0 0 4px 0;"><span class="orange">A</span> + "How do new nurses navigate their first rotation at a community hospital?"</p>
+              <p style="margin: 0 0 4px 0;"><span class="orange">B</span> + "What operational workarounds do independent coffee shop owners rely on daily?"</p>
+              <p style="margin: 0 0 4px 0;"><span class="orange">D</span> + "Why do eligible families in one school district not use the free tutoring program?"</p>
+            </div>
           </div>
         </div>
-        <div class="reminder" style="margin-top: 20px;">
-          <span class="label">Find the Duct Tape:</span> Have you spotted a workaround this week? Get it into your notebook.
-        </div>
+        <p style="margin-top: 16px; font-size: 0.82em;">Your team's combined geography, industries, and networks are your research advantage. Map them before you pick.</p>
       </section>
 
-      <!-- Slide 3: Check-In -->
+      <!-- Slide 11: Interview Practice - Activity -->
       <section>
-        <h2>Check-In</h2>
+        <h2>Activity: The "Why?" Interview</h2>
         <div class="title-underline"></div>
-        <div class="activity-box">
-          <p style="margin: 0 0 12px 0;"><i data-lucide="message-circle"></i> <strong>Quick round the room:</strong></p>
-          <p style="margin: 0; font-size: 1.1em;">One surprising thing from your TETHER observation.</p>
-          <span class="time-tag"><i data-lucide="clock"></i> 10 minutes</span>
-        </div>
-        <div class="callout-box" style="font-style: normal;">
-          You each observed in a completely different environment. That diversity is the data.
-        </div>
-      </section>
-
-      <!-- Slide 4: TETHER Observation Sharing -->
-      <section>
-        <h2>Share Your Observations</h2>
-        <div class="title-underline"></div>
-        <div class="activity-box">
-          <p style="margin: 0 0 12px 0;"><i data-lucide="eye"></i> <strong>Post your key observations on the wall</strong></p>
-          <ul>
-            <li>One observation per sticky note, or key findings on a sheet</li>
-            <li>Label with your name and location observed</li>
-          </ul>
-          <p style="margin: 16px 0 12px 0;"><strong>Then: Silent gallery walk.</strong> Read what everyone posted.</p>
-          <ul>
-            <li>Look for patterns across contexts</li>
-            <li>Look for what's unique to someone else's environment</li>
-          </ul>
-          <p style="margin: 16px 0 0 0;"><strong>Capture in your notebook:</strong> 3 patterns you noticed across observations. 1 thing someone else caught that you missed.</p>
-          <span class="time-tag"><i data-lucide="clock"></i> 30 minutes</span>
-        </div>
-      </section>
-
-      <!-- Slide 5: Debrief - What Did You Notice? -->
-      <section>
-        <h2>What Did You Notice?</h2>
-        <div class="title-underline"></div>
-        <ul>
-          <li>What <span class="orange">patterns</span> emerged across your very different environments?</li>
-          <li>What did you notice about <strong>noticing</strong>? Was 90 minutes long enough? Too long?</li>
-          <li>How did your <strong>environment</strong> shape what you observed?</li>
-          <li>What did someone else catch that you <span class="orange">completely missed</span>?</li>
-          <li>Where did you slip from <strong>observing</strong> into <strong>interpreting</strong>?</li>
-        </ul>
-        <div class="callout-box" style="font-style: normal;">
-          "This is data from completely different worlds. A single-campus class can't produce this."
-        </div>
-      </section>
-
-      <!-- Slide 6: Name - AEIOU Framework -->
-      <section>
-        <h2>A Framework for Observation</h2>
-        <div class="title-underline"></div>
-        <p style="margin-bottom: 16px;">You already did this intuitively. Now let's name what you were doing.</p>
-        <div class="card-row" style="grid-template-columns: 1fr 1fr 1fr; margin-bottom: 16px;">
-          <div class="concept-card highlight">
-            <h3><span class="aeiou-letter">A</span>ctivities</h3>
-            <p>What are people doing?</p>
-          </div>
-          <div class="concept-card highlight">
-            <h3><span class="aeiou-letter">E</span>nvironments</h3>
-            <p>What is the space like?</p>
-          </div>
-          <div class="concept-card highlight">
-            <h3><span class="aeiou-letter">I</span>nteractions</h3>
-            <p>How do people engage with each other and objects?</p>
-          </div>
-        </div>
-        <div class="card-row" style="grid-template-columns: 1fr 1fr;">
-          <div class="concept-card highlight">
-            <h3><span class="aeiou-letter">O</span>bjects</h3>
-            <p>What things are present?</p>
-          </div>
-          <div class="concept-card highlight">
-            <h3><span class="aeiou-letter">U</span>sers</h3>
-            <p>Who are the people? What are their roles?</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Slide 7: AEIOU Applied -->
-      <section>
-        <h2>Apply AEIOU to Your TETHER</h2>
-        <div class="title-underline"></div>
-        <div class="activity-box">
-          <p style="margin: 0 0 12px 0;"><i data-lucide="notebook-pen"></i> <strong>Look at your TETHER notes.</strong></p>
-          <ul>
-            <li>Which of the five elements did you naturally gravitate toward?</li>
-            <li>Which did you miss entirely?</li>
-          </ul>
-          <span class="time-tag"><i data-lucide="clock"></i> 5 minutes</span>
-        </div>
-        <div class="callout-box" style="font-style: normal;">
-          AEIOU is a scaffold, not a rigid template. It helps you notice what you're not noticing.
-        </div>
-      </section>
-
-      <!-- Slide 8: Break -->
-      <section class="title-slide">
-        <h1>Break</h1>
-        <div class="subtitle">15 minutes. Stretch, refill coffee, decompress.</div>
-      </section>
-
-      <!-- Slide 9: Problem Framing -->
-      <section>
-        <h2>From Observation to Problem</h2>
-        <div class="title-underline"></div>
-        <div class="activity-box">
-          <p style="margin: 0 0 12px 0;"><i data-lucide="pencil"></i> <strong>Individual work. Review your TETHER observations.</strong></p>
-          <ul>
-            <li>What problem did you observe?</li>
-            <li>Who experiences it?</li>
-            <li>What makes it persist?</li>
-          </ul>
-          <p style="margin: 16px 0 0 0;">Draft a preliminary problem statement:<br>
-          <em>"The problem I observed is __________ because __________."</em></p>
-          <span class="time-tag"><i data-lucide="clock"></i> 25 minutes</span>
-        </div>
-        <p style="margin-top: 12px; font-size: 0.78em; color: var(--dark-gray);">You're naming what you saw, not fixing it.</p>
-      </section>
-
-      <!-- Slide 10: Share Problem Framings -->
-      <section>
-        <h2>Share Problem Framings</h2>
-        <div class="title-underline"></div>
-        <div class="activity-box">
-          <p style="margin: 0 0 12px 0;"><i data-lucide="users"></i> <strong>Small groups of 3-4.</strong></p>
-          <ul>
-            <li>Share your problem statement</li>
-            <li>What's the difference between a symptom and a root cause in what you described?</li>
-            <li>Where did you jump to solutions?</li>
-          </ul>
-          <span class="time-tag"><i data-lucide="clock"></i> 20 minutes</span>
-        </div>
-      </section>
-
-      <!-- Slide 11: Problem Framing Discussion -->
-      <section>
-        <h2>What Did We Hear?</h2>
-        <div class="title-underline"></div>
-        <ul>
-          <li>What's the difference between a <span class="orange">symptom</span> and a <strong>root cause</strong>?</li>
-          <li>Where did you <strong>jump to solutions</strong>?</li>
-          <li>How did different contexts produce different problems?</li>
-        </ul>
-        <div class="callout-box" style="font-style: normal;">
-          These problems came from completely different environments, and yet some of the underlying dynamics are similar. That's synthesis at work.
-        </div>
-      </section>
-
-      <!-- Slide 12: Transition to Project 2 -->
-      <section class="title-slide">
-        <div class="pre-title" style="color: var(--orange);">Project 1 Complete</div>
-        <h1>Launching Project 2</h1>
-        <div class="subtitle">From individual observation to team design challenge</div>
-      </section>
-
-      <!-- Slide 13: Project 2 Arc -->
-      <section>
-        <h2>Where Project 2 Is Headed</h2>
-        <div class="title-underline"></div>
-        <table>
-          <thead>
-            <tr>
-              <th>Session</th>
-              <th>What Happens</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>2 (Today)</strong></td>
-              <td>Form teams, pick a scenario, map what you can access</td>
-            </tr>
-            <tr>
-              <td><strong>3</strong></td>
-              <td>Stakeholder mapping. Design your distributed research plan.</td>
-            </tr>
-            <tr>
-              <td><strong>Research Gap</strong></td>
-              <td>Two weeks of fieldwork. Each member researches in their own context.</td>
-            </tr>
-            <tr>
-              <td><strong>4</strong></td>
-              <td>Synthesize research, build causal loop map, define the problem</td>
-            </tr>
-            <tr>
-              <td><strong>5</strong></td>
-              <td>Present. Full arc from problem to solution. Stress test assumptions.</td>
-            </tr>
-            <tr>
-              <td><strong>6</strong></td>
-              <td>Reflect on the whole process</td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="callout-box" style="font-style: normal;">
-          Five people, five different environments, five different perspectives on the same problem. That's the hybrid advantage.
-        </div>
-      </section>
-
-      <!-- Slide 14: Choosing Your Subject -->
-      <section>
-        <h2>Scenario vs. Subject</h2>
-        <div class="title-underline"></div>
-        <p style="margin-bottom: 16px;">A <strong>scenario</strong> is the broad problem space. A <strong>subject</strong> is your team's specific investigation within it.</p>
+        <p style="margin-bottom: 12px;">In TETHER and on the train, you practiced observation: watching without asking. Now you add a new tool: the <strong>empathy interview</strong>.</p>
         <div class="two-col">
           <div class="col">
-            <h3>Examples</h3>
-            <ul>
-              <li><strong>Scenario A</strong> + Subject: "How do new nurses navigate their first rotation at a community hospital?"</li>
-              <li><strong>Scenario D</strong> + Subject: "Why do eligible families in one school district not use the free tutoring program?"</li>
-            </ul>
+            <div class="activity-box" style="margin: 0;">
+              <p style="margin: 0 0 8px 0; font-size: 0.85em; opacity: 0.8;">ROUND 1</p>
+              <p style="margin: 0 0 10px 0;"><strong>Silent Listening</strong></p>
+              <p style="margin: 0 0 10px 0;">Ask your partner: "Tell me about a time you had to figure something out with no instructions."</p>
+              <p style="margin: 0;">Your partner talks. <strong>You only listen.</strong> No words, no follow-ups. Just nods, eye contact, leaning in. 2 min, then switch roles.</p>
+            </div>
           </div>
           <div class="col">
-            <h3>How to Choose Well</h3>
-            <ul>
-              <li>Pick a subject where your team can <span class="orange">access real stakeholders</span></li>
-              <li>Keep it bounded: one organization, one location, or one population</li>
-              <li>Follow genuine curiosity</li>
-              <li>Aim for no more than 3 stakeholder groups</li>
-            </ul>
+            <div class="activity-box" style="margin: 0;">
+              <p style="margin: 0 0 8px 0; font-size: 0.85em; opacity: 0.8;">ROUND 2</p>
+              <p style="margin: 0 0 10px 0;"><strong>Only "Why?"</strong></p>
+              <p style="margin: 0 0 10px 0;">Same topic, same partner. After each response, you can only ask "Why?"</p>
+              <p style="margin: 0;">Nothing else. Just "Why?" 2 min each.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Slide 15: Scenarios (Business) -->
+      <!-- Slide 12: Interview Reflection -->
       <section>
-        <h2>Project 2 Scenarios: Business</h2>
+        <h2>Reflection: The "Why?" Interview</h2>
         <div class="title-underline"></div>
-        <div class="card-row" style="grid-template-columns: 1fr 1fr 1fr;">
-          <div class="concept-card">
-            <div class="card-label">Scenario A</div>
-            <h3>The First 90 Days</h3>
-            <p><em>How do new employees learn to navigate an organization?</em></p>
-            <p>What isn't taught? Who helps? What falls through the cracks?</p>
-          </div>
-          <div class="concept-card">
-            <div class="card-label">Scenario B</div>
-            <h3>Small Business Friction</h3>
-            <p><em>What makes running a small business harder than it needs to be?</em></p>
-            <p>What systems don't work together? What workarounds exist?</p>
-          </div>
-          <div class="concept-card">
-            <div class="card-label">Scenario C</div>
-            <h3>The Feedback Gap</h3>
-            <p><em>How do organizations learn what's not working?</em></p>
-            <p>How does feedback flow between customers, frontline staff, and decision-makers?</p>
-          </div>
+        <ul>
+          <li>How did that feel? What was challenging?</li>
+          <li>When did the conversation get <span class="orange">interesting</span>?</li>
+          <li>What surprised you about what you heard?</li>
+          <li>How did silence change the dynamic?</li>
+          <li>Which round produced more <span class="orange">honest</span> responses?</li>
+        </ul>
+        <div class="callout-box" style="font-style: normal; margin-top: 16px;">
+          Most people find Round 1 harder but more productive. Silence creates space for the other person to think. That discomfort is where the real answers live.
         </div>
       </section>
 
-      <!-- Slide 16: Scenarios (Nonprofit) -->
+      <!-- Slide 13: Empathy Interview Principles -->
       <section>
-        <h2>Project 2 Scenarios: Nonprofit</h2>
+        <h2>Empathy Interview Principles</h2>
         <div class="title-underline"></div>
-        <div class="card-row" style="grid-template-columns: 1fr 1fr 1fr;">
-          <div class="concept-card">
-            <div class="card-label">Scenario D</div>
-            <h3>Access Barriers</h3>
-            <p><em>Why can't people access services designed for them?</em></p>
-            <p>What prevents access? What constraints does each stakeholder group face?</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+          <div style="background: var(--light-mint); border-radius: 10px; padding: 16px 20px;">
+            <p style="margin: 0 0 4px 0; font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--teal); font-size: 0.75em; letter-spacing: 1px;">LISTEN</p>
+            <p style="margin: 0; font-size: 0.78em;"><strong>More than you talk.</strong> Your job is to understand their world, not explain yours.</p>
           </div>
-          <div class="concept-card">
-            <div class="card-label">Scenario E</div>
-            <h3>The Volunteer Experience</h3>
-            <p><em>What makes volunteering sustainable, or not?</em></p>
-            <p>Why do volunteers stay or leave? What tensions exist?</p>
+          <div style="background: var(--light-mint); border-radius: 10px; padding: 16px 20px;">
+            <p style="margin: 0 0 4px 0; font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--teal); font-size: 0.75em; letter-spacing: 1px;">FOLLOW CURIOSITY</p>
+            <p style="margin: 0; font-size: 0.78em;">When something surprises you, go deeper. <strong>"Tell me more about that."</strong></p>
           </div>
-          <div class="concept-card">
-            <div class="card-label">Scenario F</div>
-            <h3>Mission vs. Operations</h3>
-            <p><em>How do mission-driven organizations navigate competing pressures?</em></p>
-            <p>What trade-offs get made between mission impact and operational sustainability?</p>
+          <div style="background: var(--light-mint); border-radius: 10px; padding: 16px 20px;">
+            <p style="margin: 0 0 4px 0; font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--teal); font-size: 0.75em; letter-spacing: 1px;">STORIES, NOT OPINIONS</p>
+            <p style="margin: 0; font-size: 0.78em;"><span class="orange">"Tell me about a time when..."</span> beats "What do you think about..."</p>
+          </div>
+          <div style="background: var(--light-mint); border-radius: 10px; padding: 16px 20px;">
+            <p style="margin: 0 0 4px 0; font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--teal); font-size: 0.75em; letter-spacing: 1px;">EMBRACE SILENCE</p>
+            <p style="margin: 0; font-size: 0.78em;">After they answer, <strong>wait</strong>. They'll often fill the silence with something more interesting.</p>
+          </div>
+          <div style="background: var(--light-mint); border-radius: 10px; padding: 16px 20px; grid-column: 1 / -1;">
+            <p style="margin: 0 0 4px 0; font-family: 'Montserrat', sans-serif; font-weight: 700; color: var(--teal); font-size: 0.75em; letter-spacing: 1px;">NO LEADING QUESTIONS</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 0.78em;">
+              <p style="margin: 0;"><span style="color: #DC2626;">&#10007;</span> "What's frustrating about X?"</p>
+              <p style="margin: 0;"><span style="color: var(--teal);">&#10003;</span> "How do you experience X?"</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Slide 17: Scenario Selection -->
+      <!-- Scoping Guide -->
       <section>
-        <h2>Choose Your Scenario</h2>
+        <h2>Scoping Your Investigation</h2>
         <div class="title-underline"></div>
-        <div class="activity-box">
-          <p style="margin: 0 0 12px 0;"><i data-lucide="search"></i> <strong>Read the scenario one-pagers at each station.</strong></p>
-          <p style="margin: 0;">Think about who you could observe or interview in your world. Which scenario connects to people and environments you can actually reach?</p>
-          <span class="time-tag"><i data-lucide="clock"></i> 15 minutes</span>
+        <div class="two-col">
+          <div class="col">
+            <div class="callout-box" style="font-style: normal; margin: 0; background: #FEF2F2; border-left-color: #EF4444;">
+              <p style="margin: 0 0 8px 0; color: #DC2626;"><strong>Too Broad</strong></p>
+              <ul>
+                <li>"How do nonprofits work?"</li>
+                <li>"What's wrong with healthcare?"</li>
+                <li>"Why is onboarding broken?"</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <div class="callout-box" style="font-style: normal; margin: 0;">
+              <p style="margin: 0 0 8px 0; color: var(--teal);"><strong>Well-Scoped</strong></p>
+              <ul>
+                <li>"How do new nurses navigate their first rotation at a community hospital?"</li>
+                <li>"Why do eligible families in one district not use free tutoring?"</li>
+                <li>"What workarounds do food truck owners use daily?"</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="callout-box" style="font-style: normal;">
-          Between the members of your future team, you can reach stakeholders in different cities, different industries, different organizations. Choose based on combined access.
-        </div>
+        <p style="margin-top: 16px; font-size: 0.82em;"><strong>The test:</strong> Can you name the specific person you'd interview? Can you get to them in two weeks? If yes, your scope is right.</p>
       </section>
 
-      <!-- Slide 18: Team Formation -->
+      <!-- Slide 14: Team Work Phase 1 -->
       <section>
-        <h2>Form Your Teams</h2>
-        <div class="title-underline"></div>
-        <div class="activity-box">
-          <p style="margin: 0 0 12px 0;"><i data-lucide="users"></i> <strong>Move to the scenario station that interests you.</strong></p>
-          <ul>
-            <li>Target team size: ~5 people</li>
-            <li>We'll balance for size and diversity of contexts</li>
-            <li>Exchange contact info once teams are set</li>
-          </ul>
-          <span class="time-tag"><i data-lucide="clock"></i> 15 minutes</span>
-        </div>
-      </section>
-
-      <!-- Slide 19: Break -->
-      <section class="title-slide">
-        <h1>Break</h1>
-        <div class="subtitle">15 minutes. You'll need the energy for the next block.</div>
-      </section>
-
-      <!-- Slide 20: Team Work -->
-      <section>
-        <h2>Initial Team Exploration</h2>
+        <h2>Team Work: Map What You Know</h2>
         <div class="title-underline"></div>
         <div class="activity-box">
-          <p style="margin: 0 0 12px 0;"><i data-lucide="users"></i> <strong>Work with your team. Start exploring your scenario.</strong></p>
-          <ol>
-            <li>What do you already know about this problem?</li>
-            <li>What assumptions are you making?</li>
-            <li>Who are potential stakeholders? (List at least 4-5, including at least one extreme user)</li>
-            <li>What contexts can each team member access? <span class="orange">Map your combined reach.</span></li>
-            <li>What don't you know that you need to find out?</li>
+          <p style="margin: 0 0 8px 0; font-size: 0.85em; opacity: 0.8;">PHASE 1 (15 min)</p>
+          <ol style="margin-top: 8px;">
+            <li>What do you already know about this problem? Write it down.</li>
+            <li>What assumptions are you making? Be honest about what you're guessing.</li>
+            <li>Who are 4-5 potential stakeholders? Think beyond the obvious. Include at least one <span style="color: var(--orange);">extreme user</span>: someone at the edges of this system.</li>
           </ol>
-          <span class="time-tag"><i data-lucide="clock"></i> 45 minutes</span>
+        </div>
+        <div class="callout-box" style="font-style: normal; margin-top: 12px;">
+          An extreme user experiences the problem at higher intensity or frequency than most. A daily bus rider, not an occasional one. A first-week employee, not a five-year veteran.
         </div>
       </section>
 
-      <!-- Slide 21: Combined Reach -->
+      <!-- Slide 15: Team Work Phase 2 -->
       <section>
-        <h2>Map Your Combined Reach</h2>
-        <div class="title-underline"></div>
-        <p style="margin-bottom: 16px;">Your team's diverse contexts are your research superpower.</p>
-        <div class="two-col">
-          <div class="col">
-            <h3>For Each Member</h3>
-            <ul>
-              <li>What workplaces can you access?</li>
-              <li>What neighborhoods or communities?</li>
-              <li>What organizations or industries?</li>
-              <li>Who do you know that connects to this scenario?</li>
-            </ul>
-          </div>
-          <div class="col">
-            <h3>As a Team</h3>
-            <ul>
-              <li>Where do your contexts overlap?</li>
-              <li>Where are the gaps?</li>
-              <li>Which stakeholders can each person reach?</li>
-              <li>What specific <strong>subject</strong> within your scenario will you investigate?</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Slide 22: Share Combined Reach -->
-      <section>
-        <h2>Share Your Combined Reach</h2>
+        <h2>Team Work: Map Your Reach</h2>
         <div class="title-underline"></div>
         <div class="activity-box">
-          <p style="margin: 0 0 12px 0;"><i data-lucide="presentation"></i> <strong>Each team: brief share-out.</strong></p>
-          <ul>
-            <li>Which scenario did you choose?</li>
-            <li>What's your subject within it?</li>
-            <li>What diverse contexts can your team tap?</li>
-          </ul>
-          <span class="time-tag"><i data-lucide="clock"></i> 20 minutes</span>
+          <p style="margin: 0 0 8px 0; font-size: 0.85em; opacity: 0.8;">PHASE 2 (15 min)</p>
+          <p style="margin: 0 0 12px 0;">Go around the team. Each person answers:</p>
+          <ol style="margin-top: 8px;">
+            <li>Where do you work? What organizations are you connected to?</li>
+            <li>What neighborhoods, cities, or communities do you move through?</li>
+            <li>Who could you realistically observe or interview in the next two weeks?</li>
+          </ol>
+          <p style="margin: 12px 0 0 0;">Build a combined map of your team's access. This is your research asset.</p>
         </div>
       </section>
 
-      <!-- Slide 23: What's Next -->
-      <section class="closing-slide">
-        <h2>What's Next</h2>
+      <!-- Slide 16: Team Work Phase 3 -->
+      <section>
+        <h2>Team Work: Pick Your Subject</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p style="margin: 0 0 8px 0; font-size: 0.85em; opacity: 0.8;">PHASE 3 (15 min)</p>
+          <p style="margin: 0 0 12px 0;">Given your stakeholders and your combined reach, what specific subject will you investigate?</p>
+          <ul style="margin-top: 8px;">
+            <li>Write your subject in <strong>one sentence</strong>.</li>
+            <li>Test it: Can you name the type of person you'd talk to? If not, it's too broad.</li>
+            <li>Test it: Could you investigate this in two weeks? If not, narrow it.</li>
+          </ul>
+        </div>
+        <div class="callout-box" style="font-style: normal; margin-top: 12px;">
+          "The scenario is the space. The subject is where you go within it." Your subject should be specific enough that you know who to talk to and where to observe.
+        </div>
+      </section>
+
+      <!-- Slide 17: Looking Ahead -->
+      <section>
+        <h2>Looking Ahead</h2>
         <div class="title-underline"></div>
         <ul>
-          <li><strong>Session 3</strong>: Thursday, March 12, 6:30 PM (Online, Zoom)</li>
-          <li>Stakeholder mapping and distributed research planning</li>
-          <li>Then: two-week research gap where each team member conducts fieldwork in their own context</li>
+          <li><strong>Problem Reflection</strong> due Session 3 (400-600 words on your observation experience)</li>
+          <li><strong>Session 3</strong>: Thursday, March 12, 6:30-8:00 PM, online (Zoom)</li>
+          <li>Focus: Stakeholder mapping and distributed research planning</li>
+          <li>Exchange contact info with your team before you leave today</li>
         </ul>
-        <p style="margin-top: 20px;"><i data-lucide="file-text"></i> <strong>Due Session 3:</strong> Problem Reflection (400-600 words on your Project 1 observation experience)</p>
-        <p style="margin-top: 8px; font-size: 0.82em;">Start thinking about which stakeholders you can access. Session 3 is where you build the research plan.</p>
-        <div class="reminder">
-          <span class="label">Find the Duct Tape:</span> Each week, identify and document one workaround or improvised fix in your notebook.
+        <div class="callout-box" style="font-style: normal; margin-top: 16px;">
+          Between now and Session 3, keep your notebook active. Find the Duct Tape entries, observations from your daily context, questions about your scenario. The notebook is your research instrument.
         </div>
+      </section>
+
+      <!-- Design Abilities Progress -->
+      <section>
+        <h2>Design Abilities: Today's Progress</h2>
+        <div class="title-underline"></div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px; margin-top: 8px;">
+          <div class="ability-active" style="padding: 10px 16px 12px;">
+            <strong>Learn From Others</strong>
+            <div style="font-weight: 400; font-size: 0.85em; margin-top: 4px; opacity: 0.85;">TETHER debrief, field trip observation, interview practice</div>
+          </div>
+          <div class="ability-active" style="padding: 10px 16px 12px;">
+            <strong>Synthesize Information</strong>
+            <div style="font-weight: 400; font-size: 0.85em; margin-top: 4px; opacity: 0.85;">Comparing notes, problem framing from observations</div>
+          </div>
+          <div class="ability-active" style="padding: 10px 16px 12px;">
+            <strong>Move Between Concrete and Abstract</strong>
+            <div style="font-weight: 400; font-size: 0.85em; margin-top: 4px; opacity: 0.85;">AEIOU framework, field trip debrief</div>
+          </div>
+          <div class="ability-active" style="padding: 10px 16px 12px;">
+            <strong>Navigate Ambiguity</strong>
+            <div style="font-weight: 400; font-size: 0.85em; margin-top: 4px; opacity: 0.85;">Team formation, scoping a problem you don't understand yet</div>
+          </div>
+          <div class="ability-inactive">Experiment Rapidly</div>
+          <div class="ability-inactive">Build and Craft Intentionally</div>
+          <div class="ability-inactive">Communicate Deliberately</div>
+        </div>
+      </section>
+
+      <!-- Slide 15: Closing -->
+      <section class="closing-slide">
+        <h2>Before You Go</h2>
+        <div class="title-underline"></div>
+        <div class="reminder" style="display: block; margin-bottom: 20px;">
+          <span class="label">Find the Duct Tape:</span> Keep collecting workarounds this week.
+        </div>
+        <ul>
+          <li>Make sure you have your team's contact info</li>
+          <li>Problem Reflection: 400-600 words, due Session 3</li>
+          <li>Session 3: Thursday, March 12, 6:30 PM, Zoom</li>
+        </ul>
       </section>
 
     </div>
@@ -909,11 +1005,8 @@
       height: 720,
       margin: 0,
       transition: 'fade',
-      transitionSpeed: 'fast',
-      controlsTutorial: false,
-      keyboard: true
+      transitionSpeed: 'default'
     });
-    lucide.createIcons();
   </script>
 </body>
 </html>

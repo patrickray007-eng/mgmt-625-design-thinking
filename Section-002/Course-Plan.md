@@ -271,13 +271,13 @@
 >
 > **Saturday, March 7, 2026 | 8:00 AM-12:30 PM | In-Person (McNair Hall 216)**
 >
-> **Primary Design Abilities:** Learn From Others, Synthesize Information
+> **Primary Design Abilities:** Learn From Others, Synthesize Information, Move Between Concrete and Abstract, Navigate Ambiguity
 >
 > ### Learning Objectives
 >
 > By the end of this session, learners will be able to:
 > - Share and compare observations from diverse environments
-> - Apply the AEIOU framework as a scaffold for observation
+> - Apply the AEIOU framework live in an unfamiliar context
 > - Synthesize individual observations into preliminary problem framings
 > - Form teams around shared scenario interest
 > - Begin stakeholder identification for Project 2
@@ -290,24 +290,24 @@
 >
 > | Time | Min | Activity |
 > |------|-----|----------|
-> | 8:00 | 15 | OPENING: Welcome, settle in, coffee. Quick check-in: one surprising thing from your TETHER observation. Reminder: Find the Duct Tape entries in your notebook. |
-> | 8:15 | 30 | EXPLORE: TETHER Debrief. Share key observations at tables or in pairs. What patterns emerge across diverse contexts? What's unique to specific environments? |
-> | 8:45 | 20 | MAKE SENSE: Debrief. What did you notice about noticing? What did you miss that others caught? How did your environment shape what you observed? |
-> | 9:05 | 15 | NAME: Introduce AEIOU framework (Activities, Environments, Interactions, Objects, Users). Apply retroactively to TETHER observations. |
-> | 9:20 | 15 | BREAK |
-> | 9:35 | 25 | EXPLORE: Problem Framing. Individually: What problem did you observe? Who experiences it? What makes it persist? Draft a preliminary problem statement from your TETHER. |
-> | 10:00 | 20 | MAKE SENSE: Share problem framings in small groups. What's the difference between a symptom and a root cause? Where did you jump to solutions? |
-> | 10:20 | 10 | TRANSITION: Project 1 complete. Introduce Project 2 scenarios. |
-> | 10:30 | 15 | EXPLORE: Scenario Selection. Present 6 scenarios. Learners read one-pagers, consider which connects to contexts they can access. |
-> | 10:45 | 15 | TEAM FORMATION: Learners move to scenario stations. Instructor balances teams for size and diversity of contexts represented. |
-> | 11:00 | 15 | BREAK |
-> | 11:15 | 45 | TEAM WORK: Initial exploration. What do you already know/assume? Who are potential stakeholders? What contexts can each team member access for research? Map your team's combined reach. |
-> | 12:00 | 20 | CLOSE: Teams share their "combined reach"—the diverse contexts they can tap. Preview Session 3 and the research gap. Remind: Problem Reflection due Session 3. |
-> | 12:20 | 10 | Wrap-up and departure. |
+> | 8:00 | 10 | OPENING: Welcome, settle in, coffee. Quick check-in. Frame the day: classroom, field trip, Project 2 launch. |
+> | 8:10 | 10 | FIND THE DUCT TAPE: "You've been looking for workarounds since Session 1. What did you find?" 3-4 students share. |
+> | 8:20 | 15 | MAKE SENSE: TETHER Debrief. Pairs share, then 4-5 volunteers with full group. **Design Ability: Learn From Others.** |
+> | 8:35 | 10 | NAME: AEIOU framework. Apply retroactively to TETHER. **Design Ability: Move Between Concrete and Abstract.** |
+> | 8:45 | 5 | Field trip briefing. Pairs, AEIOU on everything you see. "We ride 3 stops north and come back." |
+> | 8:50 | 70 | Train ride: AEIOU in the field. Walk to station, board 9:09 northbound, 3 stops north, board 9:36 southbound back, walk to McNair. First live AEIOU application. Question to hold: "Who was this system designed for, and who's using it right now?" |
+> | 10:00 | 10 | BREAK 1 |
+> | 10:10 | 20 | Field trip debrief + problem framing. Share AEIOU findings, name the space knob, draft problem statements. **Design Ability: Synthesize Information.** |
+> | 10:30 | 20 | GE Adventure Series story. "He assumed the problem was the machine. It was the room." Bridge to Project 2 arc. Present 6 scenarios on slides. |
+> | 10:50 | 15 | TEAM FORMATION: Move to scenario stations. Instructor balances for size and diversity. Exchange contact info. |
+> | 11:05 | 10 | BREAK 2 |
+> | 11:15 | 15 | EXPLORE: "Why?" Interview Practice. Silent listening round + "why?" only round in new teams. **Design Ability: Learn From Others.** |
+> | 11:30 | 45 | TEAM WORK: What do you know/assume? Stakeholders? Combined reach? Specific subject? **Design Ability: Navigate Ambiguity.** |
+> | 12:15 | 15 | CLOSE: Teams share combined reach. Preview Session 3. Problem Reflection due Session 3. Design abilities recap: 4 of 7. |
 >
 > ### Materials
-> - Sticky notes, markers
-> - Scenario one-pagers (6 options)
+> - Slide deck (AEIOU framework, GE Adventure Series, field trip instructions, scenario one-pagers)
+> - Pen and notebook (students bring their own)
 >
 > ### Due This Session
 > - TETHER observation (in notebook)
@@ -340,8 +340,9 @@
 >
 > | Time | Min | Activity |
 > |------|-----|----------|
-> | 6:30 | 10 | OPENING: Quick team check-ins. Any shifts in thinking since Session 2? Brief discussion of Problem Reflections. Reminder: Continue your weekly Find the Duct Tape entries in your notebook. |
-> | 6:40 | 25 | EXPLORE: Stakeholder Mapping. Teams in breakout rooms. Identify 4-5 stakeholders including at least one extreme user. For each: What do they optimize for? What constraints do they face? |
+> | 6:30 | 5 | OPENING: Quick team check-ins. Any shifts in thinking since Session 2? Brief discussion of Problem Reflections. |
+> | 6:35 | 10 | FIND THE DUCT TAPE: "What did you find this week?" 3-4 students share workarounds or improvised fixes. Bridge: "These workarounds are exactly what you'll be looking for in stakeholder research." |
+> | 6:45 | 20 | EXPLORE: Stakeholder Mapping. Teams in breakout rooms. Identify 4-5 stakeholders including at least one extreme user. For each: What do they optimize for? What constraints do they face? |
 > | 7:05 | 15 | MAKE SENSE: Return to main room. Each team shares one stakeholder they almost forgot. Why do we overlook certain stakeholders? |
 > | 7:20 | 5 | FRAME: Introduce the two-week research period. Your team's superpower: diverse contexts. Each member can access different stakeholders, different environments. |
 > | 7:25 | 25 | EXPLORE: Research Planning. Back to breakout rooms. Who can each team member reach? What observation or interviews will each person conduct? Create a research plan that leverages your distributed reach. |
@@ -411,10 +412,11 @@
 >
 > | Time | Min | Activity |
 > |------|-----|----------|
-> | 6:30 | 5 | OPENING: "You've spent two weeks in the field. What did you find?" Reminder: Continue your weekly Find the Duct Tape entries in your notebook. |
-> | 6:35 | 20 | EXPLORE: Research Synthesis. Teams in breakout rooms. Share findings from distributed research. What patterns emerged? What surprised you? Where did different contexts reveal different facets of the problem? |
-> | 6:55 | 15 | MAKE SENSE: Causal Loop Sharing. Each team presents their causal loop map (2-3 min each). What feedback loops did you identify? Who benefits if this problem persists? |
-> | 7:10 | 20 | EXPLORE: Problem Definition. Teams finalize their problem statement. Must be: bounded, specific, traceable to research, and actionable. |
+> | 6:30 | 5 | OPENING: "You've been in the field for two weeks. Tonight we move from data to insight to problem definition." |
+> | 6:35 | 15 | FIND THE DUCT TAPE: "What duct tape did you find in the field? What workarounds are people using in your problem spaces?" 4-5 students share. Bridge: "Every workaround tells you where the system is failing. That's where your causal loops start." |
+> | 6:50 | 15 | EXPLORE: Research Synthesis. Teams in breakout rooms. Share findings from distributed research. What patterns emerged? What surprised you? Where did different contexts reveal different facets of the problem? |
+> | 7:05 | 10 | MAKE SENSE: Causal Loop Sharing. Each team presents their causal loop map (2-3 min each). What feedback loops did you identify? Who benefits if this problem persists? |
+> | 7:15 | 15 | EXPLORE: Problem Definition. Teams finalize their problem statement. Must be: bounded, specific, traceable to research, and actionable. |
 > | 7:30 | 10 | MAKE SENSE: Quick peer critique. Teams share problem statements in chat. Instructor pushes back on anything too broad or vague. |
 > | 7:40 | 15 | EXPLORE: Permission to Ideate. Rapid ideation: generate 8-10 solution concepts in 10 minutes. No filtering. Then identify 2-3 to develop further. Frame as testable hypotheses. |
 > | 7:55 | 5 | CLOSE: Preview Session 5 (Final Presentations). What to prepare. Reminder: Problem Definition document due before Session 5. |
@@ -460,8 +462,9 @@
 >
 > | Time | Min | Activity |
 > |------|-----|----------|
-> | 8:00 | 15 | OPENING: Settle in, coffee. Frame the day: presentations, then stress testing. "Show your thinking, show your evidence." Reminder: Continue your weekly Find the Duct Tape entries in your notebook. |
-> | 8:15 | 90 | PRESENTATIONS: Final team presentations. ~7 teams x 13 min (8-10 min present + 4-5 min Q&A and stress testing). Focus: problem definition, solution hypotheses, traceability to distributed research. |
+> | 8:00 | 10 | OPENING: Settle in, coffee. Frame the day: presentations, then stress testing. "Show your thinking, show your evidence." |
+> | 8:10 | 15 | FIND THE DUCT TAPE: Last duct tape review of the course. "Let's hear the best ones." 4-5 students share. Discussion: what patterns do you see across the room's collection? Bridge to presentations. |
+> | 8:25 | 85 | PRESENTATIONS: Final team presentations. ~7 teams x 13 min (8-10 min present + 4-5 min Q&A and stress testing). Focus: problem definition, solution hypotheses, traceability to distributed research. |
 > | 9:45 | 15 | BREAK |
 > | 10:00 | 20 | MAKE SENSE: What made presentations compelling? Where was problem-to-solution traceability strongest? How did diverse research contexts enrich the work? |
 > | 10:20 | 20 | EXPLORE: Assumption Audit. Teams identify 5 critical assumptions their solution depends on. Rank by "if this is wrong, our concept fails." |
@@ -506,9 +509,10 @@
 >
 > | Time | Min | Activity |
 > |------|-----|----------|
-> | 6:30 | 10 | OPENING: "We've covered a lot of ground in 15 hours. Let's make sense of what you're taking with you." |
-> | 6:40 | 20 | REFLECT: Individual writing (or verbal reflection in breakout pairs). Prompts: Which design ability surprised you? Where did you struggle? What's one thing you'll do differently in your work? Look back at your Find the Duct Tape entries. What patterns do you see? |
-> | 7:00 | 20 | SHARE: Return to main room. Volunteers share reflections. Instructor draws out themes. What patterns emerge across the cohort? Surface connections between Duct Tape entries and course themes. |
+> | 6:30 | 5 | OPENING: "We've covered a lot of ground in 15 hours. Let's make sense of what you're taking with you." |
+> | 6:35 | 15 | FIND THE DUCT TAPE: The Full Collection. "Open your notebooks. You've been collecting these for six weeks. What themes do you see? What do your duct tape entries tell you about how systems fail and how people adapt?" 3-4 students share an entry that stuck with them, then discuss patterns. Bridge: "This practice costs nothing and trains your eye. You can do it forever." |
+> | 6:50 | 15 | REFLECT: Individual writing (or verbal reflection in breakout pairs). Prompts: Which design ability surprised you? Where did you struggle? What's one thing you'll do differently in your work? |
+> | 7:05 | 15 | SHARE: Return to main room. Volunteers share reflections. Instructor draws out themes. What patterns emerge across the cohort? |
 > | 7:20 | 15 | CONNECT: Design thinking in professional practice. Where does "Navigate Ambiguity" show up in your work? When do you need to "Learn From Others"? Concrete applications. |
 > | 7:35 | 10 | SYNTHESIZE: Hybrid Format Reflection. How did distributed research across diverse contexts change the work? What would have been lost with a single-context approach? |
 > | 7:45 | 10 | CLOSE: Instructor synthesis. The 7 abilities as ongoing practice, not a one-time process. Invitation to stay connected. |
