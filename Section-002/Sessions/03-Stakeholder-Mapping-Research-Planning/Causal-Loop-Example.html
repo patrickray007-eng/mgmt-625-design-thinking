@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Causal Loop Example: 99 Ranch Food Court</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --teal: #0D9488;
+      --navy: #1E3A5F;
+      --orange: #F97316;
+      --dark-gray: #4B5563;
+      --light-mint: #F0FDFA;
+      --body-gray: #374151;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #ffffff;
+      color: var(--body-gray);
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      min-height: 100vh;
+      padding: 10px 20px;
+    }
+    .slide { max-width: 1320px; width: 100%; }
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.5em;
+      margin-bottom: 2px;
+    }
+    .title-underline {
+      width: 70px; height: 4px;
+      background: var(--teal);
+      border-radius: 2px;
+      margin-bottom: 3px;
+    }
+    .subtitle {
+      font-size: 0.82em;
+      color: var(--dark-gray);
+      margin-bottom: 4px;
+    }
+    .legend {
+      display: flex; gap: 18px;
+      margin-bottom: 2px;
+      font-size: 0.75em;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+    .legend-item { display: flex; align-items: center; gap: 5px; }
+    .legend-swatch { width: 24px; height: 4px; border-radius: 2px; }
+    .diagram-container { width: 100%; margin: 0 auto 4px; }
+    .diagram-container svg { width: 100%; height: auto; }
+    .bottom-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .observation-box {
+      background: var(--light-mint);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+      padding: 8px 12px;
+      font-size: 0.74em;
+      color: var(--navy);
+      line-height: 1.45;
+    }
+    .observation-box h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600; color: var(--teal);
+      font-size: 0.88em; margin-bottom: 3px;
+    }
+    .who-benefits {
+      background: var(--dark-gray);
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 8px 12px;
+      font-size: 0.74em;
+      line-height: 1.45;
+    }
+    .who-benefits h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600; color: var(--orange);
+      font-size: 0.88em; margin-bottom: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <h2>Causal Loop Example</h2>
+    <div class="title-underline"></div>
+    <p class="subtitle">From a TETHER observation at 99 Ranch Food Court, Houston</p>
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-swatch" style="background:#0D9488;"></div>
+        <span style="color:#0D9488;">Reinforcing (R1, R2)</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-swatch" style="background:#F97316;"></div>
+        <span style="color:#F97316;">Balancing (B1, B2)</span>
+      </div>
+      <div class="legend-item" style="color:#6B7280; font-weight:400;">
+        (+) same direction &nbsp; (&minus;) opposite direction
+      </div>
+    </div>
+
+    <div class="diagram-container">
+      <svg viewBox="0 0 1320 540" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="at" viewBox="0 0 10 10" refX="9" refY="5"
+                  markerWidth="9" markerHeight="9" orient="auto">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#0D9488"/>
+          </marker>
+          <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5"
+                  markerWidth="9" markerHeight="9" orient="auto">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#F97316"/>
+          </marker>
+          <filter id="sh" x="-4%" y="-4%" width="108%" height="116%">
+            <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.08"/>
+          </filter>
+        </defs>
+
+        <!-- ========== R1 ARROWS (teal, solid) ========== -->
+        <!-- 1→2 -->
+        <path d="M 685,50 C 745,42 778,88 798,133" fill="none" stroke="#0D9488" stroke-width="3.5" marker-end="url(#at)"/>
+        <!-- 2→3 -->
+        <path d="M 935,184 C 965,255 965,305 935,359" fill="none" stroke="#0D9488" stroke-width="3.5" marker-end="url(#at)"/>
+        <!-- 3→4 -->
+        <path d="M 800,405 C 765,440 725,465 687,480" fill="none" stroke="#0D9488" stroke-width="3.5" marker-end="url(#at)"/>
+        <!-- 4→5 -->
+        <path d="M 435,480 C 390,465 350,440 309,405" fill="none" stroke="#0D9488" stroke-width="3.5" marker-end="url(#at)"/>
+        <!-- 5→6 -->
+        <path d="M 175,359 C 145,305 145,255 175,186" fill="none" stroke="#0D9488" stroke-width="3.5" marker-end="url(#at)"/>
+        <!-- 6→1 -->
+        <path d="M 300,133 C 330,88 368,42 433,50" fill="none" stroke="#0D9488" stroke-width="3.5" marker-end="url(#at)"/>
+
+        <!-- ========== R2 ARROWS (teal, dashed) ========== -->
+        <!-- 1→9: arcs high above Node 2 then descends to Node 9 -->
+        <path d="M 685,30 C 850,-15 1120,10 1175,240" fill="none" stroke="#0D9488" stroke-width="3.5" stroke-dasharray="10,5" marker-end="url(#at)"/>
+        <!-- 9→3 -->
+        <path d="M 1175,299 C 1170,335 1120,365 1062,385" fill="none" stroke="#0D9488" stroke-width="3.5" stroke-dasharray="10,5" marker-end="url(#at)"/>
+
+        <!-- ========== B1 ARROWS (orange, solid) ========== -->
+        <!-- 4→7 -->
+        <path d="M 478,469 C 474,420 470,380 466,341" fill="none" stroke="#F97316" stroke-width="3.5" marker-end="url(#ao)"/>
+        <!-- 7→3 -->
+        <path d="M 585,308 C 660,312 740,348 798,375" fill="none" stroke="#F97316" stroke-width="3.5" marker-end="url(#ao)"/>
+
+        <!-- ========== B2 ARROWS (orange, dashed) ========== -->
+        <!-- 2→8: from Node 2 left side down to Node 8 -->
+        <path d="M 830,184 C 815,200 790,218 770,228" fill="none" stroke="#F97316" stroke-width="3.5" stroke-dasharray="10,5" marker-end="url(#ao)"/>
+        <!-- 8→3: from Node 8 bottom down to Node 3 top -->
+        <path d="M 730,282 C 760,320 800,350 840,365" fill="none" stroke="#F97316" stroke-width="3.5" stroke-dasharray="10,5" marker-end="url(#ao)"/>
+
+        <!-- ========== +/- LABELS WITH PILL BACKGROUNDS ========== -->
+        <!-- R1: 1→2 -->
+        <rect x="728" y="60" width="26" height="22" rx="6" fill="white" fill-opacity="0.92"/>
+        <text x="741" y="77" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="17" fill="#0D9488">+</text>
+        <!-- R1: 2→3 -->
+        <rect x="956" y="260" width="26" height="22" rx="6" fill="white" fill-opacity="0.92"/>
+        <text x="969" y="277" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="17" fill="#0D9488">+</text>
+        <!-- R1: 3→4 -->
+        <rect x="733" y="438" width="26" height="22" rx="6" fill="white" fill-opacity="0.92"/>
+        <text x="746" y="455" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="17" fill="#0D9488">+</text>
+        <!-- R1: 4→5 -->
+        <rect x="343" y="438" width="26" height="22" rx="6" fill="white" fill-opacity="0.92"/>
+        <text x="356" y="455" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="17" fill="#0D9488">+</text>
+        <!-- R1: 5→6 -->
+        <rect x="133" y="260" width="26" height="22" rx="6" fill="white" fill-opacity="0.92"/>
+        <text x="146" y="277" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="17" fill="#0D9488">+</text>
+        <!-- R1: 6→1 -->
+        <rect x="343" y="60" width="26" height="22" rx="6" fill="white" fill-opacity="0.92"/>
+        <text x="356" y="77" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="17" fill="#0D9488">+</text>
+
+        <!-- R2: 1→9 -->
+        <rect x="942" y="18" width="26" height="22" rx="6" fill="white" fill-opacity="0.92"/>
+        <text x="955" y="35" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="17" fill="#0D9488">+</text>
+        <!-- R2: 9→3 -->
+        <rect x="1115" y="330" width="26" height="22" rx="6" fill="white" fill-opacity="0.92"/>
+        <text x="1128" y="347" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="17" fill="#0D9488">+</text>
+
+        <!-- B1: 4→7 -->
+        <rect x="467" y="392" width="26" height="22" rx="6" fill="white" fill-opacity="0.92"/>
+        <text x="480" y="409" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="17" fill="#F97316">+</text>
+        <!-- B1: 7→3 -->
+        <rect x="695" y="332" width="26" height="22" rx="6" fill="white" fill-opacity="0.92"/>
+        <text x="708" y="349" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="19" fill="#F97316">&minus;</text>
+
+        <!-- B2: 2→8 -->
+        <rect x="793" y="195" width="26" height="22" rx="6" fill="white" fill-opacity="0.92"/>
+        <text x="806" y="212" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="17" fill="#F97316">+</text>
+        <!-- B2: 8→3 -->
+        <rect x="790" y="318" width="26" height="22" rx="6" fill="white" fill-opacity="0.92"/>
+        <text x="803" y="335" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="19" fill="#F97316">&minus;</text>
+
+        <!-- ========== LOOP LABELS WITH NAMES ========== -->
+        <!-- R1: inside left of hexagon, above Node 7 -->
+        <circle cx="340" cy="235" r="21" fill="white" stroke="#0D9488" stroke-width="2.5"/>
+        <text x="340" y="240" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="14" fill="#0D9488">R1</text>
+        <text x="340" y="267" text-anchor="middle" font-family="Montserrat" font-weight="600" font-size="9" fill="#0D9488">Invisibility Cycle</text>
+
+        <!-- R2: along the arc, top-right -->
+        <circle cx="1040" cy="55" r="21" fill="white" stroke="#0D9488" stroke-width="2.5" stroke-dasharray="5,3"/>
+        <text x="1040" y="60" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="14" fill="#0D9488">R2</text>
+        <text x="1040" y="87" text-anchor="middle" font-family="Montserrat" font-weight="600" font-size="9" fill="#0D9488">Crowd Amplifier</text>
+
+        <!-- B1: lower center interior -->
+        <circle cx="598" cy="400" r="21" fill="white" stroke="#F97316" stroke-width="2.5"/>
+        <text x="598" y="405" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="14" fill="#F97316">B1</text>
+        <text x="598" y="430" text-anchor="middle" font-family="Montserrat" font-weight="600" font-size="9" fill="#F97316">Companion Workaround</text>
+
+        <!-- B2: right of Node 8, below Node 2 -->
+        <circle cx="680" cy="320" r="21" fill="white" stroke="#F97316" stroke-width="2.5" stroke-dasharray="5,3"/>
+        <text x="680" y="325" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="14" fill="#F97316">B2</text>
+        <text x="680" y="350" text-anchor="middle" font-family="Montserrat" font-weight="600" font-size="9" fill="#F97316">Accidental Aid</text>
+
+        <!-- ========== NODE BOXES (rendered last, on top) ========== -->
+        <!-- Node 1: Space designed for high-volume throughput -->
+        <rect x="435" y="19" width="250" height="58" rx="10" fill="#1E3A5F" filter="url(#sh)"/>
+        <text x="560" y="41" text-anchor="middle" font-family="Open Sans" font-weight="600" font-size="15" fill="#fff">
+          <tspan x="560">Space designed for</tspan>
+          <tspan x="560" dy="19">high-volume throughput</tspan>
+        </text>
+
+        <!-- Node 2: Dense barriers & standing-only queues -->
+        <rect x="800" y="126" width="260" height="58" rx="10" fill="#1E3A5F" filter="url(#sh)"/>
+        <text x="930" y="148" text-anchor="middle" font-family="Open Sans" font-weight="600" font-size="15" fill="#fff">
+          <tspan x="930">Dense barriers &amp;</tspan>
+          <tspan x="930" dy="19">standing-only queues</tspan>
+        </text>
+
+        <!-- Node 3: Difficulty accessing food independently -->
+        <rect x="800" y="361" width="260" height="58" rx="10" fill="#1E3A5F" filter="url(#sh)"/>
+        <text x="930" y="383" text-anchor="middle" font-family="Open Sans" font-weight="600" font-size="15" fill="#fff">
+          <tspan x="930">Difficulty accessing</tspan>
+          <tspan x="930" dy="19">food independently</tspan>
+        </text>
+
+        <!-- Node 4: Depend on companion for food access -->
+        <rect x="435" y="469" width="250" height="58" rx="10" fill="#1E3A5F" filter="url(#sh)"/>
+        <text x="560" y="491" text-anchor="middle" font-family="Open Sans" font-weight="600" font-size="15" fill="#fff">
+          <tspan x="560">Depend on companion</tspan>
+          <tspan x="560" dy="19">for food access</tspan>
+        </text>
+
+        <!-- Node 5: Mobility-limited visitors less visible to operators -->
+        <rect x="43" y="361" width="264" height="58" rx="10" fill="#1E3A5F" filter="url(#sh)"/>
+        <text x="175" y="383" text-anchor="middle" font-family="Open Sans" font-weight="600" font-size="15" fill="#fff">
+          <tspan x="175">Mobility-limited visitors</tspan>
+          <tspan x="175" dy="19">less visible to operators</tspan>
+        </text>
+
+        <!-- Node 6: No pressure to design for accessibility -->
+        <rect x="50" y="126" width="250" height="58" rx="10" fill="#1E3A5F" filter="url(#sh)"/>
+        <text x="175" y="148" text-anchor="middle" font-family="Open Sans" font-weight="600" font-size="15" fill="#fff">
+          <tspan x="175">No pressure to design</tspan>
+          <tspan x="175" dy="19">for accessibility</tspan>
+        </text>
+
+        <!-- Node 7 (B1, orange): Companion brings food; needs met informally -->
+        <rect x="335" y="281" width="250" height="58" rx="10" fill="#F97316" filter="url(#sh)"/>
+        <text x="460" y="303" text-anchor="middle" font-family="Open Sans" font-weight="700" font-size="15" fill="#1E3A5F">
+          <tspan x="460">Companion brings food;</tspan>
+          <tspan x="460" dy="19">needs met informally</tspan>
+        </text>
+
+        <!-- Node 8 (B2, orange): Barrier posts double as mobility aids -->
+        <rect x="640" y="220" width="220" height="54" rx="10" fill="#F97316" filter="url(#sh)"/>
+        <text x="750" y="241" text-anchor="middle" font-family="Open Sans" font-weight="700" font-size="14" fill="#1E3A5F">
+          <tspan x="750">Barrier posts double</tspan>
+          <tspan x="750" dy="18">as mobility aids</tspan>
+        </text>
+
+        <!-- Node 9 (R2, navy): Crowds gather at popular stalls -->
+        <rect x="1075" y="245" width="220" height="54" rx="10" fill="#1E3A5F" filter="url(#sh)"/>
+        <text x="1185" y="266" text-anchor="middle" font-family="Open Sans" font-weight="600" font-size="14" fill="#fff">
+          <tspan x="1185">Crowds gather at</tspan>
+          <tspan x="1185" dy="18">popular stalls</tspan>
+        </text>
+
+      </svg>
+    </div>
+
+    <div class="bottom-row">
+      <div class="observation-box">
+        <h3>The Observation</h3>
+        An elderly man with an unsteady gait and a tall cane enters the food court. He steadies himself on retractable barrier posts spaced one foot apart. There is no break in the perimeter barrier. He sits alone at a four-top with no food. A younger companion joins him and shares food. Meanwhile, up to 20 people crowd around the duck stall's hot case.
+      </div>
+      <div class="who-benefits">
+        <h3>Who Benefits?</h3>
+        The food court operators. Two balancing loops mask the reinforcing cycles: the companion provides a social workaround (B1), and the barriers themselves accidentally provide physical support (B2). The design's success at attracting crowds adds a second reinforcing pathway (R2). The companion and the mobility-limited visitor absorb the cost that the system externalizes. Multiple workarounds converging on the same variable signals a systemic design gap.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

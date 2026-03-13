@@ -1,4 +1,4 @@
-# Session 3: Stakeholder Mapping + Research Planning
+# Session 3: Stakeholder Mapping + Causal Loop Introduction
 
 **Thursday, March 12, 2026 | 6:30-8:00 PM | Online (Zoom)**
 
@@ -6,18 +6,20 @@
 
 ## Topics
 
-- Identifying and mapping stakeholders for your team's scenario
+- Deepening stakeholder maps with optimization goals, constraints, and concerns
 - Extreme users and overlooked perspectives
-- The transition from observation to empathy interviews
-- Planning distributed research that leverages your team's combined reach
+- Introduction to causal loop mapping as a systems thinking tool
+- Launching the two-week distributed research period
 
 ## What We'll Do
 
 - Quick team check-ins: Has your thinking shifted since Session 2?
-- **Stakeholder Mapping** (breakout rooms): Identify 4-5 stakeholders for your scenario, including at least one extreme user. For each, map what they optimize for, what constrains them, and which team member can access them.
+- **Find the Duct Tape** review: What workarounds did you spot this week?
+- **Stakeholder Mapping** (breakout rooms): Deepen your Session 2 stakeholder list. For each of 4-5 stakeholders, map what they optimize for, what constrains them, and their top concerns. Include at least one extreme user.
 - Full-group debrief: Share one stakeholder your team almost forgot
-- **Research Planning** (breakout rooms): Design your team's two-week research plan. Who can each member reach? What will each person do (observation, interview, or both)? How will you coordinate and compile findings?
-- Close: Share research plans and confirm deliverables
+- **Causal Loop Introduction**: Learn the causal loop tool through a live demo, then draft your own
+- **Causal Loop Drafting** (breakout rooms): Sketch an initial causal loop map for your scenario with 4-5 nodes and at least one feedback loop
+- Close: Share one loop you found, confirm research period deliverables
 
 ## What to Bring
 
@@ -40,6 +42,7 @@ After this session, your team has **two weeks of distributed fieldwork**:
 - Document in your notebook; contribute to your team's shared document
 - Coordinate with your team asynchronously
 - Compile findings before Session 4
+- Continue developing your causal loop map as research reveals new dynamics
 
 ## Ongoing Notebook Practice
 
