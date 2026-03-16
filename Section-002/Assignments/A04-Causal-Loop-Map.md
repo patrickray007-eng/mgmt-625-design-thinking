@@ -21,6 +21,8 @@ Create a causal loop map that visualizes the system dynamics underlying your tea
 
 ## What to Do
 
+Start from the problem your team selected in Session 2. Your stakeholder research (A03) should inform the dynamics you map here.
+
 1. **Start with your core problem** at the center. Be specific (not "communication issues" but "frontline staff feedback doesn't reach decision-makers").
 2. **Identify contributing factors** and draw arrows pointing toward the problem.
 3. **Trace the effects** and draw arrows pointing away from the problem.
