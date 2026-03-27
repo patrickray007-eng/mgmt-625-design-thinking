@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Synthesis Board — Session 4</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #1a1a2e;
+    min-height: 100vh;
+    overflow: auto;
+    user-select: none;
+  }
+  #header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(26,26,46,0.95); backdrop-filter: blur(8px);
+    padding: 12px 24px; display: flex; align-items: center; gap: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  #header h1 { color: #fff; font-size: 16px; font-weight: 600; white-space: nowrap; }
+  .legend { display: flex; gap: 16px; font-size: 12px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; color: rgba(255,255,255,0.7); }
+  .legend-dot { width: 12px; height: 12px; border-radius: 3px; }
+  #board {
+    position: relative;
+    margin-top: 52px;
+    width: 4000px;
+    height: 3000px;
+  }
+  .card {
+    position: absolute;
+    width: 220px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #1a1a2e;
+    cursor: grab;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    transition: box-shadow 0.15s;
+  }
+  .card:active { cursor: grabbing; box-shadow: 0 6px 20px rgba(0,0,0,0.5); z-index: 999; }
+  .card .num {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 11px;
+    margin-right: 4px;
+    opacity: 0.6;
+  }
+  .card .observer {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 10px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-right: 4px;
+    color: white;
+  }
+  /* Observer colors */
+  .obs-A { background: #fef3c7; } .obs-A .observer { background: #b45309; }
+  .obs-B { background: #dbeafe; } .obs-B .observer { background: #1d4ed8; }
+  .obs-C { background: #dcfce7; } .obs-C .observer { background: #15803d; }
+  .obs-D { background: #fce7f3; } .obs-D .observer { background: #be185d; }
+  .obs-E { background: #f3e8ff; } .obs-E .observer { background: #7c3aed; }
+  /* Cluster zones */
+  .cluster-zone {
+    position: absolute;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 12px;
+    min-width: 300px;
+    min-height: 200px;
+    background: rgba(255,255,255,0.06);
+  }
+  .cluster-label {
+    position: absolute;
+    top: -14px;
+    left: 16px;
+    background: #1a1a2e;
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  /* Parking lot */
+  #parking {
+    position: absolute;
+    top: 60px; right: 20px;
+    border: 2px dashed rgba(255,255,255,0.2);
+    border-radius: 12px;
+    width: 260px;
+    min-height: 200px;
+    padding: 30px 10px 10px;
+  }
+  #parking .cluster-label { color: rgba(255,255,255,0.4); }
+  /* Note cards */
+  .note {
+    position: absolute;
+    width: 220px;
+    min-height: 60px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    background: #fefce8;
+    border: 1px solid #ca8a04;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #1a1a2e;
+    cursor: grab;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .note:active { cursor: grabbing; box-shadow: 0 6px 20px rgba(0,0,0,0.5); z-index: 999; }
+  .note textarea {
+    width: 100%;
+    min-height: 40px;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #1a1a2e;
+    resize: vertical;
+    outline: none;
+  }
+  .note .note-header {
+    font-size: 10px;
+    font-weight: 600;
+    color: #ca8a04;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+    cursor: grab;
+  }
+  .note .delete-note {
+    cursor: pointer;
+    opacity: 0.4;
+    font-size: 14px;
+  }
+  .note .delete-note:hover { opacity: 1; }
+  /* Add note button */
+  #add-note-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background: #ca8a04;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+  #add-note-btn:hover { background: #a16207; }
+</style>
+</head>
+<body>
+
+<div id="header">
+  <h1>Synthesis Board — Voting Access in the LGBT Community</h1>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#fef3c7;border:1px solid #b45309;"></div>A — Bar (weeknight)</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#dbeafe;border:1px solid #1d4ed8;"></div>B — Resource center</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#dcfce7;border:1px solid #15803d;"></div>C — Coffee shop</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#fce7f3;border:1px solid #be185d;"></div>D — Bar (weekend)</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#f3e8ff;border:1px solid #7c3aed;"></div>E — Support group</div>
+  </div>
+</div>
+
+<button id="add-note-btn">+ Add Note</button>
+<div id="board">
+  <!-- Cluster zones in a vertical column -->
+  <div class="cluster-zone" style="top:80px; left:40px; width:900px; height:500px;">
+    <div class="cluster-label">Cluster 1</div>
+  </div>
+  <div class="cluster-zone" style="top:620px; left:40px; width:900px; height:500px;">
+    <div class="cluster-label">Cluster 2</div>
+  </div>
+  <div class="cluster-zone" style="top:1160px; left:40px; width:900px; height:500px;">
+    <div class="cluster-label">Cluster 3</div>
+  </div>
+  <div class="cluster-zone" style="top:1700px; left:40px; width:900px; height:500px;">
+    <div class="cluster-label">Cluster 4</div>
+  </div>
+  <div class="cluster-zone" style="top:2240px; left:40px; width:900px; height:500px;">
+    <div class="cluster-label">Cluster 5</div>
+  </div>
+
+  <div id="parking">
+    <div class="cluster-label">Parking Lot</div>
+  </div>
+</div>
+
+<script>
+const observations = [
+  {n:1, o:"A", t:`Guy, mid-30s. Votes every election. "Never had a problem getting to a polling place. That's not the issue." "They don't see us."`},
+  {n:2, o:"B", t:`Bulletin board, ~15 flyers. Health services, legal aid, voter reg drive partially covered by a drag show flyer.`},
+  {n:3, o:"C", t:`Overheard: "I'm not giving them my address again. Last time I updated my registration my roommate opened county mail."`},
+  {n:4, o:"D", t:`9:47 PM. 34 people. Astros on TV, sound off. Tip jar: "PROTECT TRANS KIDS" sticker, bail fund sticker.`},
+  {n:5, o:"A", t:`Woman, late 40s. "I did everything right in 2020. Volunteered, drove people to polls. Then the legislature just..." "I'm tired."`},
+  {n:6, o:"B", t:`Front desk: condoms, Trevor Project cards, "Know your rights at a traffic stop" sign. No voter reg materials.`},
+  {n:7, o:"E", t:`Support group, ~12 people. Facilitator asked what everyone did for themselves this week. Nothing political came up.`},
+  {n:8, o:"C", t:`Bookstore display: "RESIST." Trans memoir, Stonewall history, tenant organizing zine. Nothing about voting.`},
+  {n:9, o:"D", t:`Guy, early 20s, to bartender: "My parents don't know where I live. You think I'm putting my real address on a government form?"`},
+  {n:10, o:"A", t:`Couple, both men, 50s. Same polling place 15 years. "The poll workers know us now. First few years you could feel them looking."`},
+  {n:11, o:"B", t:`Woman helping younger person (~19) fill out forms. Younger person kept looking around. Woman moved closer, blocking the view.`},
+  {n:12, o:"E", t:`Person, mid-20s, stocks community fridges at three Montrose locations. "That's my politics. I can see it."`},
+  {n:13, o:"C", t:`Barista, trans flag pin. Registered but: "I moved from Beaumont and I don't know if my registration followed me." Moved on to next customer.`},
+  {n:14, o:"D", t:`Restroom stickers: "ALL GENDERS WELCOME." "NOBODY IS COMING TO SAVE US." Someone wrote under it: "good."`},
+  {n:15, o:"A", t:`Bartender, trans woman. "I vote but I hate it. My ID still has my old name." Can't afford the name change.`},
+  {n:16, o:"B", t:`Hallway mural, Houston skyline. "WE TAKE CARE OF US." Shelf below: PrEP, housing assistance, hate crime reporting.`},
+  {n:17, o:"E", t:`Facilitator asked about "the political climate." Responses: "Exhausted." "Numb." "I don't feel anything about it anymore and that scares me."`},
+  {n:18, o:"C", t:`Two guys, laptops. "Did you see the new bill?" "Which one." "The bathroom one." "Yeah."`},
+  {n:19, o:"D", t:`10:38 PM. Tracked topics at a table of 5 for ~15 min. Work (3), dating apps (5), surgery (2), rent (4), politics (1, changed subject).`},
+  {n:20, o:"A", t:`Black man, 60s. "I vote because people died for me to vote. That's not about whether it works." Represented? "I'm a Black gay man in Texas. I've never felt represented. I just show up."`},
+  {n:21, o:"B", t:`Waiting area. Person on clipboard forms. Staff called a name. Person left pen on chair. Other person put it on table without looking up.`},
+  {n:22, o:"E", t:`Woman, 40s. "Voting is one tool. It's not even the sharpest one." Runs a legal network for ICE encounters. "I can see the results the same week."`},
+  {n:23, o:"C", t:`Tip jar collecting for someone's top surgery. Customer put in $5. Barista: "That's for Marcus, he's almost there."`},
+  {n:24, o:"D", t:`11:01 PM. TV switched to drag performance. Nobody looked up. AC struggling. 80 degrees outside.`},
+  {n:25, o:"A", t:`Woman, 22, never voted. "The things that affect my life, nobody's voting on those. Housing. Safety. Whether my insurance covers my hormones. That's offices, not ballot boxes."`},
+  {n:26, o:"B", t:`Sign above computers: "NEED HELP WITH: Name change forms, Housing applications, SNAP benefits, Voter registration." That order.`},
+  {n:27, o:"E", t:`Re: council member at pride. "She shows up for the photo op then votes against our interests." "At least she shows up. When's the last time any of them came without a camera?"`},
+  {n:28, o:"C", t:`Stall door: DV hotline for queer relationships. Below in Sharpie: "this saved my life." Different hand: "mine too."`},
+  {n:29, o:"D", t:`Two women on a zoning vote for a queer youth shelter. One knew every council member's position. "I went to every meeting. All six."`},
+  {n:30, o:"A", t:`Guy, 40s, legal advocacy. "Everyone asks about voting. Nobody asks about the 400 hours we spent fighting a reg that would've closed three queer businesses."`},
+  {n:31, o:"B", t:`Staff on phone 20 min. Caught: "No, you don't need a permanent address... a shelter address works." Hung up, added a sticky note to a wall of ~30 sticky notes.`},
+  {n:32, o:"E", t:`Group discussing mutual aid Venmo chain. "It's just us looking out for us." Someone had a spreadsheet tracking who'd been helped.`},
+  {n:33, o:"C", t:`Woman, 70s. "Voted every election since 1972." Made a difference? "It made a difference for marriage. But I waited 40 years for that one."`},
+  {n:34, o:"D", t:`10:22 PM. Alt-weekly by the door. Front page: Montrose gentrification. Nobody picked one up in 25 min.`},
+  {n:35, o:"A", t:`Overheard: "If you don't vote you can't complain." "I organize, show up to hearings, donate, protest. You fill in a bubble once a year and think that's the whole thing?"`},
+  {n:36, o:"B", t:`Calendar: HIV testing, trans support group, know-your-rights workshop, clothing swap, mixer. No voter events.`},
+  {n:37, o:"E", t:`Person, ~20, barely spoke all session. Near end: "I just got my name changed on my ID. First time I have an ID that's actually me." "Like I exist now."`},
+  {n:38, o:"C", t:`Guy at laptop: "The problem isn't getting people to vote. It's giving people something to vote for."`},
+  {n:39, o:"D", t:`11:15 PM. Quick poll, 8 people. 6 registered, 1 not a citizen, 1 unsure. Of 6, 4 voted last election. 2 didn't. Both said deliberate choice.`},
+  {n:40, o:"A", t:`Person, mid-30s. "Access isn't my problem. I have a car, I have an ID. My problem is I access a system that doesn't want me in it and nothing changes. That's a trust problem."`},
+  {n:41, o:"B", t:`Resource center exterior. Nondescript. Small rainbow sticker. No signage. Shared lot with a laundromat.`},
+  {n:42, o:"E", t:`End of meeting, facilitator handed out grocery bags. Canned goods, hygiene products. No sign-up, no paperwork. Five people took one.`},
+  {n:43, o:"C", t:`Closing time. Barista knew several customers by name. One to another: "See you Saturday?" "Yeah, I'm bringing the signs."`},
+  {n:44, o:"D", t:`11:30 PM. Told bartender my project was voting access. "Access to what, though?" Walked away.`},
+  {n:45, o:"A", t:`Outside, after midnight. Two people discussing a friend's eviction. "We gotta figure out the deposit before Friday." Other one on Venmo.`}
+];
+
+const board = document.getElementById('board');
+
+// Layout cards in a grid on the right side initially
+const startX = 1200;
+const startY = 80;
+const colWidth = 240;
+const cols = 4;
+
+observations.forEach((obs, i) => {
+  const card = document.createElement('div');
+  card.className = `card obs-${obs.o}`;
+  card.setAttribute('data-draggable', 'true');
+  card.innerHTML = `<span class="num">#${obs.n}</span><span class="observer">${obs.o}</span> ${obs.t}`;
+
+  const col = i % cols;
+  const row = Math.floor(i / cols);
+  card.style.left = (startX + col * colWidth) + 'px';
+  card.style.top = (startY + row * 130) + 'px';
+
+  board.appendChild(card);
+});
+
+// Single global drag handler
+let dragEl = null, dragOffsetX = 0, dragOffsetY = 0;
+
+document.addEventListener('mousedown', (e) => {
+  const el = e.target.closest('[data-draggable]');
+  if (!el) return;
+  // Don't drag if clicking inside a textarea or contenteditable
+  if (e.target.tagName === 'TEXTAREA' || e.target.isContentEditable) return;
+  dragEl = el;
+  const rect = el.getBoundingClientRect();
+  dragOffsetX = e.clientX - rect.left;
+  dragOffsetY = e.clientY - rect.top;
+  el.style.zIndex = 999;
+  e.preventDefault();
+});
+
+document.addEventListener('mousemove', (e) => {
+  if (!dragEl) return;
+  const boardRect = board.getBoundingClientRect();
+  dragEl.style.left = (e.clientX - boardRect.left - dragOffsetX + window.scrollX) + 'px';
+  dragEl.style.top = (e.clientY - boardRect.top - dragOffsetY + window.scrollY) + 'px';
+});
+
+document.addEventListener('mouseup', () => {
+  if (dragEl) { dragEl.style.zIndex = ''; dragEl = null; }
+});
+
+// Make cluster labels editable — click to edit inline
+document.querySelectorAll('.cluster-label').forEach(label => {
+  label.setAttribute('contenteditable', 'true');
+  label.setAttribute('spellcheck', 'false');
+  label.style.cursor = 'text';
+  label.style.minWidth = '80px';
+  label.style.outline = 'none';
+  label.style.borderBottom = '1px solid transparent';
+  label.addEventListener('focus', () => {
+    label.style.borderBottom = '1px solid rgba(255,255,255,0.5)';
+    if (label.textContent.startsWith('Cluster ')) {
+      const sel = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(label);
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+  });
+  label.addEventListener('blur', () => {
+    label.style.borderBottom = '1px solid transparent';
+    if (!label.textContent.trim()) label.textContent = 'Untitled';
+  });
+  label.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); label.blur(); }
+  });
+});
+
+// Add note functionality
+let noteCount = 0;
+function createNote(x, y) {
+  noteCount++;
+  const note = document.createElement('div');
+  note.className = 'note';
+  note.style.left = x + 'px';
+  note.style.top = y + 'px';
+  note.setAttribute('data-draggable', 'true');
+  note.innerHTML = `<div class="note-header"><span>NOTE</span><span class="delete-note" title="Delete">✕</span></div><textarea placeholder="Type here..."></textarea>`;
+
+  // Delete
+  note.querySelector('.delete-note').addEventListener('click', () => {
+    if (confirm('Delete this note?')) note.remove();
+  });
+
+  board.appendChild(note);
+  note.querySelector('textarea').focus();
+}
+
+document.getElementById('add-note-btn').addEventListener('click', () => {
+  const scrollX = window.scrollX || 0;
+  const scrollY = window.scrollY || 0;
+  createNote(scrollX + 200, scrollY + 200);
+});
+</script>
+</body>
+</html>

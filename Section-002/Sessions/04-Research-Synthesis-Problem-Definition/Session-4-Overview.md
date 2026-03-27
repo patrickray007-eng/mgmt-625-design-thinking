@@ -1,4 +1,4 @@
-# Session 4: Research Synthesis + Problem Definition
+# Session 4: Learning to Synthesize
 
 **Thursday, March 26, 2026 | 6:30-8:00 PM | Online (Zoom)**
 
@@ -6,18 +6,16 @@
 
 ## Topics
 
-- Synthesizing distributed research findings across diverse contexts
-- Causal loop analysis: why problems persist
-- Crafting a bounded, evidence-based problem definition
-- Moving from problem to ideation (rapid idea generation)
+- Synthesis as a design skill: moving from raw data to insight
+- Separating observations from interpretations
+- Clustering, naming patterns, and breaking your frame
+- Stress testing your causal loop map against fresh synthesis
 
 ## What We'll Do
 
-- **Research Synthesis** (breakout rooms): Share what each team member found during the research period. Identify patterns across contexts, surprises, and contradictions.
-- **Causal Loop Sharing** (full group): Each team presents their causal loop map (2-3 min). Discuss feedback loops and who benefits from the status quo.
-- **Problem Definition** (breakout rooms): Finalize your problem statement. It must be bounded, evidence-based, actionable, and not a solution in disguise.
-- **Peer Critique** (full group): Share problem statements in chat for quick feedback.
-- **Rapid Ideation**: Generate 8-10 solution concepts in 10 minutes. No filtering. Then select 2-3 to develop as testable hypotheses.
+- **Guided Synthesis Exercise** (full group): Work through 45 real field observations from a design project together. I'll model the synthesis process live on a shared whiteboard: separating observations from interpretations, clustering, naming patterns, and discovering what the data is actually telling us.
+- **Team Synthesis** (breakout rooms): Apply the same method to your own distributed research. Silent observation posting, clustering, naming patterns, identifying what doesn't fit.
+- **Causal Loop Stress Test** (breakout rooms): Pull up your causal loop map and compare it to your fresh synthesis. What holds up? What's missing? What needs to change?
 
 ## What to Bring
 
@@ -30,9 +28,8 @@
 | Assignment | Status | Details |
 |------------|--------|---------|
 | [[A03-Stakeholder-Research\|Stakeholder Research]] | **Due this session** | Team synthesis document submitted to Canvas before class |
-| [[A04-Causal-Loop-Map\|Causal Loop Map]] | **Due this session** | Diagram + half-page explanation submitted to Canvas before class |
-| [[A05-Problem-Definition\|Problem Definition]] | **Released this session** | Team: Synthesize research into problem statement + 2-3 solution hypotheses. Due before Session 5. |
-| [[A06-Final-Presentation\|Final Presentation]] | **Released this session** | Team: 8-10 min presentation + 4-5 min Q&A and stress testing. Presented in Session 5. |
+| [[A04-Causal-Loop-Map\|Causal Loop Map]] | **Due this session** | First pass diagram + explanation submitted to Canvas before class |
+| [[A05-Problem-Definition\|Problem Definition]] | **Released this session** | Team: Synthesize research into problem statement + revised causal loop. Due April 1. |
 
 ## Ongoing Notebook Practice
 
@@ -40,6 +37,5 @@
 
 ## Looking Ahead
 
-- **Problem Definition** document is due before Session 5 (Saturday, April 4)
-- Prepare your **Final Presentation** for Session 5 (8-10 minutes)
-- **Session 5** is Saturday, April 4, 8:00 AM-12:30 PM, **in-person** at McNair Hall 216
+- **Problem Definition** document (with revised causal loop map) is due **Wednesday, April 1**. I'll review and give feedback before Session 5.
+- **Session 5** is Saturday, April 4, 8:00 AM-12:30 PM, **in-person** at McNair Hall 216. You'll come in with a defined problem and leave with an experiment to run.
