@@ -1,7 +1,7 @@
 ---
 course: MGMT 625-002 Design Thinking
 type: Individual
-due: Session 6 (Thursday, April 9)
+due: see Canvas
 points: 50
 weight: 5%
 ---
@@ -27,7 +27,7 @@ Write a 500-800 word reflection that closes the course by examining your design 
 
 ## Submit
 
-PDF or Word document to Canvas before Session 6 (Thursday, April 9). 500-800 words addressing all three parts.
+PDF or Word document to Canvas before class on the due date. 500-800 words addressing all three parts.
 
 ## Specifications
 

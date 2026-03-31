@@ -1,7 +1,7 @@
 ---
 course: MGMT 625-002 Design Thinking
 type: Individual
-due: Session 6 (Thursday, April 9) - before class
+due: see Canvas - before class
 points: 100
 weight: 10%
 ---
@@ -17,13 +17,13 @@ Should include:
 - **Find the Duct Tape** entries (weekly workarounds)
 - **Research notes** from the two-week fieldwork period
 - **Stakeholder map and causal loop drafts** (including iterations)
-- **Experiment notes** from between Sessions 5 and 6
+- **Experiment notes** from the experimentation period
 
 Submit as PDF. Physical notebooks: scan pages in order. Digital: organize by session.
 
 ## Submit
 
-PDF to Canvas **before Session 6 (Thursday, April 9)**.
+PDF to Canvas **before class on the due date**.
 
 ## Specs
 

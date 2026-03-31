@@ -1,7 +1,7 @@
 ---
 course: MGMT 625-002 Design Thinking
 type: Team
-due: Session 6 (Thursday, April 9) - presented in class
+due: see Canvas - presented in class
 points: 300
 weight: 30%
 ---
@@ -21,7 +21,7 @@ Honest reporting matters more than successful experiments.
 
 ## Submit
 
-Present in class **Session 6 (Thursday, April 9)**. Upload slides to Canvas after.
+Present in class on the date shown in Canvas. Upload slides to Canvas after.
 
 ## Specs
 

@@ -1,7 +1,7 @@
 ---
 course: MGMT 625-002 Design Thinking
 type: Team
-due: Wednesday, April 1 - instructor reviews before Session 5
+due: see Canvas
 points: 100
 weight: 10%
 ---
@@ -12,13 +12,13 @@ weight: 10%
 
 One page max. Two parts:
 
-1. **Problem statement** (1 paragraph): Who experiences it, what it is, why it persists. Grounded in your research, not assumptions. Include your **revised causal loop map** (updated after Session 4 synthesis) and a sentence or two on what changed.
+1. **Problem statement** (1 paragraph): Who experiences it, what it is, why it persists. Grounded in your research, not assumptions. Include your **revised causal loop map** (updated after the synthesis discussion) and a sentence or two on what changed.
 
 2. **2-3 solution hypotheses** (a few sentences each): "We believe [solution] will [outcome] for [stakeholder] because [insight from research]." Name the riskiest assumption for each.
 
 ## Submit
 
-PDF to Canvas by **Wednesday, April 1**. I'll review and give feedback before Session 5.
+PDF to Canvas by the due date. I'll review and give feedback before the next session.
 
 ## Specs
 
