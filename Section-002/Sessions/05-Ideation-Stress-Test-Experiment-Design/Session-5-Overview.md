@@ -36,10 +36,10 @@
 |------------|--------|---------|
 | [[A05-Problem-Definition\|Problem Definition]] | **Submitted April 1** | Instructor has reviewed and will return feedback |
 | [[A06-Final-Presentation\|Final Presentation]] | **Experiment happens between S5-S6** | Present experiment results in Session 6 |
-| [[A07-Notebook\|Notebook]] | **Due before Session 6** | Submit complete notebook (all entries from TETHER through experiment) |
+| [[A07-Notebook\|Notebook]] | **Due Sunday, April 12 at 11:59 PM** | Submit complete notebook (all entries from TETHER through experiment) |
 
 ## Looking Ahead
 
 - **Between now and Session 6**: Execute your experiment. Test with real stakeholders in your distributed contexts. Document results.
-- **Notebook** due before Session 6 (Thursday, April 9).
+- **Notebook** due Sunday, April 12 at 11:59 PM.
 - **Session 6** is Thursday, April 9, 6:30-8:00 PM, **online** via Zoom. You'll present what you tested and what you learned.

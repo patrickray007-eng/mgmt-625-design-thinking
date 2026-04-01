@@ -99,8 +99,8 @@
 > - **Session 3: Research Planning** -- Stakeholder mapping and distributed research design. Divide research responsibilities based on who can reach which stakeholders.
 > - **Research Gap (2 weeks)** -- Distributed field research across team members' contexts. Each member conducts observations and interviews in their own environment.
 > - **Session 4: Define + Synthesize** -- Compile research from diverse contexts, build a causal loop map, define the problem, and begin ideation.
-> - **Session 5: Communicate + Test** -- Final presentations with stress testing. Show the full arc from problem to solution.
-> - **Session 6: Reflect** -- Individual and collective reflection on the design process.
+> - **Session 5: Ideate + Test** -- Stress test solution hypotheses. Design a credible experiment your team can run in 5 days.
+> - **Session 6: Present + Close** -- Present experiment results: what you tested, what happened, what you learned.
 >
 > ### Design Abilities by Phase
 >
@@ -110,9 +110,8 @@
 > |-------|----------|-------------------|
 > | Understand | 2-3 + Research Gap | Learn From Others, Synthesize Information |
 > | Define | 4 | Synthesize Information, Move Between Concrete and Abstract |
-> | Ideate + Test | 4-5 | Experiment Rapidly, Build and Craft Intentionally |
-> | Communicate | 5 | Communicate Deliberately, Build and Craft Intentionally |
-> | Reflect | 6 | All abilities through reflection |
+> | Ideate + Test | 5 | Experiment Rapidly, Build and Craft Intentionally |
+> | Communicate + Reflect | 6 | Communicate Deliberately, all abilities through reflection |
 >
 > ### Choosing Your Subject
 >
@@ -167,7 +166,7 @@
 >
 > ## Individual Assignments
 >
-> **Notebook (Submitted Session 6)**
+> **Notebook (Due Sunday, April 12, 11:59 PM)**
 > Contains all practice work, including TETHER observation. Graded on completion and sustained engagement.
 >
 > **TETHER (Due Session 2)**
@@ -465,7 +464,7 @@
 > | 10:45 | 15 | BREAK |
 > | 11:00 | 45 | BUILD: Design the Experiment. Teams design a credible experiment they can run in 5 days. What will you test? With whom? How will you measure? What's the kill criterion? Leverage your distributed contexts: who on your team can reach which stakeholders? Build a prototype plan with specific assignments per team member. |
 > | 11:45 | 25 | SHARE: Each team presents their experiment plan (3-4 min each). Peer feedback: "Is this actually testable in 5 days?" Instructor pushes back on anything too ambitious or too vague. |
-> | 12:10 | 15 | CLOSE: "You have 5 days. Go test it. Session 6 is where you present what you learned, not what you planned." Notebooks due Session 6. |
+> | 12:10 | 15 | CLOSE: "You have 5 days. Go test it. Session 6 is where you present what you learned, not what you planned." Notebooks due Sunday, April 12. |
 > | 12:25 | 5 | Wrap-up and departure. |
 >
 > ### Due Before This Session
@@ -499,7 +498,7 @@
 > | 7:50 | 10 | CLOSE: The 7 abilities as ongoing practice. "Navigate Ambiguity, Learn From Others, Synthesize Information: these aren't steps in a process. They're ways of seeing." Invitation to stay connected. Thank you. |
 >
 > ### Due This Session
-> - Notebook (digital submission, before class)
+> - Notebook (digital submission, due Sunday, April 12 at 11:59 PM)
 > - Final Presentation (experiment results, presented in class)
 
 ---

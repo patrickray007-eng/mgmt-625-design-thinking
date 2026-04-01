@@ -20,12 +20,12 @@
 
 ## What to Bring
 
-- Notebook submitted to Canvas before class
+- Notebook submitted to Canvas by Sunday, April 12 at 11:59 PM
 - Your team's experiment results and reflections
 
 ## Assignments
 
 | Assignment | Status | Details |
 |------------|--------|---------|
-| [[A07-Notebook\|Notebook]] | **Due before class** | Complete notebook submitted to Canvas as PDF before Session 6 |
+| [[A07-Notebook\|Notebook]] | **Due Sunday, April 12 at 11:59 PM** | Complete notebook submitted to Canvas as PDF |
 | [[A06-Final-Presentation\|Final Presentation]] | **Presented this session** | Experiment results: what you tested, what happened, what you learned |

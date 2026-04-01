@@ -1,7 +1,7 @@
 ---
 course: MGMT 625-002 Design Thinking
 type: Individual
-due: see Canvas - before class
+due: Sunday, April 12, 2026, 11:59 PM
 points: 100
 weight: 10%
 ---
@@ -23,7 +23,7 @@ Submit as PDF. Physical notebooks: scan pages in order. Digital: organize by ses
 
 ## Submit
 
-PDF to Canvas **before class on the due date**.
+PDF to Canvas **by Sunday, April 12 at 11:59 PM**.
 
 ## Specs
 
