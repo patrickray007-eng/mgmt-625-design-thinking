@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 5: Your Experiment Might Fail</title>
+  <!-- Icons: Lucide (https://lucide.dev), ISC License -->
+  <!-- Presentation: reveal.js (https://revealjs.com), MIT License -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+/* Build-Slides Theme
+   Shared design system for reveal.js course presentations.
+   Embedded into each HTML deck at generation time. */
+
+:root {
+  --teal: #0D9488;
+  --navy: #1E3A5F;
+  --orange: #F97316;
+  --dark-gray: #4B5563;
+  --light-mint: #F0FDFA;
+  --body-gray: #374151;
+}
+
+/* ── Base ── */
+
+.reveal {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 28px;
+  color: var(--body-gray);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  box-sizing: border-box;
+  padding: 40px 60px;
+  overflow: hidden;
+  background: #ffffff;
+  background-image: radial-gradient(ellipse at top right, rgba(13, 148, 136, 0.04) 0%, transparent 60%);
+}
+
+/* ── Slide Titles ── */
+
+.reveal h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 1.6em;
+  margin-bottom: 4px;
+  text-transform: none;
+}
+
+.reveal .title-underline {
+  width: 80px;
+  height: 4px;
+  background: var(--teal);
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+
+/* ── Body Text ── */
+
+.reveal p, .reveal li {
+  font-size: 0.82em;
+  line-height: 1.6;
+  color: var(--body-gray);
+}
+
+.reveal ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.reveal ul li {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.reveal ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background: var(--teal);
+  border-radius: 50%;
+}
+
+.reveal ol {
+  padding-left: 24px;
+  margin: 0;
+}
+
+.reveal ol li {
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
+.reveal ol li::marker {
+  color: var(--teal);
+  font-weight: 700;
+}
+
+/* ── Emphasis ── */
+
+.reveal strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.reveal .orange {
+  color: var(--orange);
+  font-weight: 600;
+}
+
+/* ── Activity Box (dark gray, white text) ── */
+
+.reveal .activity-box {
+  box-sizing: border-box;
+  max-width: 100%;
+  background: var(--dark-gray);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin: 20px 0;
+  font-size: 0.78em;
+  line-height: 1.65;
+}
+
+.reveal .activity-box p,
+.reveal .activity-box li {
+  color: #ffffff;
+}
+
+.reveal .activity-box strong {
+  color: #ffffff;
+}
+
+.reveal .activity-box ol li::marker {
+  color: #ffffff;
+}
+
+.reveal .activity-box ul li::before {
+  background: #ffffff;
+}
+
+.reveal .activity-box .time-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  margin-top: 12px;
+}
+
+/* ── Callout Box (light mint, teal border) ── */
+
+.reveal .callout-box {
+  background: var(--light-mint);
+  border-left: 4px solid var(--teal);
+  border-radius: 0 8px 8px 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+  font-size: 0.78em;
+  font-style: italic;
+  color: var(--navy);
+  line-height: 1.5;
+}
+
+/* ── Title Slide ── */
+
+.reveal .title-slide {
+  text-align: center;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reveal .title-slide .pre-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.7em;
+  color: var(--teal);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.reveal .title-slide h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 2.2em;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+  text-transform: none;
+}
+
+.reveal .title-slide .subtitle {
+  font-size: 0.85em;
+  color: var(--dark-gray);
+  margin-bottom: 40px;
+}
+
+.reveal .title-slide .footer {
+  font-size: 0.65em;
+  color: #9CA3AF;
+}
+
+/* ── Two-Column Layout ── */
+
+.reveal .two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.reveal .two-col .col {
+  font-size: 0.9em;
+}
+
+.reveal .two-col .col h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--teal);
+  font-size: 0.95em;
+  margin-bottom: 8px;
+}
+
+/* ── Concept Cards ── */
+
+.card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 16px 0;
+}
+
+.card-row.three-col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.concept-card {
+  background: #ffffff;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 10px;
+  padding: 20px 22px;
+  font-size: 0.78em;
+  line-height: 1.55;
+}
+
+.concept-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--teal);
+  font-size: 1.05em;
+  margin: 0 0 8px 0;
+}
+
+.concept-card p {
+  margin: 4px 0;
+  font-size: 1em;
+}
+
+.concept-card .card-label {
+  font-size: 0.85em;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.concept-card.highlight {
+  border-color: var(--teal);
+  background: var(--light-mint);
+}
+
+/* ── Airbnb Story Slides ── */
+
+.story-slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.story-text {
+  font-size: 0.82em;
+  line-height: 1.65;
+}
+
+.story-text .story-facts {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--navy);
+  font-size: 0.95em;
+  margin-top: 16px;
+  line-height: 1.7;
+}
+
+.story-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-image img {
+  max-width: 100%;
+  max-height: 380px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.type-label {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.65em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.type-label.mvp {
+  background: rgba(13, 148, 136, 0.1);
+  color: var(--teal);
+}
+
+.type-label.survival {
+  background: rgba(249, 115, 22, 0.1);
+  color: var(--orange);
+}
+
+.type-label.prototype {
+  background: rgba(30, 58, 95, 0.1);
+  color: var(--navy);
+}
+
+/* ── Tables ── */
+
+.reveal table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78em;
+  margin: 16px 0;
+}
+
+.reveal table th {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--navy);
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 2px solid var(--teal);
+}
+
+.reveal table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #E5E7EB;
+  vertical-align: top;
+}
+
+.reveal table tr:last-child td {
+  border-bottom: none;
+}
+
+.reveal table tr.row-highlight td {
+  background: var(--light-mint);
+}
+
+/* ── Find the Duct Tape Reminder (MGMT 625) ── */
+
+.reveal .reminder {
+  display: inline-block;
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.72em;
+  color: var(--dark-gray);
+  margin-top: 12px;
+}
+
+.reveal .reminder .label {
+  font-weight: 600;
+  color: var(--orange);
+}
+
+/* ── Lucide Icon Defaults ── */
+
+.reveal .activity-box i[data-lucide] {
+  width: 18px;
+  height: 18px;
+  color: #ffffff;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.reveal .callout-box i[data-lucide] {
+  width: 16px;
+  height: 16px;
+  color: var(--teal);
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.reveal i[data-lucide] {
+  width: 20px;
+  height: 20px;
+  color: var(--teal);
+  vertical-align: middle;
+}
+
+/* ── Progress Bar ── */
+
+.reveal .progress {
+  color: var(--teal);
+}
+
+/* ── Slide Number ── */
+
+.reveal .slide-number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #9CA3AF;
+}
+
+/* ── Constraint Slide ── */
+
+.constraint-slide {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.constraint-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.7em;
+  color: var(--orange);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.constraint-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.8em;
+  color: var(--navy);
+  line-height: 1.3;
+  max-width: 800px;
+}
+
+/* ── Video Label ── */
+
+.video-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.55em;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ═══════════════════════════════════════════ -->
+      <!-- BLOCK 1: OPENING                           -->
+      <!-- ═══════════════════════════════════════════ -->
+
+      <!-- Slide 1: Title -->
+      <section class="title-slide" style="height: 100%; min-height: 100%;">
+        <div class="pre-title">Session 5</div>
+        <h1>Your Experiment Might Fail.<br>Design It Anyway.</h1>
+        <div class="subtitle">Design Thinking for MBAs</div>
+        <div class="footer">Saturday, April 4, 2026 &ensp;|&ensp; Instructor: Patrick Ray</div>
+      </section>
+
+      <!-- Slide 2: Today's Arc -->
+      <section>
+        <h2>Today's Arc</h2>
+        <div class="title-underline"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>Phase</th>
+              <th>What Happens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Feedback</strong></td>
+              <td>Gallery walk your Problem Definitions. Read, respond, sharpen.</td>
+            </tr>
+            <tr>
+              <td><strong>Ideate</strong></td>
+              <td>Generate genuinely different solutions. Frame them as testable hypotheses.</td>
+            </tr>
+            <tr>
+              <td><strong>Stress Test</strong></td>
+              <td>Audit your assumptions. Another team tries to break them.</td>
+            </tr>
+            <tr>
+              <td><strong>Experiment</strong></td>
+              <td>Design a test you can run in 5 days with zero dollars.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="callout-box" style="font-style: normal;">
+          <i data-lucide="compass"></i> <strong>Thursday night (Session 6):</strong> You present what you learned, not what you planned. A killed idea is a successful experiment.
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════ -->
+      <!-- BLOCK 2: PROBLEM DEFINITION GALLERY WALK   -->
+      <!-- ═══════════════════════════════════════════ -->
+
+      <!-- Slide 3: Gallery Walk Instructions -->
+      <section>
+        <h2>Problem Definition Gallery Walk</h2>
+        <div class="title-underline"></div>
+        <div class="two-col" style="align-items: end;">
+          <div class="col">
+            <div class="activity-box" style="margin-top: 0;">
+              <p><i data-lucide="layout-grid"></i> <strong>Setup</strong></p>
+              <ol>
+                <li>Print and <strong>post your Problem Definition</strong> on the wall at your team's station</li>
+                <li>Include your revised causal loop map</li>
+                <li>One team member stays as <strong>docent</strong> (answers questions, does not present)</li>
+                <li>Everyone else circulates</li>
+              </ol>
+              <span class="time-tag"><i data-lucide="clock"></i> ~30 minutes total</span>
+            </div>
+          </div>
+          <div class="col">
+            <h3>Feedback Framework</h3>
+            <p style="margin-bottom: 16px;">Leave written notes at each station:</p>
+            <div class="concept-card" style="margin-bottom: 10px;">
+              <h3 style="color: var(--teal);"><i data-lucide="thumbs-up"></i> I Like...</h3>
+              <p>What's sharp? Where is the evidence strongest?</p>
+            </div>
+            <div class="concept-card" style="margin-bottom: 10px;">
+              <h3 style="color: var(--orange);"><i data-lucide="lightbulb"></i> I Wish...</h3>
+              <p>What's still vague? What needs tightening?</p>
+            </div>
+            <div class="concept-card">
+              <h3 style="color: var(--navy);"><i data-lucide="help-circle"></i> I Wonder...</h3>
+              <p>What question does this raise? What's missing?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════ -->
+      <!-- BLOCK 3: IDEATE + FRAME HYPOTHESES         -->
+      <!-- ═══════════════════════════════════════════ -->
+
+      <!-- Slide 4: Solutions Tic-Tac-Toe -->
+      <section>
+        <h2>Solutions Tic-Tac-Toe</h2>
+        <div class="title-underline"></div>
+        <div class="two-col" style="align-items: end;">
+          <div class="col">
+            <div class="activity-box" style="margin-top: 0;">
+              <p><i data-lucide="grid-3x3"></i> <strong>Draw a 3x3 grid on your large paper.</strong></p>
+              <p>Fill every cell with a solution concept. Each must be <strong>mutually incompatible</strong> with the others. No variations on a theme.</p>
+              <p style="margin-top: 12px;"><strong>All 9 cells must be filled when time is up.</strong></p>
+              <span class="time-tag"><i data-lucide="clock"></i> 20 minutes</span>
+            </div>
+          </div>
+          <div class="col">
+            <table style="font-size: 0.85em; margin: 0;">
+              <thead>
+                <tr>
+                  <th style="width: 80px;"></th>
+                  <th style="text-align: center;">Individual</th>
+                  <th style="text-align: center;">System</th>
+                  <th style="text-align: center;">Policy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Low Risk</strong></td>
+                  <td style="text-align: center; color: #9CA3AF; font-style: italic; font-size: 0.85em;">Peer mentor program for new hires</td>
+                  <td style="text-align: center; color: #9CA3AF; font-style: italic; font-size: 0.85em;">Shared onboarding checklist across teams</td>
+                  <td style="text-align: center; color: #9CA3AF; font-style: italic; font-size: 0.85em;">Require 30-day check-in with every new employee</td>
+                </tr>
+                <tr>
+                  <td><strong>Med Risk</strong></td>
+                  <td style="text-align: center; color: #D1D5DB;">?</td>
+                  <td style="text-align: center; color: #D1D5DB;">?</td>
+                  <td style="text-align: center; color: #D1D5DB;">?</td>
+                </tr>
+                <tr>
+                  <td><strong>High Risk</strong></td>
+                  <td style="text-align: center; color: #D1D5DB;">?</td>
+                  <td style="text-align: center; color: #D1D5DB;">?</td>
+                  <td style="text-align: center; color: #D1D5DB;">?</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="font-size: 0.7em; color: #9CA3AF; margin-top: 8px; text-align: center;">Example: Scenario A (The First 90 Days)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 5: Hypothesis Framing -->
+      <section>
+        <h2>Frame Your Hypothesis</h2>
+        <div class="title-underline"></div>
+        <p>Pick your <strong>1-2 strongest concepts</strong> from the grid. Reframe each as a testable hypothesis:</p>
+        <div class="callout-box" style="font-style: normal; font-size: 0.95em; margin: 30px 0; padding: 24px 28px;">
+          "We believe <strong>[solution]</strong> will <strong>[outcome]</strong> for <strong>[stakeholder]</strong> because <strong>[insight from our research]</strong>."
+        </div>
+        <div class="activity-box">
+          <p><i data-lucide="pen-tool"></i> <strong>The "because" clause is the test.</strong> It must trace to something a stakeholder actually said or did during your research. If it doesn't point to evidence, you're guessing.</p>
+          <p style="margin-top: 12px;">Write your hypotheses on large paper and <strong>post them on the wall.</strong> Then walk the room and read every team's hypothesis silently. No presenting.</p>
+          <span class="time-tag"><i data-lucide="clock"></i> ~30 minutes (framing + posting + reading)</span>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════ -->
+      <!-- BLOCK 4: STRESS TEST                       -->
+      <!-- ═══════════════════════════════════════════ -->
+
+      <!-- Slide 6: Assumption Audit -->
+      <section>
+        <h2>Assumption Audit</h2>
+        <div class="title-underline"></div>
+        <p style="font-size: 1.05em; color: var(--navy); margin-bottom: 20px;"><strong>You just read each other's hypotheses. Now find the weakest link in your own.</strong></p>
+        <div class="activity-box">
+          <p><i data-lucide="search"></i> <strong>Team Activity</strong></p>
+          <ol>
+            <li>What makes you <strong>nervous</strong> about your own hypothesis?</li>
+            <li>List <strong>5 critical assumptions</strong> it depends on</li>
+            <li>Rank by lethality: <strong>"If this is wrong, our concept fails"</strong></li>
+            <li>For your top 2: what <strong>specific, observable evidence</strong> would disprove this?</li>
+          </ol>
+          <span class="time-tag"><i data-lucide="clock"></i> ~15 minutes</span>
+        </div>
+        <div class="callout-box" style="font-style: normal;">
+          <i data-lucide="alert-triangle"></i> Confidence without evidence is just optimism. If two people can't agree on whether your kill criterion has been met, it's not specific enough.
+        </div>
+      </section>
+
+      <!-- Slide 7: Adversarial Stress Test -->
+      <section>
+        <h2>Adversarial Stress Test</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p><i data-lucide="swords"></i> <strong>Find weaknesses, not strengths.</strong></p>
+          <ol>
+            <li><strong>Half your team stays</strong> at your table as defenders. Other half walks to another team's table as attackers.</li>
+            <li><strong>Attackers:</strong> find the assumption that, if wrong, wastes their five days.</li>
+            <li><strong>12 minutes.</strong> Then swap roles at a different table.</li>
+          </ol>
+          <span class="time-tag"><i data-lucide="clock"></i> ~25 minutes (12 min each round)</span>
+        </div>
+        <p style="margin-top: 16px;"><strong>Questions worth asking:</strong></p>
+        <ul>
+          <li>"You're assuming the stakeholder wants this. Do you <em>know</em> that, or do you <em>believe</em> that?"</li>
+          <li>"What evidence do you have beyond your own intuition?"</li>
+          <li>"What if your problem definition is wrong?"</li>
+          <li>"Who benefits if this works, and who doesn't?"</li>
+        </ul>
+      </section>
+
+      <!-- Slide 8: Problem Check -->
+      <section>
+        <h2>Problem Check</h2>
+        <div class="title-underline"></div>
+        <p style="font-size: 1.3em; color: var(--navy); margin-top: 60px; line-height: 1.5;">Did anything you just heard change how you understand <span class="orange">the problem</span>, not just the solution?</p>
+        <div class="activity-box" style="margin-top: 40px;">
+          <p><i data-lucide="pencil"></i> <strong>Silent write in your notebook</strong> (2 minutes, individual). Then share with your team. Revise your hypothesis if needed.</p>
+          <span class="time-tag"><i data-lucide="clock"></i> ~10 minutes</span>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════ -->
+      <!-- BLOCK 5: PROTOTYPING + EXPERIMENT DESIGN   -->
+      <!-- ═══════════════════════════════════════════ -->
+
+      <!-- Slide 9: Three Tools, One Company -->
+      <section>
+        <h2>Three Tools, One Company</h2>
+        <div class="title-underline"></div>
+        <p>Before Thursday, you need to run an experiment. Here's what that means, and what it doesn't.</p>
+        <div class="card-row three-col" style="margin-top: 24px;">
+          <div class="concept-card">
+            <div class="card-label">MVP</div>
+            <h3>Built to Run</h3>
+            <p>A product you ship and keep running. It's rough, but it works as a service. You grow it into a business.</p>
+          </div>
+          <div class="concept-card">
+            <div class="card-label">Survival Tactic</div>
+            <h3>Built to Not Die</h3>
+            <p>Pure scrappiness. Whatever it takes to keep the lights on and prove you won't quit.</p>
+          </div>
+          <div class="concept-card highlight">
+            <div class="card-label">Prototype</div>
+            <h3>Built to Learn</h3>
+            <p>Tests one assumption with one real person. Might be disposable. Not built to last. Built to find out if you're right.</p>
+          </div>
+        </div>
+        <p style="margin-top: 16px; font-size: 0.82em;"><strong>You're building a prototype.</strong> Not an MVP. Not a business. A test.</p>
+      </section>
+
+      <!-- Slide 12: Airbnb MVP -->
+      <section>
+        <h2>The MVP: Air Mattresses, 2007</h2>
+        <div class="title-underline"></div>
+        <div class="story-slide">
+          <div class="story-text">
+            <span class="type-label mvp">MVP</span>
+            <p>Chesky and Gebbia can't make rent. Design conference in SF, hotels sold out. They buy three air mattresses, build a simple website: AirBed and Breakfast. $80/night. Breakfast included.</p>
+            <p>Three strangers show up and pay.</p>
+            <div class="story-facts">
+              They kept running it. Kept hosting.<br>
+              It became the business.
+            </div>
+          </div>
+          <div class="story-image">
+            <img src="ABNB-Original-Site.jpeg" alt="Original AirBed and Breakfast website, circa 2008">
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 13: Airbnb Survival -->
+      <section>
+        <h2>The Survival Tactic: Cereal Boxes, 2008</h2>
+        <div class="title-underline"></div>
+        <div class="story-slide">
+          <div class="story-text">
+            <span class="type-label survival">Survival</span>
+            <p>One year later. Airbnb is nearly dead. No funding, no traction, massive debt. The 2008 election is happening.</p>
+            <p>They design custom cereal: Obama O's and Cap'n McCains. 500 boxes each. $20 to make, $40 to sell. They sell out. $30,000. Enough to keep the lights on.</p>
+            <div class="callout-box" style="margin-top: 12px; font-style: normal;">
+              <strong>Paul Graham, Y Combinator:</strong><br>
+              "If you can convince people to pay $40 for a $4 box of cereal, you can convince people to stay in each other's homes. You are cockroaches. You will not die."
+            </div>
+          </div>
+          <div class="story-image">
+            <img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/4da8dbea-f96f-47bc-afaf-e75b35fd11e9/abb_cereals.jpg" alt="Obama O's and Cap'n McCains cereal boxes">
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 14: Would You Book This? -->
+      <section>
+        <h2>The Problem: Would You Book This?</h2>
+        <div class="title-underline"></div>
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+          <img src="ABNB-Photog-Example.jpg" alt="Airbnb listing photography before and after comparison" style="max-width: 100%; max-height: 480px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+        </div>
+      </section>
+
+      <!-- Slide 15: Airbnb Prototype -->
+      <section>
+        <h2>The Prototype: Photography, 2009</h2>
+        <div class="title-underline"></div>
+        <div class="story-slide">
+          <div class="story-text">
+            <span class="type-label prototype">Prototype</span>
+            <p>Airbnb has users, but nobody's booking. Hypothesis: the photos are terrible and that's killing trust.</p>
+            <p>They rent a camera, fly to New York, knock on hosts' doors. One week. One apartment at a time.</p>
+            <div class="story-facts">
+              2-3x more bookings.<br>
+              Revenue doubled that month.<br><br>
+              Then they threw away the prototype<br>
+              and built the real program.
+            </div>
+          </div>
+          <div class="story-image" style="align-items: start;">
+            <div class="callout-box" style="font-style: normal; font-size: 0.82em; line-height: 1.6;">
+              <p style="color: var(--navy);">"A web startup would say, 'Let's send emails, teach users professional photography, and test them.' We said, 'Screw that.'"</p>
+              <p style="color: var(--navy); margin-top: 10px;">"When we fixed the product in New York, it solved our problems in Paris, London, Vancouver, and Miami."</p>
+              <p style="color: #9CA3AF; margin-top: 12px; font-size: 0.85em;">Chesky &amp; Gebbia, Fast Company</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 16: Design the Experiment -->
+      <section>
+        <h2>Design Your Experiment</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p><i data-lucide="flask-conical"></i> <strong>Team Activity: Answer four questions. Write them on your large paper.</strong></p>
+          <ol>
+            <li><strong>What's the riskiest assumption you're testing?</strong></li>
+            <li><strong>What's the smallest thing you can do to test it?</strong><br>Not the whole solution. Just the test.</li>
+            <li><strong>What does "pass" look like? What does "fail" look like?</strong><br>Specific enough that two people can agree on whether it happened.</li>
+            <li><strong>Who specifically will you test with, and when?</strong><br>Name a real person. Pick a day.</li>
+          </ol>
+          <span class="time-tag"><i data-lucide="clock"></i> ~45 minutes</span>
+        </div>
+        <p style="font-size: 0.78em; margin-top: 8px;"><strong>Plus:</strong> task assignments. Each team member's name, their specific action, their stakeholder, the day they'll do it.</p>
+      </section>
+
+      <!-- Slide 17: Surprise Constraint -->
+      <section class="constraint-slide">
+        <div class="constraint-label">New Constraint</div>
+        <div class="constraint-text">Your first test must cost<br>zero dollars.</div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════ -->
+      <!-- BLOCK 6: SHARE + CLOSE                     -->
+      <!-- ═══════════════════════════════════════════ -->
+
+      <!-- Slide 18: Share Plans -->
+      <section>
+        <h2>Experiment Plan Review</h2>
+        <div class="title-underline"></div>
+        <div class="activity-box">
+          <p><i data-lucide="messages-square"></i> <strong>Poster Session</strong></p>
+          <ol>
+            <li>Your experiment plan stays at your table.</li>
+            <li><strong>Half your team stays as defenders.</strong> Other half circulates.</li>
+            <li>At each table, ask only two questions.</li>
+            <li><strong>Swap at 12 minutes</strong> so everyone both presents and visits.</li>
+          </ol>
+          <span class="time-tag"><i data-lucide="clock"></i> ~24 minutes</span>
+        </div>
+        <div class="card-row" style="margin-top: 20px;">
+          <div class="concept-card">
+            <h3><i data-lucide="calendar-check"></i> Question 1</h3>
+            <p>"Is this testable in 5 days?"</p>
+          </div>
+          <div class="concept-card">
+            <h3><i data-lucide="git-branch"></i> Question 2</h3>
+            <p>"What decision does this test let you make?"</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 19: Close -->
+      <section class="title-slide" style="height: 100%; min-height: 100%;">
+        <h1 style="font-size: 1.8em; line-height: 1.4;">You have 5 days.<br>Go test it.</h1>
+        <p style="font-size: 0.85em; color: var(--dark-gray); margin-top: 20px;">Session 6: Thursday, April 9 &ensp;|&ensp; 6:30 PM &ensp;|&ensp; Online</p>
+        <p style="font-size: 0.82em; color: var(--body-gray); margin-top: 30px;">Present what you learned and who taught you.<br>Not a polished pitch. The story of what happened.</p>
+        <p style="font-size: 0.82em; color: var(--navy); font-weight: 600; margin-top: 30px;">A killed idea is a successful experiment.</p>
+        <div class="footer" style="margin-top: 40px;">Notebooks due Sunday, April 12, 11:59 PM</div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      progress: true,
+      center: false,
+      width: 1280,
+      height: 720,
+      margin: 0,
+      transition: 'fade',
+      transitionSpeed: 'fast',
+      controlsTutorial: false,
+      keyboard: true
+    });
+    lucide.createIcons();
+  </script>
+</body>
+</html>
