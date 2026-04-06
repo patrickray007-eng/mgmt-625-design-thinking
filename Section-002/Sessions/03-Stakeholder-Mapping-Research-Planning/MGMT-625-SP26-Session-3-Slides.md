@@ -1,202 +1,388 @@
 ---
 source_pdf: "MGMT-625-SP26-Session-3-Slides.pdf"
-converted: 2026-04-04
+converted: "2026-04-05"
+method: PyMuPDF
 ---
 
-# Session 3: Stakeholder Mapping + Research Planning
+<!-- Page 1 -->
 
+S E S S I O N  3
+Stakeholder Mapping +
+Causal Loop Introduction
 Design Thinking for MBAs (Hybrid Section)
-
-Thursday, March 12, 2026 | 6:30 PM | Online (Zoom) | Faculty: Patrick Ray
-
----
-
-## Slide 2: Check-In
-
-> **Quick round:** Has anything shifted in your thinking since Session 2?
->
-> What did writing about your observation experience surface?
->
-> 10 minutes
-
-> "By the end of tonight, your team will have a research plan. The next two weeks are fieldwork."
+Thursday, March 12, 2026  |  6:30 PM  |  Online (Zoom)  |  Faculty: Patrick Ray
 
 ---
 
-## Slide 3: Tonight's Arc
+<!-- Page 2 -->
 
-Two breakout room cycles, two deliverables:
-
-**Stakeholder Mapping**
-- Identify 4-5 stakeholders for your scenario
-- Include at least one **extreme user**
-- Map concerns, constraints, access
-
-**Research Planning**
-- Design your two-week distributed plan
-- Map each member's unique access
-- Leave with specific assignments
-
-> Find the Duct Tape: Document one workaround or improvised fix in your notebook this week.
+Check-In
+Quick round: Has anything shifted in your thinking since Session 2?
+What did writing about your observation experience surface?
+5 minutes
+2
 
 ---
 
-## Slide 4: Stakeholder Mapping
+<!-- Page 3 -->
 
-> **Breakout rooms by team.** Identify 4-5 stakeholders for your scenario.
->
-> For each stakeholder:
->
-> 1. Who are they? (specific: "night shift warehouse supervisor," not "employee")
-> 2. What do they optimize for?
-> 3. What constraints do they face?
-> 4. What are their top 2-3 concerns?
-> 5. Which team member can access this stakeholder type?
->
-> Include at least one **extreme user**: someone who experiences the problem most intensely.
->
-> 25 minutes
+Find the Duct Tape
+What did you find this week? Any workarounds, improvised fixes, duct tape solutions?
+Drop yours in the chat in one sentence. Then we'll hear 2-3 people elaborate.
+10 minutes
+What's the fix? What's the real problem underneath?
+These workarounds are exactly what you'll look for during stakeholder research
+People's improvised fixes tell you where the system is failing
+3
 
 ---
 
-## Slide 5: What Makes a Good Stakeholder Map?
+<!-- Page 4 -->
 
-**Go Specific**
-- Not "customers" but **"first-time parents buying online"**
-- Not "employees" but **"mid-career nurses on night shift"**
-- The more specific, the more useful your research will be
-
-**Find Extreme Users**
-- Who experiences this problem **most intensely**?
-- Who has a **workaround**?
-- Who has **given up** on the existing solution?
-- These perspectives reveal what normal users won't tell you
-
----
-
-## Slide 6: Debrief: The Overlooked Stakeholder
-
-> **Back to main room.** Each team shares one stakeholder they almost forgot or didn't initially consider.
->
-> 15 minutes
-
-- Why do we overlook certain stakeholders?
-- What makes some **invisible**?
-- "Learning From Others" means seeking perspectives you wouldn't naturally encounter
-
-> "The stakeholders you overlook are often the ones with the most revealing perspective."
+Tonight's Arc
+Two breakout room cycles, two tools:
+Stakeholder Mapping
+Deepen your Session 2 stakeholder list
+Map optimization goals, constraints,
+concerns
+Include at least one extreme user
+Causal Loop Mapping
+Learn a tool for mapping system
+dynamics
+Draft an initial causal loop for your
+scenario
+Identify what your research needs to test
+4
 
 ---
 
-## Slide 7: The Method Transition
+<!-- Page 5 -->
 
-From observation to empathy interviews
-
----
-
-## Slide 8: Observation -> Interviews
-
-In TETHER, you practiced pure observation: watching without asking. That discipline matters, and you'll keep using it.
-
-Now you add a new tool: **the empathy interview.**
-
-**Observation Shows**
-- **What** people do
-- Behaviors, patterns, workarounds
-- The visible surface of the problem
-
-**Interviews Reveal**
-- **Why** they do it
-- Motivations, constraints, frustrations
-- The invisible logic underneath
-
-You need both. You've mapped stakeholders on paper. Now you actually talk to them.
-
----
-
-## Slide 9: The Distributed Advantage
-
-Your team's superpower is that you're in **different places.**
-
-- Different cities
-- Different workplaces
-- Different industries
-
-Each of you can reach stakeholders the others can't.
-
-> That's not a limitation of the hybrid format. It's the strategy.
+Design Abilities Tonight
+Learn From Others
+Empathize with diverse viewpoints. Observe
+and learn from unfamiliar contexts. Tonight:
+stakeholder mapping, extreme users, seeking
+perspectives you wouldn't naturally encounter.
+Synthesize Information
+Make sense of information and find insight
+within. Tonight: causal loop mapping turns
+scattered observations into a system-level
+picture.
+Navigate Ambiguity
+Persist in the discomfort of not knowing.
+Tonight: your maps are hypotheses, not
+answers. The research period starts with
+uncertainty.
+Move Between Concrete and Abstract
+Zoom in on specific stakeholder concerns,
+zoom out to system dynamics. Tonight: you'll
+do both, repeatedly.
+5
 
 ---
 
-## Slide 10: Research Planning
+<!-- Page 6 -->
 
-> **Back to breakout rooms.** Create a concrete research plan for the next two weeks.
->
-> 1. Who can each team member **reach**? Map your combined access.
-> 2. What will each person **do**? (Observation, interview, or both)
-> 3. What specific **questions** or observation targets for each stakeholder?
-> 4. How will you **coordinate** async? (Slack, GroupMe, text, shared doc)
-> 5. When will you **compile** findings? (Must be before Session 4, March 26)
->
-> Each member: 1-2 substantial observations or interviews. **Depth, not breadth.**
->
-> 25 minutes
-
----
-
-## Slide 11: What a Good Research Plan Looks Like
-
-Not "we'll do some research." Instead:
-
-> **Sarah** interviews two pediatric nurses at Houston Methodist (week 1). Shares notes in team Google Doc by March 20.
-> **Marcus** observes shift handoff at his company's warehouse in Dallas (March 14). Posts photos + field notes by March 17.
-> **Team sync**: 30-min Zoom on March 22 to compile findings before Session 4.
-
-Names. Dates. Stakeholders. Coordination method. Compile deadline.
+Why Map Stakeholders?
+A stakeholder map makes differences visible: who's affected, what they want, and
+where their interests conflict.
+What You're Looking For
+Who is affected by this problem?
+Who has influence over it?
+Where do their interests conflict?
+Who is invisible in the current system?
+Why It Matters for Design
+Solutions that work for one stakeholder
+often create problems for another
+The stakeholders you forget are usually
+the ones whose needs go unmet
+Your research plan depends on knowing
+who to talk to and what to ask them
+6
 
 ---
 
-## Slide 12: Share Research Plans
+<!-- Page 7 -->
 
-> **Back to main room.** Each team briefly shares:
->
-> - Who's doing what, and where?
-> - What's your coordination plan?
-> - When will findings be compiled?
->
-> 10 minutes
-
----
-
-## Slide 13: The Research Period
-
-**March 12 - 26**
-
-- Each team member conducts **1-2 substantial** observations or interviews
-- Focus on **depth**, not breadth
-- Document in your notebook; contribute to your team's shared document
-- Coordinate with your team asynchronously
-
-**Due Session 4 (March 26)**
-- **Stakeholder Research**: Compiled team research document
-
-**Not a Survey**
-- Don't send a Google Form to 50 people
-- Talk to 1-2 stakeholders in depth
-
-- **Causal Loop Map**: Diagram of problem dynamics, feedback loops, who benefits
-
-- Observe in context when possible
-- Quality of insight over quantity of data
+Stakeholder Mapping
+Breakout rooms by team. Deepen your stakeholder list from Session 2. Identify 4-5
+stakeholders for your scenario.
+For each stakeholder, fill in the template on the next slide:
+Include at least one extreme user: someone who experiences the problem most intensely.
+20 minutes
+7
 
 ---
 
-## Slide 14: What's Next
+<!-- Page 8 -->
 
-- **Session 4**: Thursday, March 26, 6:30 PM (Online, Zoom)
-- Synthesize research, build causal loop maps, define the problem
-- Use the two-week gap to conduct research in your own environments
+Stakeholder Template
+Element
+Prompt
+Who
+Specific role or identity (not generic)
+Optimizes for
+What are they trying to maximize?
+Constraints
+What limits their options?
+Top concerns
+What do they care about most? (2-3)
+Access
+Which team member can reach this person?
+If everyone on your list wants the same thing, you're missing someone. Stakeholder maps without
+tension are incomplete.
+8
 
-> "The next two weeks are yours. Use them."
+---
 
-> Find the Duct Tape: Each week, identify and document one workaround or improvised fix in your notebook.
+<!-- Page 9 -->
+
+What Is This?
+9
+
+---
+
+<!-- Page 10 -->
+
+The First Typewriter
+This is one of the oldest typewritten documents in existence. Written in 1808.
+The machine that produced it didn't survive. But the letters did.
+In 1808, Italian inventor Pellegrino Turri built one of the first working typewriters. He
+built it for exactly one person: Countess Carolina Fantoni, who was blind. She
+wanted to write letters independently, without dictating to someone else.
+10
+
+---
+
+<!-- Page 11 -->
+
+Extreme Users Drive Innovation
+Turri didn't set out to invent the typewriter. He set out to solve one person's problem:
+a blind woman who wanted to write her own letters.
+That's what extreme users do. Their needs are so acute that they force you past
+incremental fixes into fundamentally different solutions.
+11
+
+---
+
+<!-- Page 12 -->
+
+Debrief: The Overlooked Stakeholder
+Each team shares one stakeholder they almost forgot or didn't initially consider.
+Why do we overlook certain stakeholders? What makes some invisible?
+The stakeholders you overlook are usually the ones absorbing the cost of the current
+system.
+10 minutes
+12
+
+---
+
+<!-- Page 13 -->
+
+Causal Loop Mapping
+Why does this problem persist?
+
+---
+
+<!-- Page 14 -->
+
+What Is a Causal Loop Map?
+A diagram that shows the system dynamics underlying your problem: what causes
+what, what reinforces what, and why it doesn't just fix itself.
+The Building Blocks
+Nodes: Specific factors in the system
+Arrows: Direction of influence
++/- signs: (+) as A increases, B increases.
+(-) as A increases, B decreases.
+Two Types of Loops
+Reinforcing (R): Self-amplifying. The
+problem feeds itself.
+Balancing (B): Self-correcting. Something
+pushes back.
+14
+
+---
+
+<!-- Page 15 -->
+
+Reading a Causal Loop
+A simple three-node reinforcing loop:
++
++
++
+R
+High demand
+Long wait times
+Staff burnout
+How to Read It
+1. Follow the arrows. High demand → long
+wait times → staff burnout → high
+demand
+2. Check the signs. All (+) means each factor
+increases the next
+3. Identify the loop type. All same
+direction? Reinforcing (R): it spirals. A
+minus sign flips the direction? Balancing
+(B): something pushes back.
+15
+
+---
+
+<!-- Page 16 -->
+
+From Observation to Causal Loop
+We'll review a real TETHER observation, then walk through the causal loop map it
+produced.
+Four loops to trace:
+1. R1 "Invisibility Cycle": The core reinforcing loop. The problem feeds itself.
+2. B1 "Companion Workaround": A balancing loop. Does this solve the problem?
+3. B2 "Accidental Aid": Two workarounds converge on the same variable.
+4. R2 "Crowd Amplifier": A second reinforcing pathway. It gets worse.
+As we trace, watch for: Where does an effect become a cause? Who benefits? Who
+bears the cost?
+16
+
+---
+
+<!-- Page 17 -->
+
+The Observation
+99 Ranch Food Court, Houston
+An elderly man with an unsteady gait and a tall
+cane enters the food court. He steadies
+himself on retractable barrier posts spaced
+one foot apart. There is no break in the
+perimeter barrier. He sits alone at a four-top
+with no food. A younger companion joins him
+and shares food. Meanwhile, up to 20 people
+crowd around the duck stall's hot case.
+What do you notice?
+Who is this space designed for?
+What workarounds are happening?
+Who benefits from the current design?
+Who bears the cost?
+17
+
+---
+
+<!-- Page 18 -->
+
+Causal Loop Example
+Reinforcing (R1, R2)
+Balancing (B1, B2)
+(+) same direction    (−) opposite direction
++
++
++
++
++
++
++
++
++
+−
++
+−
+R1
+Invisibility Cycle
+R2
+Crowd Amplifier
+B1
+Companion Workaround
+B2
+Accidental Aid
+Space designed for
+high-volume throughput
+Dense barriers &
+standing-only queues
+Difficulty accessing
+food independently
+Depend on companion
+for food access
+Mobility-limited visitors
+less visible to operators
+No pressure to design
+for accessibility
+Companion brings food;
+needs met informally
+Barrier posts double
+as mobility aids
+Crowds gather at
+popular stalls
+18
+
+---
+
+<!-- Page 19 -->
+
+Causal Loop Drafting
+Sketch an initial causal loop map for your scenario.
+1. Put your core problem in the center. Be specific.
+2. Identify 4-5 contributing factors and effects. Draw the arrows.
+3. Find at least one loop. Label it R or B.
+4. Add +/- signs to your arrows.
+5. Ask: who benefits from this staying the way it is?
+20 minutes
+19
+
+---
+
+<!-- Page 20 -->
+
+What a Good Causal Loop Looks Like
+Common Pitfalls
+Nodes too abstract ("bad
+communication")
+All arrows going one direction (that's a
+chain, not a loop)
+Forgetting to close the loop
+Symptoms instead of causes
+Signs You're On Track
+You can trace a path that returns to
+where it started
+Your +/- signs make logical sense
+You found something that surprised you
+You can name who benefits from the
+status quo
+Not "communication issues." What specifically? "Frontline staff feedback doesn't reach decision-
+makers." Now you can map what causes that and trace the loop.
+20
+
+---
+
+<!-- Page 21 -->
+
+Share Your Loops
+Each team: "Our reinforcing loop is ___. Our balancing loop is ___."
+Does it ring true? What would you want to investigate to test it?
+Where would you intervene? Which node, if changed, would break the cycle?
+Name your loops. A loop with a name is a loop your team can reference.
+21
+
+---
+
+<!-- Page 22 -->
+
+What's Due for Session 4
+Thursday, March 26
+Stakeholder Research
+Team deliverable. Each member conducts 1-2
+observations or interviews, then compile.
+Details on Canvas.
+Causal Loop Map
+Team deliverable. Start from tonight's draft.
+Let your research reveal new dynamics.
+Details on Canvas.
+22
+
+---
+
+<!-- Page 23 -->
+
+What's Next
+Session 4: Thursday, March 26, 6:30 PM (Online, Zoom)
+Synthesize research, refine causal loop maps, define the problem
+Both deliverables are hypotheses right now. The next two weeks of research will tell you where
+you're wrong. That's the point.
+23
