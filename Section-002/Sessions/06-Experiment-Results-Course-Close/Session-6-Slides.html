@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Session 6: What You Learned</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+:root {
+  --teal: #0D9488;
+  --navy: #1E3A5F;
+  --orange: #F97316;
+  --dark-gray: #4B5563;
+  --light-mint: #F0FDFA;
+  --body-gray: #374151;
+}
+
+.reveal {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 28px;
+  color: var(--body-gray);
+}
+
+.reveal .slides { text-align: left; }
+
+.reveal .slides section {
+  box-sizing: border-box;
+  padding: 40px 60px;
+  overflow: hidden;
+  background: #ffffff;
+  background-image: radial-gradient(ellipse at top right, rgba(13, 148, 136, 0.04) 0%, transparent 60%);
+}
+
+.reveal h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 1.6em;
+  margin-bottom: 4px;
+  text-transform: none;
+}
+
+.reveal .title-underline {
+  width: 80px;
+  height: 4px;
+  background: var(--teal);
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+.reveal p, .reveal li {
+  font-size: 0.82em;
+  line-height: 1.6;
+  color: var(--body-gray);
+}
+
+.reveal ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.reveal ul li {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.reveal ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background: var(--teal);
+  border-radius: 50%;
+}
+
+.reveal ol { padding-left: 24px; margin: 0; }
+.reveal ol li { margin-bottom: 8px; padding-left: 4px; }
+.reveal ol li::marker { color: var(--teal); font-weight: 700; }
+
+.reveal strong { color: var(--navy); font-weight: 600; }
+.reveal .orange { color: var(--orange); font-weight: 600; }
+
+.reveal .activity-box {
+  box-sizing: border-box;
+  max-width: 100%;
+  background: var(--dark-gray);
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin: 20px 0;
+  font-size: 0.78em;
+  line-height: 1.65;
+}
+
+.reveal .activity-box p,
+.reveal .activity-box li { color: #ffffff; }
+.reveal .activity-box strong { color: #ffffff; }
+
+.reveal .callout-box {
+  background: var(--light-mint);
+  border-left: 4px solid var(--teal);
+  border-radius: 0 8px 8px 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+  font-size: 0.78em;
+  font-style: italic;
+  color: var(--navy);
+  line-height: 1.5;
+}
+
+.reveal .title-slide {
+  text-align: center;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100% !important;
+  min-height: 720px;
+}
+
+.reveal .title-slide .pre-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.7em;
+  color: var(--teal);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.reveal .title-slide h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--navy);
+  font-size: 2.2em;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+  text-transform: none;
+}
+
+.reveal .title-slide .subtitle {
+  font-size: 0.85em;
+  color: var(--dark-gray);
+  margin-bottom: 40px;
+}
+
+.reveal .title-slide .footer {
+  font-size: 0.65em;
+  color: #9CA3AF;
+}
+
+.reveal .reminder {
+  display: inline-block;
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.25);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.72em;
+  color: var(--dark-gray);
+  margin-top: 12px;
+}
+
+.reveal .reminder .label {
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.reveal .closing-slide {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reveal .thank-you {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.1em;
+  color: var(--teal);
+  margin-top: 24px;
+}
+
+.reveal .progress { color: var(--teal); }
+
+.reveal .slide-number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #9CA3AF;
+}
+
+/* Ability Cards */
+.ability-grid-desc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.ability-card-desc {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  background: var(--light-mint);
+  border: 1.5px solid var(--teal);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.ability-card-desc i[data-lucide] {
+  width: 20px;
+  height: 20px;
+  color: var(--teal);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ability-card-desc .ability-text .ability-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.62em;
+  color: var(--navy);
+  margin: 0 0 2px 0;
+}
+
+.ability-card-desc .ability-text .ability-desc {
+  font-size: 0.52em;
+  color: var(--dark-gray);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.ability-card-desc.eighth {
+  border-color: var(--orange);
+  background: rgba(249, 115, 22, 0.06);
+}
+
+.ability-card-desc.eighth i[data-lucide] {
+  color: var(--orange);
+}
+
+/* Tools Table */
+.tools-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 6px;
+}
+
+.tools-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.50em;
+  line-height: 1.35;
+}
+
+.tools-table th {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--navy);
+  text-align: left;
+  padding: 3px 6px;
+  border-bottom: 2px solid var(--teal);
+  font-size: 1.05em;
+}
+
+.tools-table td {
+  padding: 2.5px 6px;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: top;
+}
+
+.tools-table .group-row td {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--teal);
+  font-size: 1.0em;
+  padding-top: 6px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(13, 148, 136, 0.3);
+  background: var(--light-mint);
+}
+
+.tools-table .tool-name {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* Book Cards */
+.book-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 36px;
+  margin: 20px 40px;
+  text-align: center;
+}
+
+.book-card img {
+  height: 260px;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  margin-bottom: 12px;
+}
+
+.book-card .book-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.68em;
+  color: var(--navy);
+  line-height: 1.3;
+}
+
+.book-card .book-author {
+  font-size: 0.58em;
+  color: var(--dark-gray);
+  margin-top: 3px;
+}
+
+/* Questions grid */
+.questions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.question-card {
+  background: var(--light-mint);
+  border: 1.5px solid var(--teal);
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.question-card .q-number {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.1em;
+  color: var(--teal);
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.question-card .q-text {
+  font-size: 0.72em;
+  color: var(--navy);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.question-card.highlight {
+  background: rgba(249, 115, 22, 0.06);
+  border-color: var(--orange);
+}
+
+.question-card.highlight .q-number {
+  color: var(--orange);
+}
+
+.question-card.full-width {
+  grid-column: 1 / -1;
+}
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Title -->
+      <section class="title-slide">
+        <div class="pre-title">Session 6</div>
+        <h1>What You Learned</h1>
+        <div class="subtitle">Design Thinking for MBAs</div>
+        <div class="footer">Thursday, April 9, 2026 &ensp;|&ensp; Faculty: Patrick Ray</div>
+      </section>
+
+      <!-- Slide 2: How Tonight Works -->
+      <section>
+        <h2>How Tonight Works</h2>
+        <div class="title-underline"></div>
+
+        <ul>
+          <li><strong>Each team: ~8 minutes.</strong> Present what happened, not what you planned.</li>
+          <li><strong>After each team:</strong> questions from the room. Push for what surprised you and what's still unresolved.</li>
+          <li><strong>After all teams:</strong> we'll look at patterns, revisit your Duct Tape collections, and close the course.</li>
+        </ul>
+
+        <div class="callout-box">
+          Helpful Hint: If your experiment didn't go as planned, that's not a failure. That's data. The teams that learn the most are often the ones whose experiments broke.
+        </div>
+
+        <div class="reminder">
+          <span class="label"><i data-lucide="notebook-pen"></i> Notebooks due Sunday, April 12 at 11:59 PM.</span> Submit to Canvas as PDF.
+        </div>
+      </section>
+
+      <!-- Slide 3: Tell Us What Happened -->
+      <section>
+        <h2>Tell Us What Happened</h2>
+        <div class="title-underline"></div>
+
+        <div class="questions-grid">
+          <div class="question-card">
+            <div class="q-number">1</div>
+            <p class="q-text"><strong>What was your hypothesis?</strong><br>The "We believe... because..." statement you left Session 5 with.</p>
+          </div>
+          <div class="question-card">
+            <div class="q-number">2</div>
+            <p class="q-text"><strong>What did you actually test?</strong><br>Describe the experiment you ran, not the one you planned.</p>
+          </div>
+          <div class="question-card">
+            <div class="q-number">3</div>
+            <p class="q-text"><strong>What happened?</strong><br>Results, reactions, data. Be specific.</p>
+          </div>
+          <div class="question-card highlight">
+            <div class="q-number">4</div>
+            <p class="q-text"><strong>What surprised you?</strong><br>Where did reality break from your assumptions?</p>
+          </div>
+          <div class="question-card full-width">
+            <div class="q-number">5</div>
+            <p class="q-text"><strong>What would you do next?</strong> If you had another five days, what would you test, change, or investigate?</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 4: The 7 Design Abilities -->
+      <section>
+        <h2>The 8 Design Abilities</h2>
+        <div class="title-underline"></div>
+
+        <div class="ability-grid-desc">
+          <div class="ability-card-desc">
+            <i data-lucide="compass"></i>
+            <div class="ability-text">
+              <p class="ability-name">Navigate Ambiguity</p>
+              <p class="ability-desc">Staying in the question. Resisting the urge to resolve too quickly.</p>
+            </div>
+          </div>
+          <div class="ability-card-desc">
+            <i data-lucide="users"></i>
+            <div class="ability-text">
+              <p class="ability-name">Learn From Others</p>
+              <p class="ability-desc">Observing without judgment. Seeking perspectives unlike your own.</p>
+            </div>
+          </div>
+          <div class="ability-card-desc">
+            <i data-lucide="layers"></i>
+            <div class="ability-text">
+              <p class="ability-name">Synthesize Information</p>
+              <p class="ability-desc">Finding patterns in noise. Moving from scattered data to actionable insight.</p>
+            </div>
+          </div>
+          <div class="ability-card-desc">
+            <i data-lucide="zap"></i>
+            <div class="ability-text">
+              <p class="ability-name">Experiment Rapidly</p>
+              <p class="ability-desc">Generating many ideas without commitment. Building to think, not to ship.</p>
+            </div>
+          </div>
+          <div class="ability-card-desc">
+            <i data-lucide="move-vertical"></i>
+            <div class="ability-text">
+              <p class="ability-name">Move Between Concrete and Abstract</p>
+              <p class="ability-desc">Zooming in on details, out to purpose. Connecting the specific to the systemic.</p>
+            </div>
+          </div>
+          <div class="ability-card-desc">
+            <i data-lucide="hammer"></i>
+            <div class="ability-text">
+              <p class="ability-name">Build and Craft Intentionally</p>
+              <p class="ability-desc">Showing work at the right resolution for the feedback you need.</p>
+            </div>
+          </div>
+          <div class="ability-card-desc">
+            <i data-lucide="message-circle"></i>
+            <div class="ability-text">
+              <p class="ability-name">Communicate Deliberately</p>
+              <p class="ability-desc">Telling the story of your thinking so others can follow the thread.</p>
+            </div>
+          </div>
+          <div class="ability-card-desc eighth">
+            <i data-lucide="settings"></i>
+            <div class="ability-text">
+              <p class="ability-name">Design Your Design Work</p>
+              <p class="ability-desc">Choosing the right tools, and making your own when none exist.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-box">
+          These are not steps in a process. They are abilities you have built. Take them with you.
+        </div>
+      </section>
+
+      <!-- Slide 5: Design Your Design Work -->
+      <section>
+        <h2>Design Your Design Work</h2>
+        <div class="title-underline"></div>
+
+        <p style="font-size: 0.82em; line-height: 1.65; margin-bottom: 18px;">
+          Someone had to design every activity you did in this course. Each one maps to a specific ability. But these are <span class="orange">one set of tools</span> among many. You can also make your own.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: start;">
+          <div>
+            <p style="font-size: 0.78em; line-height: 1.65; margin: 0 0 16px 0;">
+              Experienced machinists don't just use tools off the shelf. They fabricate custom jigs, fixtures, and cutting tools shaped by the specific job in front of them.
+            </p>
+            <p style="font-size: 0.78em; line-height: 1.65; margin: 0 0 16px 0;">
+              This ability is so large it could fill an entire course on its own. But now you know what design feels like from the inside. That means you can start designing your own process for problems no one has solved before.
+            </p>
+            <p style="font-style: italic; color: var(--navy); font-size: 0.72em; margin: 0;">
+              This is the hardest ability. It takes years. Now you know what you are building toward.
+            </p>
+          </div>
+          <div>
+            <img src="machinist-lathe.jpg" alt="Machinist working at a milling machine" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);">
+            <p style="font-size: 0.52em; color: #9CA3AF; margin-top: 6px; font-style: italic;">Experienced machinists make their own tools. Photo: Wikimedia Commons, CC BY-SA 4.0</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 7: Everything You Have Built -->
+      <section style="padding: 30px 50px;">
+        <h2>Everything You Have Built</h2>
+        <div class="title-underline" style="margin-bottom: 10px;"></div>
+
+        <div class="tools-two-col">
+          <table class="tools-table">
+            <thead>
+              <tr>
+                <th style="width: 40%;">Tool</th>
+                <th style="width: 60%;">Skill Developed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="group-row"><td colspan="2"><i data-lucide="compass" style="width:13px;height:13px;vertical-align:middle;margin-right:3px;"></i> Navigate Ambiguity</td></tr>
+              <tr><td class="tool-name">Video Ambiguity Exercise</td><td>Productive discomfort with uncertainty</td></tr>
+              <tr><td class="tool-name">TETHER</td><td>Sustained attention without interpretation</td></tr>
+              <tr><td class="tool-name">Find the Duct Tape</td><td>Recognizing workarounds in broken systems</td></tr>
+
+              <tr class="group-row"><td colspan="2"><i data-lucide="users" style="width:13px;height:13px;vertical-align:middle;margin-right:3px;"></i> Learn From Others</td></tr>
+              <tr><td class="tool-name">AEIOU Framework</td><td>Structured observation</td></tr>
+              <tr><td class="tool-name">"Why?" Interviews</td><td>Listening for what is not said</td></tr>
+              <tr><td class="tool-name">Stakeholder Mapping</td><td>Identifying who is affected and why</td></tr>
+              <tr><td class="tool-name">Distributed Research</td><td>Gathering data across diverse contexts</td></tr>
+
+              <tr class="group-row"><td colspan="2"><i data-lucide="layers" style="width:13px;height:13px;vertical-align:middle;margin-right:3px;"></i> Synthesize Information</td></tr>
+              <tr><td class="tool-name">Guided Synthesis</td><td>Observations to patterns to insights</td></tr>
+              <tr><td class="tool-name">Causal Loop Mapping</td><td>Systems, feedback loops, who benefits</td></tr>
+              <tr><td class="tool-name">Frame Breaking</td><td>Questioning whether the assumed problem is real</td></tr>
+            </tbody>
+          </table>
+
+          <table class="tools-table">
+            <thead>
+              <tr>
+                <th style="width: 40%;">Tool</th>
+                <th style="width: 60%;">Skill Developed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="group-row"><td colspan="2"><i data-lucide="zap" style="width:13px;height:13px;vertical-align:middle;margin-right:3px;"></i> Experiment Rapidly</td></tr>
+              <tr><td class="tool-name">Solutions Tic-Tac-Toe</td><td>Diversity across risk, scope, timeline</td></tr>
+              <tr><td class="tool-name">Testable Hypotheses</td><td>"We believe... because..."</td></tr>
+              <tr><td class="tool-name">Assumption Audit</td><td>What must be true for this to work</td></tr>
+              <tr><td class="tool-name">Kill Criteria</td><td>What evidence would disprove your concept</td></tr>
+              <tr><td class="tool-name">Stress Testing</td><td>Breaking your own logic first</td></tr>
+
+              <tr class="group-row"><td colspan="2"><i data-lucide="move-vertical" style="width:13px;height:13px;vertical-align:middle;margin-right:3px;"></i> Move Between Concrete and Abstract</td></tr>
+              <tr><td class="tool-name">Scope Shifting</td><td>Individual stories to systemic patterns</td></tr>
+              <tr><td class="tool-name">Stakeholder Concerns</td><td>Specific experiences to broader dynamics</td></tr>
+
+              <tr class="group-row"><td colspan="2"><i data-lucide="hammer" style="width:13px;height:13px;vertical-align:middle;margin-right:3px;"></i> Build and Craft Intentionally</td></tr>
+              <tr><td class="tool-name">Prototyping</td><td>Right resolution for the learning you need</td></tr>
+              <tr><td class="tool-name">Gallery Walk</td><td>Showing work for specific, written feedback</td></tr>
+              <tr><td class="tool-name">Experiment Design</td><td>Smallest credible test of riskiest assumption</td></tr>
+
+              <tr class="group-row"><td colspan="2"><i data-lucide="message-circle" style="width:13px;height:13px;vertical-align:middle;margin-right:3px;"></i> Communicate Deliberately</td></tr>
+              <tr><td class="tool-name">Problem Definition</td><td>Clear, bounded, evidence-based statement</td></tr>
+              <tr><td class="tool-name">Experiment Results</td><td>What happened vs. what you planned</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Slide 6: Keep Going -->
+      <section>
+        <h2>Keep Going</h2>
+        <div class="title-underline"></div>
+
+        <div class="book-row">
+          <div class="book-card">
+            <img src="../../../Section-001/Sessions/12-Final-Presentations/creative-acts-cover.png" alt="Creative Acts for Curious People book cover">
+            <div class="book-title">Creative Acts for<br>Curious People</div>
+            <div class="book-author">Sarah Stein Greenberg<br>(Stanford d.school)</div>
+          </div>
+          <div class="book-card">
+            <img src="https://covers.openlibrary.org/b/isbn/9780062856623-L.jpg" alt="Change By Design book cover">
+            <div class="book-title">Change By Design</div>
+            <div class="book-author">Tim Brown (IDEO)</div>
+          </div>
+          <div class="book-card">
+            <img src="https://covers.openlibrary.org/b/isbn/9780262062664-L.jpg" alt="101 Things I Learned in Architecture School book cover">
+            <div class="book-title">101 Things I Learned in<br>Architecture School</div>
+            <div class="book-author">Matthew Frederick</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 7: Close -->
+      <section class="closing-slide">
+        <h2>&nbsp;</h2>
+
+        <p style="font-size: 0.85em; color: var(--navy); line-height: 1.6;">
+          You started this course by sitting with ambiguity.<br>
+          You end it by telling the story of something you tested with real people.
+        </p>
+
+        <div class="reminder">
+          <span class="label"><i data-lucide="notebook-pen"></i> Notebooks due Sunday, April 12 at 11:59 PM.</span> Submit to Canvas as PDF.
+        </div>
+
+        <p class="thank-you">Go practice.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      progress: true,
+      center: false,
+      width: 1280,
+      height: 720,
+      margin: 0,
+      transition: 'fade',
+      transitionSpeed: 'fast',
+      controlsTutorial: false,
+      keyboard: true
+    });
+    lucide.createIcons();
+  </script>
+</body>
+</html>
