@@ -33,13 +33,12 @@ For each group: mark each spec ✅ Met, ⚠️ Borderline, or ❌ Not Met. Jot o
 ### Feedback
 - **I like:**
 	- Very clear pass/fail criteria on the experiment
-	- The insight that "memory flettens the experience"
+	- The insight that "memory flattens the experience"
 - **I wish:**
 	- I had more detail on the experiment process
 	- There were more direct connection between the hypothesis and the data gathered
 - **I wonder:**
 	- How these questions are actually connected to the initial hypothesis
-	- 
 
 ---
 
