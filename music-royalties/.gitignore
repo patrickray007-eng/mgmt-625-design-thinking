@@ -1,0 +1,17 @@
+# Keep your real financial data OUT of git — it should never be committed.
+# Your actual earnings statements:
+reconciliation/statements/*
+!reconciliation/statements/.gitkeep
+!reconciliation/statements/README.txt
+
+# Generated reports (regenerate anytime by running reconcile.py):
+reconciliation/output/*
+!reconciliation/output/.gitkeep
+
+# Your real, filled-in config with fees (optional privacy — uncomment to ignore):
+# reconciliation/config.json
+
+# OS/editor noise
+.DS_Store
+__pycache__/
+*.pyc

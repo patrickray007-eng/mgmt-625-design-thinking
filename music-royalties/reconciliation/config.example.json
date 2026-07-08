@@ -1,0 +1,18 @@
+{
+  "_comment": "Copy this file to config.json and edit the values to match YOUR real setup. Percentages are whole numbers (e.g. 20 means 20%). Flat fees are dollars for the period you are reconciling.",
+
+  "artist_name": "Your Artist Name",
+  "reporting_currency": "USD",
+  "period_label": "2025 full year",
+
+  "distribution": {
+    "_comment_distrokid": "DistroKid keeps 0% of royalties by default. Its cost to you is the annual subscription fee. Put the fee you actually paid for THIS period here. Musician=24.99, Musician Plus=44.99, Ultimate=89.99 (2026 prices). Set distrokid_percent_cut>0 only if you use an add-on that takes a cut (e.g. YouTube Content ID 20%, DistroKid Publishing 20%) AND those earnings are in this statement.",
+    "distrokid_annual_fee": 44.99,
+    "distrokid_percent_cut": 0,
+
+    "_comment_other": "Use this block for Smith Music Group or any other distributor/label/aggregator that takes a CUT of your royalties. If Smith Music administers/distributes some releases and takes, say, 15%, put 15 here. Ask them directly for the exact number (see ../templates/Smith-Music-Questions.md). Leave at 0 until you have confirmed it.",
+    "other_distributor_name": "Smith Music Group",
+    "other_distributor_percent_cut": 0,
+    "other_distributor_flat_fees": 0
+  }
+}

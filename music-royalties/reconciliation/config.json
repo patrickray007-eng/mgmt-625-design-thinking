@@ -1,0 +1,13 @@
+{
+  "artist_name": "Your Artist Name",
+  "reporting_currency": "USD",
+  "period_label": "SAMPLE DATA — replace with your real period",
+
+  "distribution": {
+    "distrokid_annual_fee": 44.99,
+    "distrokid_percent_cut": 0,
+    "other_distributor_name": "Smith Music Group",
+    "other_distributor_percent_cut": 0,
+    "other_distributor_flat_fees": 0
+  }
+}
