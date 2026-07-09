@@ -1,0 +1,21 @@
+- Without Laptops, digital notes are not possible unless you have a tablet, and takeaways are difficult
+- Almost all other classes say "no laptops" but don't enforce
+- For in-class activities, why not submit the in-class work as assignments? The workload of assignments outside this set of work seems unneccessary
+- Make sure to integrate the in-class work with assignments
+	- Some professors grade in-class work, which functions as a sort of attendance tracking
+	- It would be nice if in-class work was THE work, that way you're done when you leave
+	- This class has a high assignment load
+- Assignment instructions are very complex and long
+- Exploratory looks at these concepts are nice, but it would be good to jump into a real product to improve understanding.
+- Case study request: he understands learning a toolbox of skills, but wants to connect to reality with a case study
+- "You get out what you put in", so perhaps there's a way to be less prescriptive in assignments
+- These students are used to technical classes, cases, frameworks. It would be helpful to establish definitions early on and to start with a product.
+- Knowing what you're doing, knowing expectations would be nice.
+- What is the definition of design thinking?
+- Keep the duct tape, but they'd like to submit it. Right now, it's building up to a giant journal that he's paranoid about
+- Another perspective: Weekly duct tape is too much
+- Difficulties with this being an MBA-level course. Expected frameworks, more analytical rigor, and specific examples with a real product. She would have expected this course in undergrad, but wants something more so she can go "Wow" her employers.
+- More in-depth analysis and practicality toward solving a specific problem
+- Real cases (note: this met with lots of spontaneous verbal agreement amongst the crowd)
+- Doesn't have an example to point to, so missing the "so-what" factor
+- The scope of this class feels to broad, case-based approach desired. Wants to focus on the framework.
