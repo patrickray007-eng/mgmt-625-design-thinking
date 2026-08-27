@@ -1,6 +1,6 @@
 ---
 source_pdf: "MGMT 625 SP26 - Session 9 Slides.pdf"
-converted: "2026-04-05"
+converted: "2026-08-26"
 method: PyMuPDF
 ---
 

@@ -1,6 +1,6 @@
 ---
 source_pdf: "MGMT 625 - Session 1 Navigating Ambiguity.pdf"
-converted: "2026-04-05"
+converted: "2026-08-26"
 method: PyMuPDF
 ---
 

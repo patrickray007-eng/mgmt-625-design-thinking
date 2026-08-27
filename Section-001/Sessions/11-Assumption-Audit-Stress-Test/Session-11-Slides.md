@@ -1,6 +1,6 @@
 ---
 source_pdf: "Session-11-Slides.pdf"
-converted: "2026-04-05"
+converted: "2026-08-26"
 method: PyMuPDF
 ---
 
