@@ -1,6 +1,6 @@
 ---
 source_pdf: "MGMT 625-002 - Syllabus - Spring 2026.pdf"
-converted: "2026-08-26"
+converted: "2026-08-28"
 method: PyMuPDF
 ---
 
